@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class CONSULTA_
+    partial class CONSULTA_ProductosVendidos
     {
         /// <summary>
         /// Required designer variable.
