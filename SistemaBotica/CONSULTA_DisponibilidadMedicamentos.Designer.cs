@@ -70,11 +70,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            label1.Location = new Point(29, 19);
+            label1.Location = new Point(12, 19);
             label1.Name = "label1";
-            label1.Size = new Size(518, 30);
+            label1.Size = new Size(389, 30);
             label1.TabIndex = 3;
-            label1.Text = "CONSULTAR DISPONIBILIDAD DE MEDICAMENTOS\r\n";
+            label1.Text = "DISPONIBILIDAD DE MEDICAMENTOS\r\n";
             // 
             // label2
             // 
@@ -140,7 +140,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(textBox1);
             Name = "CONSULTA_DisponibilidadMedicamentos";
-            Text = "Form1";
+            Text = "CONSULTA_DisponibilidadMedicamentos";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

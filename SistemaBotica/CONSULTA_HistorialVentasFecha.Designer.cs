@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class CONSULTA_ProductosVendidos
+    partial class CONSULTA_HistorialVentasFecha
     {
         /// <summary>
         /// Required designer variable.
@@ -51,11 +51,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            label1.Location = new Point(57, 21);
+            label1.Location = new Point(21, 19);
             label1.Name = "label1";
-            label1.Size = new Size(501, 30);
+            label1.Size = new Size(361, 30);
             label1.TabIndex = 1;
-            label1.Text = "CONSULTAR PRODUCTOS VENDIDOS POR FECHA\r\n";
+            label1.Text = "HISTORIAL DE VENTAS POR FECHA";
             label1.UseMnemonic = false;
             // 
             // label2
@@ -94,7 +94,7 @@
             dateTimePicker1.Size = new Size(243, 25);
             dateTimePicker1.TabIndex = 5;
             // 
-            // CONSULTA_ProductosVendidos
+            // CONSULTA_HistorialVentasFecha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -105,8 +105,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button1);
-            Name = "CONSULTA_ProductosVendidos";
-            Text = "CONSULTA_";
+            Name = "CONSULTA_HistorialVentasFecha";
+            Text = "CONSULTA_HistorialVentasFecha";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
