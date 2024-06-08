@@ -135,7 +135,7 @@
             Controls.Add(textBox1);
             Name = "CONSULTA_DisponibilidadMedicamentos";
             Text = "Form1";
-            Load += this.CONSULTA_DisponibilidadMedicamentos_Load;
+            
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
