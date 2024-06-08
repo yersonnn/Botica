@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class CONSULTA_ProductosVendidos
+    partial class CONSULTA_HistorialVentasFecha
     {
         /// <summary>
         /// Required designer variable.
@@ -39,9 +39,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(295, 80);
+            button1.Font = new Font("Segoe UI", 11.25F);
+            button1.Location = new Point(291, 73);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(77, 36);
             button1.TabIndex = 0;
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = true;
@@ -49,28 +50,30 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(107, 20);
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            label1.Location = new Point(21, 19);
             label1.Name = "label1";
-            label1.Size = new Size(378, 21);
+            label1.Size = new Size(361, 30);
             label1.TabIndex = 1;
-            label1.Text = "CONSULTAR PRODUCTOS VENDIDOS POR FECHA\r\n";
+            label1.Text = "HISTORIAL DE VENTAS POR FECHA";
             label1.UseMnemonic = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(21, 62);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(21, 60);
             label2.Name = "label2";
-            label2.Size = new Size(113, 15);
+            label2.Size = new Size(53, 21);
             label2.TabIndex = 2;
-            label2.Text = "Seleccione la fecha :\r\n";
+            label2.Text = "Fecha:";
             // 
             // button2
             // 
-            button2.Location = new Point(21, 415);
+            button2.Font = new Font("Segoe UI", 11.25F);
+            button2.Location = new Point(21, 403);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(85, 35);
             button2.TabIndex = 3;
             button2.Text = "Regresar";
             button2.UseVisualStyleBackColor = true;
@@ -85,12 +88,13 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(21, 80);
+            dateTimePicker1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePicker1.Location = new Point(23, 84);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(243, 23);
+            dateTimePicker1.Size = new Size(243, 25);
             dateTimePicker1.TabIndex = 5;
             // 
-            // CONSULTA_
+            // CONSULTA_HistorialVentasFecha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -101,8 +105,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button1);
-            Name = "CONSULTA_";
-            Text = "CONSULTA_";
+            Name = "CONSULTA_HistorialVentasFecha";
+            Text = "CONSULTA_HistorialVentasFecha";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

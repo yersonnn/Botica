@@ -42,24 +42,26 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(154, 66);
+            textBox1.Font = new Font("Segoe UI", 11.25F);
+            textBox1.Location = new Point(227, 69);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(177, 23);
+            textBox1.Size = new Size(177, 27);
             textBox1.TabIndex = 0;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(60, 234);
+            dataGridView1.Location = new Point(60, 198);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 150);
+            dataGridView1.Size = new Size(460, 176);
             dataGridView1.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(114, 172);
+            button1.Font = new Font("Segoe UI", 11.25F);
+            button1.Location = new Point(440, 87);
             button1.Name = "button1";
-            button1.Size = new Size(137, 23);
+            button1.Size = new Size(107, 39);
             button1.TabIndex = 2;
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = true;
@@ -67,63 +69,67 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(35, 20);
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            label1.Location = new Point(12, 19);
             label1.Name = "label1";
-            label1.Size = new Size(290, 15);
+            label1.Size = new Size(389, 30);
             label1.TabIndex = 3;
-            label1.Text = "CONSULTAR DISPONIBILIDAD DE MEDICAMENTOS\r\n";
+            label1.Text = "DISPONIBILIDAD DE MEDICAMENTOS\r\n";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(20, 69);
+            label2.Font = new Font("Segoe UI", 11.25F);
+            label2.Location = new Point(60, 69);
             label2.Name = "label2";
-            label2.Size = new Size(128, 15);
+            label2.Size = new Size(160, 20);
             label2.TabIndex = 4;
             label2.Text = "Nombre del Producto :";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(19, 119);
+            label3.Font = new Font("Segoe UI", 11.25F);
+            label3.Location = new Point(89, 122);
             label3.Name = "label3";
-            label3.Size = new Size(104, 15);
+            label3.Size = new Size(131, 20);
             label3.TabIndex = 5;
             label3.Text = "Tipo de Producto :";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.Location = new Point(60, 216);
+            label4.Font = new Font("Arial", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label4.Location = new Point(60, 172);
             label4.Name = "label4";
-            label4.Size = new Size(68, 15);
+            label4.Size = new Size(94, 18);
             label4.TabIndex = 6;
             label4.Text = "Inventario :";
             // 
             // button2
             // 
-            button2.Location = new Point(269, 400);
+            button2.Font = new Font("Segoe UI", 11.25F);
+            button2.Location = new Point(12, 402);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(95, 41);
             button2.TabIndex = 7;
             button2.Text = "Regresar";
             button2.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
+            comboBox1.Font = new Font("Segoe UI", 11.25F);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(154, 116);
+            comboBox1.Location = new Point(227, 119);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(177, 23);
+            comboBox1.Size = new Size(177, 28);
             comboBox1.TabIndex = 8;
             // 
             // CONSULTA_DisponibilidadMedicamentos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(356, 435);
+            ClientSize = new Size(576, 455);
             Controls.Add(comboBox1);
             Controls.Add(button2);
             Controls.Add(label4);
@@ -134,8 +140,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(textBox1);
             Name = "CONSULTA_DisponibilidadMedicamentos";
-            Text = "Form1";
-            
+            Text = "CONSULTA_DisponibilidadMedicamentos";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

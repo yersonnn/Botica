@@ -33,20 +33,20 @@
             button1 = new Button();
             button2 = new Button();
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            label3 = new Label();
-            textBox1 = new TextBox();
             textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
             groupBox2 = new GroupBox();
+            textBox4 = new TextBox();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            textBox3 = new TextBox();
+            label4 = new Label();
             button3 = new Button();
             button4 = new Button();
-            label4 = new Label();
-            textBox3 = new TextBox();
             dataGridView2 = new DataGridView();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            textBox4 = new TextBox();
             groupBox3 = new GroupBox();
             dateTimePicker1 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -106,15 +106,21 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Cliente:";
             // 
-            // label2
+            // textBox2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(14, 33);
-            label2.Name = "label2";
-            label2.Size = new Size(137, 20);
-            label2.TabIndex = 0;
-            label2.Text = "Nombre Completo:";
+            textBox2.Font = new Font("Segoe UI", 9.75F);
+            textBox2.Location = new Point(157, 65);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(136, 25);
+            textBox2.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(157, 29);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(272, 25);
+            textBox1.TabIndex = 4;
             // 
             // label3
             // 
@@ -126,21 +132,15 @@
             label3.TabIndex = 1;
             label3.Text = "DNI:";
             // 
-            // textBox1
+            // label2
             // 
-            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(157, 29);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(272, 25);
-            textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI", 9.75F);
-            textBox2.Location = new Point(157, 65);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(136, 25);
-            textBox2.TabIndex = 5;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(14, 33);
+            label2.Name = "label2";
+            label2.Size = new Size(137, 20);
+            label2.TabIndex = 0;
+            label2.Text = "Nombre Completo:";
             // 
             // groupBox2
             // 
@@ -157,6 +157,62 @@
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Text = "VENTA DIRECTA";
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 9.75F);
+            textBox4.Location = new Point(102, 81);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(71, 25);
+            textBox4.TabIndex = 10;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(102, 125);
+            label7.Name = "label7";
+            label7.Size = new Size(21, 20);
+            label7.TabIndex = 9;
+            label7.Text = "--";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(33, 125);
+            label6.Name = "label6";
+            label6.Size = new Size(53, 20);
+            label6.TabIndex = 8;
+            label6.Text = "Precio:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(14, 82);
+            label5.Name = "label5";
+            label5.Size = new Size(72, 20);
+            label5.TabIndex = 7;
+            label5.Text = "Cantidad:";
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 9.75F);
+            textBox3.Location = new Point(102, 36);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(272, 25);
+            textBox3.TabIndex = 6;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(25, 36);
+            label4.Name = "label4";
+            label4.Size = new Size(61, 20);
+            label4.TabIndex = 1;
+            label4.Text = "Codigo:";
             // 
             // button3
             // 
@@ -176,24 +232,6 @@
             button4.Text = "QUITAR DEL CARRITO";
             button4.UseVisualStyleBackColor = true;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(25, 36);
-            label4.Name = "label4";
-            label4.Size = new Size(61, 20);
-            label4.TabIndex = 1;
-            label4.Text = "Codigo:";
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI", 9.75F);
-            textBox3.Location = new Point(102, 36);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(272, 25);
-            textBox3.TabIndex = 6;
-            // 
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -201,44 +239,6 @@
             dataGridView2.Name = "dataGridView2";
             dataGridView2.Size = new Size(549, 260);
             dataGridView2.TabIndex = 8;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(14, 82);
-            label5.Name = "label5";
-            label5.Size = new Size(72, 20);
-            label5.TabIndex = 7;
-            label5.Text = "Cantidad:";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(33, 125);
-            label6.Name = "label6";
-            label6.Size = new Size(53, 20);
-            label6.TabIndex = 8;
-            label6.Text = "Precio:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(102, 125);
-            label7.Name = "label7";
-            label7.Size = new Size(21, 20);
-            label7.TabIndex = 9;
-            label7.Text = "--";
-            // 
-            // textBox4
-            // 
-            textBox4.Font = new Font("Segoe UI", 9.75F);
-            textBox4.Location = new Point(102, 81);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(71, 25);
-            textBox4.TabIndex = 10;
             // 
             // groupBox3
             // 

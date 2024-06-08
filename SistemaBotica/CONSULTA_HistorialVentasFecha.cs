@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class CONSULTA_ProductosVendidos : Form
+    public partial class CONSULTA_HistorialVentasFecha : Form
     {
-        public CONSULTA_ProductosVendidos()
+        public CONSULTA_HistorialVentasFecha()
         {
             InitializeComponent();
         }
+
+       
     }
 }
