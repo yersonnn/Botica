@@ -251,7 +251,7 @@
             Controls.Add(label1);
             Name = "CONSULTA_ProductosProvedor";
             Text = "CONSULTA";
-            Load += this.CONSULTA_ProductosProvedor_Load;
+            
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
