@@ -180,7 +180,7 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { PRODUCTO, CODIGO, CANTIDAD, PRECIO, TOTAL });
-            dataGridView1.Location = new Point(66, 301);
+            dataGridView1.Location = new Point(64, 301);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(551, 145);
             dataGridView1.TabIndex = 11;
