@@ -116,6 +116,17 @@ namespace CapaPresentacion
             }
         }
 
+        private void InitializeComponent()
+        {
+            SuspendLayout();
+            // 
+            // CRUD_FormasDePago
+            // 
+            ClientSize = new Size(793, 440);
+            Name = "CRUD_FormasDePago";
+            ResumeLayout(false);
+        }
+
         private void EliminarFormaDePago(int id)
         {
             string connectionString = "your_connection_string_here";
