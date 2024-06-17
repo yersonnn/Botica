@@ -32,18 +32,18 @@
             button1 = new Button();
             button2 = new Button();
             groupBox1 = new GroupBox();
+            label4 = new Label();
+            textBox1 = new TextBox();
             label2 = new Label();
             groupBox2 = new GroupBox();
-            textBox1 = new TextBox();
-            label4 = new Label();
-            textBox2 = new TextBox();
-            label5 = new Label();
-            label6 = new Label();
+            label7 = new Label();
+            label3 = new Label();
             textBox3 = new TextBox();
+            label6 = new Label();
+            label5 = new Label();
+            textBox2 = new TextBox();
             dateTimePicker1 = new DateTimePicker();
             dataGridView1 = new DataGridView();
-            label3 = new Label();
-            label7 = new Label();
             PRODUCTO = new DataGridViewTextBoxColumn();
             CODIGO = new DataGridViewTextBoxColumn();
             CANTIDAD = new DataGridViewTextBoxColumn();
@@ -94,6 +94,22 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "DATOS DEL PROVEDOR";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(6, 26);
+            label4.Name = "label4";
+            label4.Size = new Size(56, 15);
+            label4.TabIndex = 1;
+            label4.Text = "NOMBRE";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(6, 44);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(342, 23);
+            textBox1.TabIndex = 0;
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -120,37 +136,30 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "DATOS DE LA VENTA";
             // 
-            // textBox1
+            // label7
             // 
-            textBox1.Location = new Point(6, 44);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(342, 23);
-            textBox1.TabIndex = 0;
+            label7.AutoSize = true;
+            label7.Location = new Point(377, 49);
+            label7.Name = "label7";
+            label7.Size = new Size(57, 15);
+            label7.TabIndex = 9;
+            label7.Text = "**********";
             // 
-            // label4
+            // label3
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(6, 26);
-            label4.Name = "label4";
-            label4.Size = new Size(56, 15);
-            label4.TabIndex = 1;
-            label4.Text = "NOMBRE";
+            label3.AutoSize = true;
+            label3.Location = new Point(377, 26);
+            label3.Name = "label3";
+            label3.Size = new Size(52, 15);
+            label3.TabIndex = 8;
+            label3.Text = "CODIGO";
             // 
-            // textBox2
+            // textBox3
             // 
-            textBox2.Location = new Point(6, 46);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(211, 23);
-            textBox2.TabIndex = 3;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(6, 26);
-            label5.Name = "label5";
-            label5.Size = new Size(68, 15);
-            label5.TabIndex = 5;
-            label5.Text = "PRODUCTO";
+            textBox3.Location = new Point(248, 46);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(43, 23);
+            textBox3.TabIndex = 7;
             // 
             // label6
             // 
@@ -161,12 +170,21 @@
             label6.TabIndex = 6;
             label6.Text = "CANTIDAD";
             // 
-            // textBox3
+            // label5
             // 
-            textBox3.Location = new Point(248, 46);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(43, 23);
-            textBox3.TabIndex = 7;
+            label5.AutoSize = true;
+            label5.Location = new Point(6, 26);
+            label5.Name = "label5";
+            label5.Size = new Size(68, 15);
+            label5.TabIndex = 5;
+            label5.Text = "PRODUCTO";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(6, 46);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(211, 23);
+            textBox2.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
@@ -182,26 +200,8 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { PRODUCTO, CODIGO, CANTIDAD, PRECIO, TOTAL });
             dataGridView1.Location = new Point(64, 301);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(551, 145);
+            dataGridView1.Size = new Size(543, 145);
             dataGridView1.TabIndex = 11;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(377, 26);
-            label3.Name = "label3";
-            label3.Size = new Size(52, 15);
-            label3.TabIndex = 8;
-            label3.Text = "CODIGO";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(377, 49);
-            label7.Name = "label7";
-            label7.Size = new Size(57, 15);
-            label7.TabIndex = 9;
-            label7.Text = "**********";
             // 
             // PRODUCTO
             // 
@@ -251,7 +251,6 @@
             Controls.Add(label1);
             Name = "CONSULTA_ProductosProvedor";
             Text = "CONSULTA";
-            
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
