@@ -50,10 +50,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold | FontStyle.Italic);
             label1.Location = new Point(21, 19);
             label1.Name = "label1";
-            label1.Size = new Size(361, 30);
+            label1.Size = new Size(360, 30);
             label1.TabIndex = 1;
             label1.Text = "HISTORIAL DE VENTAS POR FECHA";
             label1.UseMnemonic = false;

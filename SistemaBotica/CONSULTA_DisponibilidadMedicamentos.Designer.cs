@@ -69,10 +69,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold | FontStyle.Italic);
             label1.Location = new Point(12, 19);
             label1.Name = "label1";
-            label1.Size = new Size(389, 30);
+            label1.Size = new Size(390, 30);
             label1.TabIndex = 3;
             label1.Text = "DISPONIBILIDAD DE MEDICAMENTOS\r\n";
             // 
