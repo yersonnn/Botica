@@ -49,6 +49,7 @@
             dataGridView2 = new DataGridView();
             groupBox3 = new GroupBox();
             dateTimePicker1 = new DateTimePicker();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -85,7 +86,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(921, 542);
+            button2.Location = new Point(921, 549);
             button2.Name = "button2";
             button2.Size = new Size(170, 38);
             button2.TabIndex = 3;
@@ -258,11 +259,21 @@
             dateTimePicker1.Size = new Size(208, 29);
             dateTimePicker1.TabIndex = 0;
             // 
+            // button5
+            // 
+            button5.Location = new Point(920, 495);
+            button5.Name = "button5";
+            button5.Size = new Size(170, 38);
+            button5.TabIndex = 10;
+            button5.Text = "MODIFICAR VENTA";
+            button5.UseVisualStyleBackColor = true;
+            // 
             // CORE_VentaDirecta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1166, 639);
+            Controls.Add(button5);
             Controls.Add(groupBox3);
             Controls.Add(dataGridView2);
             Controls.Add(button4);
@@ -309,5 +320,6 @@
         private DataGridView dataGridView2;
         private GroupBox groupBox3;
         private DateTimePicker dateTimePicker1;
+        private Button button5;
     }
 }
