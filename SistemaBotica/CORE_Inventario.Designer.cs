@@ -31,6 +31,8 @@
             groupBox3 = new GroupBox();
             dateTimePicker1 = new DateTimePicker();
             groupBox2 = new GroupBox();
+            textBox5 = new TextBox();
+            label6 = new Label();
             textBox4 = new TextBox();
             label5 = new Label();
             textBox3 = new TextBox();
@@ -44,8 +46,6 @@
             button1 = new Button();
             dataGridView1 = new DataGridView();
             label1 = new Label();
-            label6 = new Label();
-            textBox5 = new TextBox();
             button5 = new Button();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -87,6 +87,24 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "PRODUCTO";
             // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 9.75F);
+            textBox5.Location = new Point(92, 68);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(272, 25);
+            textBox5.TabIndex = 12;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(19, 69);
+            label6.Name = "label6";
+            label6.Size = new Size(67, 20);
+            label6.TabIndex = 11;
+            label6.Text = "Nombre:";
+            // 
             // textBox4
             // 
             textBox4.Font = new Font("Segoe UI", 9.75F);
@@ -112,6 +130,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(272, 25);
             textBox3.TabIndex = 6;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label4
             // 
@@ -209,24 +228,6 @@
             label1.Size = new Size(142, 30);
             label1.TabIndex = 10;
             label1.Text = "INVENTARIO";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(19, 69);
-            label6.Name = "label6";
-            label6.Size = new Size(67, 20);
-            label6.TabIndex = 11;
-            label6.Text = "Nombre:";
-            // 
-            // textBox5
-            // 
-            textBox5.Font = new Font("Segoe UI", 9.75F);
-            textBox5.Location = new Point(92, 68);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(272, 25);
-            textBox5.TabIndex = 12;
             // 
             // button5
             // 

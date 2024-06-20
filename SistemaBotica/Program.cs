@@ -1,3 +1,5 @@
+using CapaPresentacion;
+
 namespace SistemaBotica
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace SistemaBotica
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new CONSULTA_DisponibilidadMedicamentos());
+            Application.Run(new MenuPrincipal());
         }
     }
 }

@@ -12,10 +12,17 @@ namespace CapaPresentacion
 {
     public partial class MenuPrincipal : Form
     {
+        private int borderSize = 2;
+        private Size formSize;
+        private Button boton;
+        private Panel leftboton;
+
         public MenuPrincipal()
         {
             InitializeComponent();
         }
+
+
         private void Cambiar(Form f)
         {
             PanelCont.Controls.Clear();
@@ -26,11 +33,37 @@ namespace CapaPresentacion
             PanelCont.Controls.Add(f);
             f.Show();
         }
-
+       
 
         private void btn_Venta_Click(object sender, EventArgs e)
         {
             Cambiar(new CORE_VentaDirecta());
+
+        }
+
+        private void btn_Inventario_Click(object sender, EventArgs e)
+        {
+            Cambiar(new CORE_Inventario());
+        }
+
+        private void btn_Cliente_Click(object sender, EventArgs e)
+        {
+            Cambiar(new CRUD_Cliente());
+        }
+
+        private void btn_Empleado_Click(object sender, EventArgs e)
+        {
+            Cambiar(new CRUD_Empleado());
+        }
+
+        private void btn_Producto_Click(object sender, EventArgs e)
+        {
+            Cambiar(new CRUD_Producto());
+        }
+
+        private void btn_Proveedor_Click(object sender, EventArgs e)
+        {
+            Cambiar(new CRUD_Proveedor());
         }
     }
 }

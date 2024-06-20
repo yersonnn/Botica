@@ -36,15 +36,15 @@
             btn_Producto = new Button();
             label1 = new Label();
             btn_Inventario = new Button();
-            panel1 = new Panel();
-            panel1.SuspendLayout();
+            panelmenu = new Panel();
+            panelmenu.SuspendLayout();
             SuspendLayout();
             // 
             // PanelCont
             // 
-            PanelCont.Location = new Point(263, 1);
+            PanelCont.Location = new Point(209, 1);
             PanelCont.Name = "PanelCont";
-            PanelCont.Size = new Size(899, 605);
+            PanelCont.Size = new Size(1197, 726);
             PanelCont.TabIndex = 0;
             // 
             // btn_Proveedor
@@ -52,37 +52,40 @@
             btn_Proveedor.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Proveedor.Location = new Point(8, 487);
             btn_Proveedor.Name = "btn_Proveedor";
-            btn_Proveedor.Size = new Size(248, 60);
+            btn_Proveedor.Size = new Size(194, 60);
             btn_Proveedor.TabIndex = 5;
             btn_Proveedor.Text = "Proveedor";
             btn_Proveedor.UseVisualStyleBackColor = true;
+            btn_Proveedor.Click += btn_Proveedor_Click;
             // 
             // btn_Cliente
             // 
             btn_Cliente.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Cliente.Location = new Point(8, 287);
             btn_Cliente.Name = "btn_Cliente";
-            btn_Cliente.Size = new Size(248, 60);
+            btn_Cliente.Size = new Size(194, 60);
             btn_Cliente.TabIndex = 1;
             btn_Cliente.Text = "Cliente";
             btn_Cliente.UseVisualStyleBackColor = true;
+            btn_Cliente.Click += btn_Cliente_Click;
             // 
             // btn_Empleado
             // 
             btn_Empleado.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Empleado.Location = new Point(8, 353);
             btn_Empleado.Name = "btn_Empleado";
-            btn_Empleado.Size = new Size(248, 60);
+            btn_Empleado.Size = new Size(194, 60);
             btn_Empleado.TabIndex = 3;
             btn_Empleado.Text = "Empleado";
             btn_Empleado.UseVisualStyleBackColor = true;
+            btn_Empleado.Click += btn_Empleado_Click;
             // 
             // btn_Venta
             // 
             btn_Venta.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Venta.Location = new Point(8, 101);
             btn_Venta.Name = "btn_Venta";
-            btn_Venta.Size = new Size(248, 60);
+            btn_Venta.Size = new Size(194, 60);
             btn_Venta.TabIndex = 6;
             btn_Venta.Text = "VENTA";
             btn_Venta.UseVisualStyleBackColor = true;
@@ -93,16 +96,17 @@
             btn_Producto.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Producto.Location = new Point(8, 419);
             btn_Producto.Name = "btn_Producto";
-            btn_Producto.Size = new Size(248, 60);
+            btn_Producto.Size = new Size(194, 60);
             btn_Producto.TabIndex = 4;
             btn_Producto.Text = "Producto";
             btn_Producto.UseVisualStyleBackColor = true;
+            btn_Producto.Click += btn_Producto_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(45, 38);
+            label1.Location = new Point(21, 35);
             label1.Name = "label1";
             label1.Size = new Size(181, 28);
             label1.TabIndex = 2;
@@ -113,36 +117,37 @@
             btn_Inventario.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Inventario.Location = new Point(8, 167);
             btn_Inventario.Name = "btn_Inventario";
-            btn_Inventario.Size = new Size(248, 60);
+            btn_Inventario.Size = new Size(194, 60);
             btn_Inventario.TabIndex = 7;
             btn_Inventario.Text = "INVENTARIO";
             btn_Inventario.UseVisualStyleBackColor = true;
+            btn_Inventario.Click += btn_Inventario_Click;
             // 
-            // panel1
+            // panelmenu
             // 
-            panel1.Controls.Add(btn_Inventario);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(btn_Producto);
-            panel1.Controls.Add(btn_Venta);
-            panel1.Controls.Add(btn_Empleado);
-            panel1.Controls.Add(btn_Cliente);
-            panel1.Controls.Add(btn_Proveedor);
-            panel1.Location = new Point(1, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(263, 606);
-            panel1.TabIndex = 1;
+            panelmenu.Controls.Add(btn_Inventario);
+            panelmenu.Controls.Add(label1);
+            panelmenu.Controls.Add(btn_Producto);
+            panelmenu.Controls.Add(btn_Venta);
+            panelmenu.Controls.Add(btn_Empleado);
+            panelmenu.Controls.Add(btn_Cliente);
+            panelmenu.Controls.Add(btn_Proveedor);
+            panelmenu.Location = new Point(1, 0);
+            panelmenu.Name = "panelmenu";
+            panelmenu.Size = new Size(208, 727);
+            panelmenu.TabIndex = 1;
             // 
             // MenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1159, 605);
-            Controls.Add(panel1);
+            ClientSize = new Size(1408, 730);
+            Controls.Add(panelmenu);
             Controls.Add(PanelCont);
             Name = "MenuPrincipal";
             Text = "MenuPrincipal";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panelmenu.ResumeLayout(false);
+            panelmenu.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -156,6 +161,6 @@
         private Button btn_Producto;
         private Label label1;
         private Button btn_Inventario;
-        private Panel panel1;
+        private Panel panelmenu;
     }
 }
