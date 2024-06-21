@@ -32,14 +32,14 @@
             button2 = new Button();
             button1 = new Button();
             groupBox1 = new GroupBox();
+            textBox3 = new TextBox();
+            label4 = new Label();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             label3 = new Label();
             label2 = new Label();
             dataGridView1 = new DataGridView();
             label1 = new Label();
-            label4 = new Label();
-            textBox3 = new TextBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -70,6 +70,7 @@
             button1.TabIndex = 17;
             button1.Text = "AGREGAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // groupBox1
             // 
@@ -86,6 +87,24 @@
             groupBox1.TabIndex = 16;
             groupBox1.TabStop = false;
             groupBox1.Text = "DETALLES";
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 9.75F);
+            textBox3.Location = new Point(154, 100);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(193, 25);
+            textBox3.TabIndex = 11;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(88, 100);
+            label4.Name = "label4";
+            label4.Size = new Size(42, 20);
+            label4.TabIndex = 10;
+            label4.Text = "Tipo:";
             // 
             // textBox2
             // 
@@ -140,24 +159,6 @@
             label1.Size = new Size(210, 30);
             label1.TabIndex = 14;
             label1.Text = "METODOS DE PAGO";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(88, 100);
-            label4.Name = "label4";
-            label4.Size = new Size(42, 20);
-            label4.TabIndex = 10;
-            label4.Text = "Tipo:";
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI", 9.75F);
-            textBox3.Location = new Point(154, 100);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(193, 25);
-            textBox3.TabIndex = 11;
             // 
             // CRUD_MetodoPago
             // 

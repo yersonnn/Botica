@@ -37,6 +37,7 @@
             label1 = new Label();
             btn_Inventario = new Button();
             panelmenu = new Panel();
+            btn_MetPago = new Button();
             panelmenu.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             PanelCont.Name = "PanelCont";
             PanelCont.Size = new Size(1197, 726);
             PanelCont.TabIndex = 0;
+            PanelCont.Paint += PanelCont_Paint;
             // 
             // btn_Proveedor
             // 
@@ -125,6 +127,7 @@
             // 
             // panelmenu
             // 
+            panelmenu.Controls.Add(btn_MetPago);
             panelmenu.Controls.Add(btn_Inventario);
             panelmenu.Controls.Add(label1);
             panelmenu.Controls.Add(btn_Producto);
@@ -136,6 +139,17 @@
             panelmenu.Name = "panelmenu";
             panelmenu.Size = new Size(208, 727);
             panelmenu.TabIndex = 1;
+            // 
+            // btn_MetPago
+            // 
+            btn_MetPago.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_MetPago.Location = new Point(11, 558);
+            btn_MetPago.Name = "btn_MetPago";
+            btn_MetPago.Size = new Size(194, 60);
+            btn_MetPago.TabIndex = 8;
+            btn_MetPago.Text = "Metodo de Pago";
+            btn_MetPago.UseVisualStyleBackColor = true;
+            btn_MetPago.Click += btn_MetPago_Click;
             // 
             // MenuPrincipal
             // 
@@ -162,5 +176,6 @@
         private Label label1;
         private Button btn_Inventario;
         private Panel panelmenu;
+        private Button btn_MetPago;
     }
 }
