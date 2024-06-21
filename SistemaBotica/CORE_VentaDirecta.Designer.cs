@@ -50,6 +50,8 @@
             groupBox3 = new GroupBox();
             dateTimePicker1 = new DateTimePicker();
             button5 = new Button();
+            textBox5 = new TextBox();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -145,6 +147,8 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(textBox5);
+            groupBox2.Controls.Add(label8);
             groupBox2.Controls.Add(textBox4);
             groupBox2.Controls.Add(label7);
             groupBox2.Controls.Add(label6);
@@ -162,7 +166,7 @@
             // textBox4
             // 
             textBox4.Font = new Font("Segoe UI", 9.75F);
-            textBox4.Location = new Point(102, 81);
+            textBox4.Location = new Point(102, 92);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(71, 25);
             textBox4.TabIndex = 10;
@@ -171,7 +175,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(102, 125);
+            label7.Location = new Point(102, 130);
             label7.Name = "label7";
             label7.Size = new Size(21, 20);
             label7.TabIndex = 9;
@@ -181,17 +185,17 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(33, 125);
+            label6.Location = new Point(6, 126);
             label6.Name = "label6";
-            label6.Size = new Size(53, 20);
+            label6.Size = new Size(80, 20);
             label6.TabIndex = 8;
-            label6.Text = "Precio:";
+            label6.Text = "Precio(S/.):";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(14, 82);
+            label5.Location = new Point(14, 95);
             label5.Name = "label5";
             label5.Size = new Size(72, 20);
             label5.TabIndex = 7;
@@ -200,7 +204,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 9.75F);
-            textBox3.Location = new Point(102, 36);
+            textBox3.Location = new Point(102, 33);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(272, 25);
             textBox3.TabIndex = 6;
@@ -210,7 +214,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(25, 36);
+            label4.Location = new Point(25, 37);
             label4.Name = "label4";
             label4.Size = new Size(61, 20);
             label4.TabIndex = 1;
@@ -269,6 +273,24 @@
             button5.Text = "MODIFICAR VENTA";
             button5.UseVisualStyleBackColor = true;
             // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 9.75F);
+            textBox5.Location = new Point(102, 62);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(272, 25);
+            textBox5.TabIndex = 12;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(19, 67);
+            label8.Name = "label8";
+            label8.Size = new Size(67, 20);
+            label8.TabIndex = 11;
+            label8.Text = "Nombre:";
+            // 
             // CORE_VentaDirecta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -322,5 +344,7 @@
         private GroupBox groupBox3;
         private DateTimePicker dateTimePicker1;
         private Button button5;
+        private TextBox textBox5;
+        private Label label8;
     }
 }

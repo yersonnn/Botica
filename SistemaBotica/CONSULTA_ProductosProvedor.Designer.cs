@@ -34,6 +34,7 @@
             button1 = new Button();
             button2 = new Button();
             groupBox1 = new GroupBox();
+            comboBox1 = new ComboBox();
             label4 = new Label();
             label2 = new Label();
             groupBox2 = new GroupBox();
@@ -41,14 +42,13 @@
             textBox2 = new TextBox();
             dateTimePicker1 = new DateTimePicker();
             dataGridView1 = new DataGridView();
-            button3 = new Button();
-            comboBox1 = new ComboBox();
             PRODUCTO = new DataGridViewTextBoxColumn();
             CODIGO = new DataGridViewTextBoxColumn();
             CANTIDAD = new DataGridViewTextBoxColumn();
             PRECIO = new DataGridViewTextBoxColumn();
             TOTAL = new DataGridViewTextBoxColumn();
             FECHA = new DataGridViewTextBoxColumn();
+            button3 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -93,14 +93,22 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "DATOS DEL PROVEDOR";
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(6, 44);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(284, 23);
+            comboBox1.TabIndex = 2;
+            // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(6, 26);
             label4.Name = "label4";
-            label4.Size = new Size(56, 15);
+            label4.Size = new Size(58, 15);
             label4.TabIndex = 1;
-            label4.Text = "NOMBRE";
+            label4.Text = "EMPRESA";
             // 
             // label2
             // 
@@ -175,23 +183,6 @@
             dataGridView1.Size = new Size(643, 145);
             dataGridView1.TabIndex = 11;
             // 
-            // button3
-            // 
-            button3.Location = new Point(600, 474);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 12;
-            button3.Text = "CERRAR";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(6, 44);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(284, 23);
-            comboBox1.TabIndex = 2;
-            // 
             // PRODUCTO
             // 
             PRODUCTO.HeaderText = "PRODUCTO";
@@ -221,6 +212,15 @@
             // 
             FECHA.HeaderText = "FECHA";
             FECHA.Name = "FECHA";
+            // 
+            // button3
+            // 
+            button3.Location = new Point(600, 474);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 12;
+            button3.Text = "CERRAR";
+            button3.UseVisualStyleBackColor = true;
             // 
             // CONSULTA_ProductosProvedor
             // 

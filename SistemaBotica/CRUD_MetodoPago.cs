@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class CONSULTA_HistorialVentasCliente : Form
+    public partial class CRUD_MetodoPago : Form
     {
-        public CONSULTA_HistorialVentasCliente()
+        public CRUD_MetodoPago()
         {
             InitializeComponent();
         }

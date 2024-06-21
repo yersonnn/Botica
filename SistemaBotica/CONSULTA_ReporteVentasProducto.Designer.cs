@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class CONSULTA_HistorialVentasCliente
+    partial class CONSULTA_ReporteVentasProducto
     {
         /// <summary>
         /// Required designer variable.
@@ -49,7 +49,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 129);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(640, 250);
+            dataGridView1.Size = new Size(574, 250);
             dataGridView1.TabIndex = 16;
             // 
             // button2
@@ -68,9 +68,9 @@
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(12, 57);
             label2.Name = "label2";
-            label2.Size = new Size(40, 21);
+            label2.Size = new Size(63, 21);
             label2.TabIndex = 14;
-            label2.Text = "DNI:";
+            label2.Text = "Codigo:";
             // 
             // label1
             // 
@@ -78,9 +78,9 @@
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold | FontStyle.Italic);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(571, 30);
+            label1.Size = new Size(552, 30);
             label1.TabIndex = 13;
-            label1.Text = "HISTORIAL DE VENTAS POR MEDICAMENTO/PRODUCTO";
+            label1.Text = "REPORTE DE VENTAS POR MEDICAMENTO/PRODUCTO";
             label1.UseMnemonic = false;
             // 
             // button1
@@ -93,19 +93,19 @@
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = true;
             // 
-            // CONSULTA_HistorialVentasCliente
+            // CONSULTA_ReporteVentasProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(664, 450);
+            ClientSize = new Size(615, 450);
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button1);
-            Name = "CONSULTA_HistorialVentasCliente";
-            Text = "CONSULTA_HistorialVentasCliente";
+            Name = "CONSULTA_ReporteVentasProducto";
+            Text = "CONSULTA_ReporteVentasProducto";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
