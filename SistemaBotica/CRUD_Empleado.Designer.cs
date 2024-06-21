@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btn_InEmpleado = new Button();
+            btn_ModEmpleado = new Button();
+            btn_AgrEmpleado = new Button();
             groupBox1 = new GroupBox();
-            textBox4 = new TextBox();
+            txt_CargoEmpleado = new TextBox();
             label5 = new Label();
-            textBox3 = new TextBox();
+            txt_TelfEmpleado = new TextBox();
             label4 = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txt_NombEmpleado = new TextBox();
+            txt_DniEmpleado = new TextBox();
             label3 = new Label();
             label2 = new Label();
             dataGridView1 = new DataGridView();
@@ -46,42 +46,42 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // button3
+            // btn_InEmpleado
             // 
-            button3.Location = new Point(448, 372);
-            button3.Name = "button3";
-            button3.Size = new Size(170, 38);
-            button3.TabIndex = 13;
-            button3.Text = "INHABILITAR EMPLEADO";
-            button3.UseVisualStyleBackColor = true;
+            btn_InEmpleado.Location = new Point(448, 372);
+            btn_InEmpleado.Name = "btn_InEmpleado";
+            btn_InEmpleado.Size = new Size(170, 38);
+            btn_InEmpleado.TabIndex = 13;
+            btn_InEmpleado.Text = "INHABILITAR EMPLEADO";
+            btn_InEmpleado.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_ModEmpleado
             // 
-            button2.Location = new Point(448, 317);
-            button2.Name = "button2";
-            button2.Size = new Size(170, 38);
-            button2.TabIndex = 12;
-            button2.Text = "MODIFICAR DATOS";
-            button2.UseVisualStyleBackColor = true;
+            btn_ModEmpleado.Location = new Point(448, 317);
+            btn_ModEmpleado.Name = "btn_ModEmpleado";
+            btn_ModEmpleado.Size = new Size(170, 38);
+            btn_ModEmpleado.TabIndex = 12;
+            btn_ModEmpleado.Text = "MODIFICAR DATOS";
+            btn_ModEmpleado.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_AgrEmpleado
             // 
-            button1.Location = new Point(448, 262);
-            button1.Name = "button1";
-            button1.Size = new Size(170, 38);
-            button1.TabIndex = 11;
-            button1.Text = "AGREGAR EMPLEADO";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btn_AgrEmpleado.Location = new Point(448, 262);
+            btn_AgrEmpleado.Name = "btn_AgrEmpleado";
+            btn_AgrEmpleado.Size = new Size(170, 38);
+            btn_AgrEmpleado.TabIndex = 11;
+            btn_AgrEmpleado.Text = "AGREGAR EMPLEADO";
+            btn_AgrEmpleado.UseVisualStyleBackColor = true;
+            btn_AgrEmpleado.Click += button1_Click;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(txt_CargoEmpleado);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(txt_TelfEmpleado);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txt_NombEmpleado);
+            groupBox1.Controls.Add(txt_DniEmpleado);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
@@ -92,13 +92,13 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "DETALLES";
             // 
-            // textBox4
+            // txt_CargoEmpleado
             // 
-            textBox4.Font = new Font("Segoe UI", 9.75F);
-            textBox4.Location = new Point(161, 136);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(193, 25);
-            textBox4.TabIndex = 13;
+            txt_CargoEmpleado.Font = new Font("Segoe UI", 9.75F);
+            txt_CargoEmpleado.Location = new Point(161, 136);
+            txt_CargoEmpleado.Name = "txt_CargoEmpleado";
+            txt_CargoEmpleado.Size = new Size(193, 25);
+            txt_CargoEmpleado.TabIndex = 13;
             // 
             // label5
             // 
@@ -106,17 +106,17 @@
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(7, 141);
             label5.Name = "label5";
-            label5.Size = new Size(136, 20);
+            label5.Size = new Size(129, 20);
             label5.TabIndex = 12;
-            label5.Text = "Horario de trabajo:";
+            label5.Text = "Cargo/Ocupacion:";
             // 
-            // textBox3
+            // txt_TelfEmpleado
             // 
-            textBox3.Font = new Font("Segoe UI", 9.75F);
-            textBox3.Location = new Point(161, 99);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(193, 25);
-            textBox3.TabIndex = 11;
+            txt_TelfEmpleado.Font = new Font("Segoe UI", 9.75F);
+            txt_TelfEmpleado.Location = new Point(161, 99);
+            txt_TelfEmpleado.Name = "txt_TelfEmpleado";
+            txt_TelfEmpleado.Size = new Size(193, 25);
+            txt_TelfEmpleado.TabIndex = 11;
             // 
             // label4
             // 
@@ -128,22 +128,22 @@
             label4.TabIndex = 10;
             label4.Text = "Telf. Celular:";
             // 
-            // textBox2
+            // txt_NombEmpleado
             // 
-            textBox2.Font = new Font("Segoe UI", 9.75F);
-            textBox2.Location = new Point(161, 61);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(193, 25);
-            textBox2.TabIndex = 9;
+            txt_NombEmpleado.Font = new Font("Segoe UI", 9.75F);
+            txt_NombEmpleado.Location = new Point(161, 61);
+            txt_NombEmpleado.Name = "txt_NombEmpleado";
+            txt_NombEmpleado.Size = new Size(193, 25);
+            txt_NombEmpleado.TabIndex = 9;
             // 
-            // textBox1
+            // txt_DniEmpleado
             // 
-            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(161, 30);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(193, 25);
-            textBox1.TabIndex = 8;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txt_DniEmpleado.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_DniEmpleado.Location = new Point(161, 30);
+            txt_DniEmpleado.Name = "txt_DniEmpleado";
+            txt_DniEmpleado.Size = new Size(193, 25);
+            txt_DniEmpleado.TabIndex = 8;
+            txt_DniEmpleado.TextChanged += textBox1_TextChanged;
             // 
             // label3
             // 
@@ -188,9 +188,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(666, 454);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btn_InEmpleado);
+            Controls.Add(btn_ModEmpleado);
+            Controls.Add(btn_AgrEmpleado);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
@@ -205,16 +205,16 @@
 
         #endregion
 
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btn_InEmpleado;
+        private Button btn_ModEmpleado;
+        private Button btn_AgrEmpleado;
         private GroupBox groupBox1;
-        private TextBox textBox4;
+        private TextBox txt_CargoEmpleado;
         private Label label5;
-        private TextBox textBox3;
+        private TextBox txt_TelfEmpleado;
         private Label label4;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txt_NombEmpleado;
+        private TextBox txt_DniEmpleado;
         private Label label3;
         private Label label2;
         private DataGridView dataGridView1;

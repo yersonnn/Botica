@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btn_InProveedor = new Button();
+            btn_ModProveedor = new Button();
+            btn_AgrProveedor = new Button();
             groupBox1 = new GroupBox();
-            textBox4 = new TextBox();
+            txt_TelfProveedor = new TextBox();
             label5 = new Label();
-            textBox3 = new TextBox();
+            txt_CorreoProveedor = new TextBox();
             label4 = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txt_NombProveedor = new TextBox();
+            txt_CodProveedor = new TextBox();
             label3 = new Label();
             label2 = new Label();
             dataGridView1 = new DataGridView();
@@ -46,41 +46,41 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // button3
+            // btn_InProveedor
             // 
-            button3.Location = new Point(507, 389);
-            button3.Name = "button3";
-            button3.Size = new Size(170, 38);
-            button3.TabIndex = 19;
-            button3.Text = "INHABILITAR PROVEEDOR";
-            button3.UseVisualStyleBackColor = true;
+            btn_InProveedor.Location = new Point(507, 389);
+            btn_InProveedor.Name = "btn_InProveedor";
+            btn_InProveedor.Size = new Size(170, 38);
+            btn_InProveedor.TabIndex = 19;
+            btn_InProveedor.Text = "INHABILITAR PROVEEDOR";
+            btn_InProveedor.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_ModProveedor
             // 
-            button2.Location = new Point(507, 334);
-            button2.Name = "button2";
-            button2.Size = new Size(170, 38);
-            button2.TabIndex = 18;
-            button2.Text = "MODIFICAR DATOS";
-            button2.UseVisualStyleBackColor = true;
+            btn_ModProveedor.Location = new Point(507, 334);
+            btn_ModProveedor.Name = "btn_ModProveedor";
+            btn_ModProveedor.Size = new Size(170, 38);
+            btn_ModProveedor.TabIndex = 18;
+            btn_ModProveedor.Text = "MODIFICAR DATOS";
+            btn_ModProveedor.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_AgrProveedor
             // 
-            button1.Location = new Point(507, 279);
-            button1.Name = "button1";
-            button1.Size = new Size(170, 38);
-            button1.TabIndex = 17;
-            button1.Text = "AGREGAR PROVEEDOR";
-            button1.UseVisualStyleBackColor = true;
+            btn_AgrProveedor.Location = new Point(507, 279);
+            btn_AgrProveedor.Name = "btn_AgrProveedor";
+            btn_AgrProveedor.Size = new Size(170, 38);
+            btn_AgrProveedor.TabIndex = 17;
+            btn_AgrProveedor.Text = "AGREGAR PROVEEDOR";
+            btn_AgrProveedor.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(txt_TelfProveedor);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(txt_CorreoProveedor);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txt_NombProveedor);
+            groupBox1.Controls.Add(txt_CodProveedor);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
@@ -91,13 +91,13 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "DETALLES";
             // 
-            // textBox4
+            // txt_TelfProveedor
             // 
-            textBox4.Font = new Font("Segoe UI", 9.75F);
-            textBox4.Location = new Point(154, 140);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(193, 25);
-            textBox4.TabIndex = 13;
+            txt_TelfProveedor.Font = new Font("Segoe UI", 9.75F);
+            txt_TelfProveedor.Location = new Point(154, 140);
+            txt_TelfProveedor.Name = "txt_TelfProveedor";
+            txt_TelfProveedor.Size = new Size(193, 25);
+            txt_TelfProveedor.TabIndex = 13;
             // 
             // label5
             // 
@@ -109,13 +109,13 @@
             label5.TabIndex = 12;
             label5.Text = "Telefono:";
             // 
-            // textBox3
+            // txt_CorreoProveedor
             // 
-            textBox3.Font = new Font("Segoe UI", 9.75F);
-            textBox3.Location = new Point(154, 103);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(288, 25);
-            textBox3.TabIndex = 11;
+            txt_CorreoProveedor.Font = new Font("Segoe UI", 9.75F);
+            txt_CorreoProveedor.Location = new Point(154, 103);
+            txt_CorreoProveedor.Name = "txt_CorreoProveedor";
+            txt_CorreoProveedor.Size = new Size(288, 25);
+            txt_CorreoProveedor.TabIndex = 11;
             // 
             // label4
             // 
@@ -127,22 +127,22 @@
             label4.TabIndex = 10;
             label4.Text = "Correo Electronico:";
             // 
-            // textBox2
+            // txt_NombProveedor
             // 
-            textBox2.Font = new Font("Segoe UI", 9.75F);
-            textBox2.Location = new Point(154, 66);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(288, 25);
-            textBox2.TabIndex = 9;
+            txt_NombProveedor.Font = new Font("Segoe UI", 9.75F);
+            txt_NombProveedor.Location = new Point(154, 66);
+            txt_NombProveedor.Name = "txt_NombProveedor";
+            txt_NombProveedor.Size = new Size(288, 25);
+            txt_NombProveedor.TabIndex = 9;
             // 
-            // textBox1
+            // txt_CodProveedor
             // 
-            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(154, 28);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(144, 25);
-            textBox1.TabIndex = 8;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txt_CodProveedor.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_CodProveedor.Location = new Point(154, 28);
+            txt_CodProveedor.Name = "txt_CodProveedor";
+            txt_CodProveedor.Size = new Size(144, 25);
+            txt_CodProveedor.TabIndex = 8;
+            txt_CodProveedor.TextChanged += textBox1_TextChanged;
             // 
             // label3
             // 
@@ -187,9 +187,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(716, 467);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btn_InProveedor);
+            Controls.Add(btn_ModProveedor);
+            Controls.Add(btn_AgrProveedor);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
@@ -204,16 +204,16 @@
 
         #endregion
 
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btn_InProveedor;
+        private Button btn_ModProveedor;
+        private Button btn_AgrProveedor;
         private GroupBox groupBox1;
-        private TextBox textBox4;
+        private TextBox txt_TelfProveedor;
         private Label label5;
-        private TextBox textBox3;
+        private TextBox txt_CorreoProveedor;
         private Label label4;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txt_NombProveedor;
+        private TextBox txt_CodProveedor;
         private Label label3;
         private Label label2;
         private DataGridView dataGridView1;

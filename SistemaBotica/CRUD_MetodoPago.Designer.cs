@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btn_InMetodo = new Button();
+            btn_ModMetodo = new Button();
+            btn_AgrMetodo = new Button();
             groupBox1 = new GroupBox();
-            textBox3 = new TextBox();
+            txt_TipoMetodo = new TextBox();
             label4 = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txt_NombMetodo = new TextBox();
+            txt_CodMetodo = new TextBox();
             label3 = new Label();
             label2 = new Label();
             dataGridView1 = new DataGridView();
@@ -44,40 +44,40 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // button3
+            // btn_InMetodo
             // 
-            button3.Location = new Point(436, 372);
-            button3.Name = "button3";
-            button3.Size = new Size(170, 38);
-            button3.TabIndex = 19;
-            button3.Text = "INHABILITAR ";
-            button3.UseVisualStyleBackColor = true;
+            btn_InMetodo.Location = new Point(436, 372);
+            btn_InMetodo.Name = "btn_InMetodo";
+            btn_InMetodo.Size = new Size(170, 38);
+            btn_InMetodo.TabIndex = 19;
+            btn_InMetodo.Text = "INHABILITAR ";
+            btn_InMetodo.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_ModMetodo
             // 
-            button2.Location = new Point(436, 317);
-            button2.Name = "button2";
-            button2.Size = new Size(170, 38);
-            button2.TabIndex = 18;
-            button2.Text = "MODIFICAR DATOS";
-            button2.UseVisualStyleBackColor = true;
+            btn_ModMetodo.Location = new Point(436, 317);
+            btn_ModMetodo.Name = "btn_ModMetodo";
+            btn_ModMetodo.Size = new Size(170, 38);
+            btn_ModMetodo.TabIndex = 18;
+            btn_ModMetodo.Text = "MODIFICAR DATOS";
+            btn_ModMetodo.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_AgrMetodo
             // 
-            button1.Location = new Point(436, 262);
-            button1.Name = "button1";
-            button1.Size = new Size(170, 38);
-            button1.TabIndex = 17;
-            button1.Text = "AGREGAR";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btn_AgrMetodo.Location = new Point(436, 262);
+            btn_AgrMetodo.Name = "btn_AgrMetodo";
+            btn_AgrMetodo.Size = new Size(170, 38);
+            btn_AgrMetodo.TabIndex = 17;
+            btn_AgrMetodo.Text = "AGREGAR";
+            btn_AgrMetodo.UseVisualStyleBackColor = true;
+            btn_AgrMetodo.Click += button1_Click;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(txt_TipoMetodo);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txt_NombMetodo);
+            groupBox1.Controls.Add(txt_CodMetodo);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
@@ -88,13 +88,13 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "DETALLES";
             // 
-            // textBox3
+            // txt_TipoMetodo
             // 
-            textBox3.Font = new Font("Segoe UI", 9.75F);
-            textBox3.Location = new Point(154, 100);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(193, 25);
-            textBox3.TabIndex = 11;
+            txt_TipoMetodo.Font = new Font("Segoe UI", 9.75F);
+            txt_TipoMetodo.Location = new Point(154, 100);
+            txt_TipoMetodo.Name = "txt_TipoMetodo";
+            txt_TipoMetodo.Size = new Size(193, 25);
+            txt_TipoMetodo.TabIndex = 11;
             // 
             // label4
             // 
@@ -106,21 +106,21 @@
             label4.TabIndex = 10;
             label4.Text = "Tipo:";
             // 
-            // textBox2
+            // txt_NombMetodo
             // 
-            textBox2.Font = new Font("Segoe UI", 9.75F);
-            textBox2.Location = new Point(154, 67);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(193, 25);
-            textBox2.TabIndex = 9;
+            txt_NombMetodo.Font = new Font("Segoe UI", 9.75F);
+            txt_NombMetodo.Location = new Point(154, 67);
+            txt_NombMetodo.Name = "txt_NombMetodo";
+            txt_NombMetodo.Size = new Size(193, 25);
+            txt_NombMetodo.TabIndex = 9;
             // 
-            // textBox1
+            // txt_CodMetodo
             // 
-            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(154, 36);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(193, 25);
-            textBox1.TabIndex = 8;
+            txt_CodMetodo.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_CodMetodo.Location = new Point(154, 36);
+            txt_CodMetodo.Name = "txt_CodMetodo";
+            txt_CodMetodo.Size = new Size(193, 25);
+            txt_CodMetodo.TabIndex = 8;
             // 
             // label3
             // 
@@ -165,9 +165,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(660, 432);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btn_InMetodo);
+            Controls.Add(btn_ModMetodo);
+            Controls.Add(btn_AgrMetodo);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
@@ -182,17 +182,17 @@
 
         #endregion
 
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btn_InMetodo;
+        private Button btn_ModMetodo;
+        private Button btn_AgrMetodo;
         private GroupBox groupBox1;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txt_NombMetodo;
+        private TextBox txt_CodMetodo;
         private Label label3;
         private Label label2;
         private DataGridView dataGridView1;
         private Label label1;
-        private TextBox textBox3;
+        private TextBox txt_TipoMetodo;
         private Label label4;
     }
 }
