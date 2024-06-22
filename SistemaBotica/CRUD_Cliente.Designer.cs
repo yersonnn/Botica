@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btn_InCliente = new Button();
+            btn_ModCliente = new Button();
+            btn_AgrCliente = new Button();
             groupBox1 = new GroupBox();
-            textBox4 = new TextBox();
+            txt_TelfCliente = new TextBox();
             label5 = new Label();
-            textBox3 = new TextBox();
+            txt_CorreoCliente = new TextBox();
             label4 = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txt_NombCliente = new TextBox();
+            txt_DniCliente = new TextBox();
             label3 = new Label();
             label2 = new Label();
             dataGridView1 = new DataGridView();
@@ -46,41 +46,41 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // button3
+            // btn_InCliente
             // 
-            button3.Location = new Point(507, 394);
-            button3.Name = "button3";
-            button3.Size = new Size(170, 38);
-            button3.TabIndex = 13;
-            button3.Text = "INHABILITAR CLIENTE";
-            button3.UseVisualStyleBackColor = true;
+            btn_InCliente.Location = new Point(507, 394);
+            btn_InCliente.Name = "btn_InCliente";
+            btn_InCliente.Size = new Size(170, 38);
+            btn_InCliente.TabIndex = 13;
+            btn_InCliente.Text = "INHABILITAR CLIENTE";
+            btn_InCliente.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_ModCliente
             // 
-            button2.Location = new Point(507, 339);
-            button2.Name = "button2";
-            button2.Size = new Size(170, 38);
-            button2.TabIndex = 12;
-            button2.Text = "MODIFICAR DATOS";
-            button2.UseVisualStyleBackColor = true;
+            btn_ModCliente.Location = new Point(507, 339);
+            btn_ModCliente.Name = "btn_ModCliente";
+            btn_ModCliente.Size = new Size(170, 38);
+            btn_ModCliente.TabIndex = 12;
+            btn_ModCliente.Text = "MODIFICAR DATOS";
+            btn_ModCliente.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_AgrCliente
             // 
-            button1.Location = new Point(507, 284);
-            button1.Name = "button1";
-            button1.Size = new Size(170, 38);
-            button1.TabIndex = 11;
-            button1.Text = "AGREGAR CLIENTE";
-            button1.UseVisualStyleBackColor = true;
+            btn_AgrCliente.Location = new Point(507, 284);
+            btn_AgrCliente.Name = "btn_AgrCliente";
+            btn_AgrCliente.Size = new Size(170, 38);
+            btn_AgrCliente.TabIndex = 11;
+            btn_AgrCliente.Text = "AGREGAR CLIENTE";
+            btn_AgrCliente.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(txt_TelfCliente);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(txt_CorreoCliente);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txt_NombCliente);
+            groupBox1.Controls.Add(txt_DniCliente);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
@@ -91,13 +91,13 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "DETALLES";
             // 
-            // textBox4
+            // txt_TelfCliente
             // 
-            textBox4.Font = new Font("Segoe UI", 9.75F);
-            textBox4.Location = new Point(154, 140);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(193, 25);
-            textBox4.TabIndex = 13;
+            txt_TelfCliente.Font = new Font("Segoe UI", 9.75F);
+            txt_TelfCliente.Location = new Point(154, 140);
+            txt_TelfCliente.Name = "txt_TelfCliente";
+            txt_TelfCliente.Size = new Size(193, 25);
+            txt_TelfCliente.TabIndex = 13;
             // 
             // label5
             // 
@@ -109,13 +109,13 @@
             label5.TabIndex = 12;
             label5.Text = "Telf. Celular:";
             // 
-            // textBox3
+            // txt_CorreoCliente
             // 
-            textBox3.Font = new Font("Segoe UI", 9.75F);
-            textBox3.Location = new Point(154, 103);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(288, 25);
-            textBox3.TabIndex = 11;
+            txt_CorreoCliente.Font = new Font("Segoe UI", 9.75F);
+            txt_CorreoCliente.Location = new Point(154, 103);
+            txt_CorreoCliente.Name = "txt_CorreoCliente";
+            txt_CorreoCliente.Size = new Size(288, 25);
+            txt_CorreoCliente.TabIndex = 11;
             // 
             // label4
             // 
@@ -127,22 +127,22 @@
             label4.TabIndex = 10;
             label4.Text = "Correo Electronico:";
             // 
-            // textBox2
+            // txt_NombCliente
             // 
-            textBox2.Font = new Font("Segoe UI", 9.75F);
-            textBox2.Location = new Point(154, 66);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(288, 25);
-            textBox2.TabIndex = 9;
+            txt_NombCliente.Font = new Font("Segoe UI", 9.75F);
+            txt_NombCliente.Location = new Point(154, 66);
+            txt_NombCliente.Name = "txt_NombCliente";
+            txt_NombCliente.Size = new Size(288, 25);
+            txt_NombCliente.TabIndex = 9;
             // 
-            // textBox1
+            // txt_DniCliente
             // 
-            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(154, 28);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(144, 25);
-            textBox1.TabIndex = 8;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txt_DniCliente.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_DniCliente.Location = new Point(154, 28);
+            txt_DniCliente.Name = "txt_DniCliente";
+            txt_DniCliente.Size = new Size(144, 25);
+            txt_DniCliente.TabIndex = 8;
+            txt_DniCliente.TextChanged += textBox1_TextChanged;
             // 
             // label3
             // 
@@ -187,9 +187,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(695, 459);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btn_InCliente);
+            Controls.Add(btn_ModCliente);
+            Controls.Add(btn_AgrCliente);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
@@ -204,16 +204,16 @@
 
         #endregion
 
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btn_InCliente;
+        private Button btn_ModCliente;
+        private Button btn_AgrCliente;
         private GroupBox groupBox1;
-        private TextBox textBox4;
+        private TextBox txt_TelfCliente;
         private Label label5;
-        private TextBox textBox3;
+        private TextBox txt_CorreoCliente;
         private Label label4;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txt_NombCliente;
+        private TextBox txt_DniCliente;
         private Label label3;
         private Label label2;
         private DataGridView dataGridView1;
