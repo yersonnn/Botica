@@ -103,7 +103,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(70, 143);
+            label5.Location = new Point(74, 139);
             label5.Name = "label5";
             label5.Size = new Size(70, 20);
             label5.TabIndex = 12;
@@ -121,11 +121,12 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(9, 104);
+            label4.Location = new Point(81, 102);
             label4.Name = "label4";
-            label4.Size = new Size(135, 20);
+            label4.Size = new Size(59, 20);
             label4.TabIndex = 10;
-            label4.Text = "Correo Electronico:";
+            label4.Text = "Ciudad:";
+            label4.Click += label4_Click;
             // 
             // textBox2
             // 
