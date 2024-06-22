@@ -38,10 +38,10 @@
             txt_CodMetodo = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            dataGridView1 = new DataGridView();
+            dgv_MetPago = new DataGridView();
             label1 = new Label();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_MetPago).BeginInit();
             SuspendLayout();
             // 
             // btn_InMetodo
@@ -142,13 +142,13 @@
             label2.TabIndex = 6;
             label2.Text = "Codigo:";
             // 
-            // dataGridView1
+            // dgv_MetPago
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 47);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(607, 181);
-            dataGridView1.TabIndex = 15;
+            dgv_MetPago.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_MetPago.Location = new Point(12, 47);
+            dgv_MetPago.Name = "dgv_MetPago";
+            dgv_MetPago.Size = new Size(607, 181);
+            dgv_MetPago.TabIndex = 15;
             // 
             // label1
             // 
@@ -169,13 +169,13 @@
             Controls.Add(btn_ModMetodo);
             Controls.Add(btn_AgrMetodo);
             Controls.Add(groupBox1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgv_MetPago);
             Controls.Add(label1);
             Name = "CRUD_MetodoPago";
             Text = "CRUD_MetodoPago";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_MetPago).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -190,7 +190,7 @@
         private TextBox txt_CodMetodo;
         private Label label3;
         private Label label2;
-        private DataGridView dataGridView1;
+        private DataGridView dgv_MetPago;
         private Label label1;
         private TextBox txt_TipoMetodo;
         private Label label4;

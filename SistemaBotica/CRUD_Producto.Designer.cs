@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dgv_Productos = new DataGridView();
             label1 = new Label();
             groupBox1 = new GroupBox();
             txt_StockProducto = new TextBox();
@@ -44,17 +44,17 @@
             btn_ModProducto = new Button();
             btn_AgrProducto = new Button();
             btn_InProducto = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Productos).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_Productos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 50);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(607, 181);
-            dataGridView1.TabIndex = 3;
+            dgv_Productos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_Productos.Location = new Point(12, 50);
+            dgv_Productos.Name = "dgv_Productos";
+            dgv_Productos.Size = new Size(607, 181);
+            dgv_Productos.TabIndex = 3;
             // 
             // label1
             // 
@@ -213,11 +213,11 @@
             Controls.Add(btn_ModProducto);
             Controls.Add(btn_AgrProducto);
             Controls.Add(groupBox1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgv_Productos);
             Controls.Add(label1);
             Name = "CRUD_Producto";
             Text = "CRUD_Producto";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Productos).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -226,7 +226,7 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgv_Productos;
         private Label label1;
         private GroupBox groupBox1;
         private TextBox txt_NombProducto;

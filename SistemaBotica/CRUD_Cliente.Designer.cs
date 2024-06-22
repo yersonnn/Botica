@@ -40,10 +40,10 @@
             txt_DniCliente = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            dataGridView1 = new DataGridView();
+            dgv_Clientes = new DataGridView();
             label1 = new Label();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Clientes).BeginInit();
             SuspendLayout();
             // 
             // btn_InCliente
@@ -164,13 +164,13 @@
             label2.TabIndex = 6;
             label2.Text = "DNI:";
             // 
-            // dataGridView1
+            // dgv_Clientes
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(22, 47);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(655, 181);
-            dataGridView1.TabIndex = 9;
+            dgv_Clientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_Clientes.Location = new Point(22, 47);
+            dgv_Clientes.Name = "dgv_Clientes";
+            dgv_Clientes.Size = new Size(655, 181);
+            dgv_Clientes.TabIndex = 9;
             // 
             // label1
             // 
@@ -191,13 +191,13 @@
             Controls.Add(btn_ModCliente);
             Controls.Add(btn_AgrCliente);
             Controls.Add(groupBox1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgv_Clientes);
             Controls.Add(label1);
             Name = "CRUD_Cliente";
             Text = "CRUD_Cliente";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Clientes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -216,7 +216,7 @@
         private TextBox txt_DniCliente;
         private Label label3;
         private Label label2;
-        private DataGridView dataGridView1;
+        private DataGridView dgv_Clientes;
         private Label label1;
     }
 }

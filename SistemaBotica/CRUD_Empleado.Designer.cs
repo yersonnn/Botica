@@ -40,10 +40,10 @@
             txt_DniEmpleado = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            dataGridView1 = new DataGridView();
+            dgv_Empleados = new DataGridView();
             label1 = new Label();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Empleados).BeginInit();
             SuspendLayout();
             // 
             // btn_InEmpleado
@@ -165,13 +165,13 @@
             label2.TabIndex = 6;
             label2.Text = "DNI:";
             // 
-            // dataGridView1
+            // dgv_Empleados
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(24, 47);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(607, 181);
-            dataGridView1.TabIndex = 9;
+            dgv_Empleados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_Empleados.Location = new Point(24, 47);
+            dgv_Empleados.Name = "dgv_Empleados";
+            dgv_Empleados.Size = new Size(607, 181);
+            dgv_Empleados.TabIndex = 9;
             // 
             // label1
             // 
@@ -192,13 +192,13 @@
             Controls.Add(btn_ModEmpleado);
             Controls.Add(btn_AgrEmpleado);
             Controls.Add(groupBox1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgv_Empleados);
             Controls.Add(label1);
             Name = "CRUD_Empleado";
             Text = "CRUD_Empleado";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Empleados).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -217,7 +217,7 @@
         private TextBox txt_DniEmpleado;
         private Label label3;
         private Label label2;
-        private DataGridView dataGridView1;
+        private DataGridView dgv_Empleados;
         private Label label1;
     }
 }
