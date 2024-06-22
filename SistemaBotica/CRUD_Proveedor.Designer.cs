@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             btn_InProveedor = new Button();
-            btn_ModProveedor = new Button();
-            btn_AgrProveedor = new Button();
+            btn_EditProveedor = new Button();
+            btn_NuevProveedor = new Button();
             groupBox1 = new GroupBox();
             txt_TelfProveedor = new TextBox();
             label5 = new Label();
@@ -42,40 +42,46 @@
             label2 = new Label();
             dgv_Proveedores = new DataGridView();
             label1 = new Label();
+            btn_ModProv = new Button();
+            btn_AgProv = new Button();
+            checkBox_Prov = new CheckBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Proveedores).BeginInit();
             SuspendLayout();
             // 
             // btn_InProveedor
             // 
-            btn_InProveedor.Location = new Point(507, 389);
+            btn_InProveedor.Location = new Point(721, 176);
             btn_InProveedor.Name = "btn_InProveedor";
             btn_InProveedor.Size = new Size(170, 38);
             btn_InProveedor.TabIndex = 19;
             btn_InProveedor.Text = "INHABILITAR PROVEEDOR";
             btn_InProveedor.UseVisualStyleBackColor = true;
             // 
-            // btn_ModProveedor
+            // btn_EditProveedor
             // 
-            btn_ModProveedor.Location = new Point(507, 334);
-            btn_ModProveedor.Name = "btn_ModProveedor";
-            btn_ModProveedor.Size = new Size(170, 38);
-            btn_ModProveedor.TabIndex = 18;
-            btn_ModProveedor.Text = "MODIFICAR DATOS";
-            btn_ModProveedor.UseVisualStyleBackColor = true;
+            btn_EditProveedor.Location = new Point(721, 121);
+            btn_EditProveedor.Name = "btn_EditProveedor";
+            btn_EditProveedor.Size = new Size(170, 38);
+            btn_EditProveedor.TabIndex = 18;
+            btn_EditProveedor.Text = "EDITAR DATOS";
+            btn_EditProveedor.UseVisualStyleBackColor = true;
             // 
-            // btn_AgrProveedor
+            // btn_NuevProveedor
             // 
-            btn_AgrProveedor.Location = new Point(507, 279);
-            btn_AgrProveedor.Name = "btn_AgrProveedor";
-            btn_AgrProveedor.Size = new Size(170, 38);
-            btn_AgrProveedor.TabIndex = 17;
-            btn_AgrProveedor.Text = "AGREGAR PROVEEDOR";
-            btn_AgrProveedor.UseVisualStyleBackColor = true;
+            btn_NuevProveedor.Location = new Point(721, 66);
+            btn_NuevProveedor.Name = "btn_NuevProveedor";
+            btn_NuevProveedor.Size = new Size(170, 38);
+            btn_NuevProveedor.TabIndex = 17;
+            btn_NuevProveedor.Text = "NUEVO PROVEEDOR";
+            btn_NuevProveedor.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(checkBox_Prov);
+            groupBox1.Controls.Add(btn_ModProv);
             groupBox1.Controls.Add(txt_TelfProveedor);
+            groupBox1.Controls.Add(btn_AgProv);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(txt_CorreoProveedor);
             groupBox1.Controls.Add(label4);
@@ -86,7 +92,7 @@
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             groupBox1.Location = new Point(22, 250);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(462, 192);
+            groupBox1.Size = new Size(869, 192);
             groupBox1.TabIndex = 16;
             groupBox1.TabStop = false;
             groupBox1.Text = "DETALLES";
@@ -183,14 +189,43 @@
             label1.TabIndex = 14;
             label1.Text = "PROVEEDORES";
             // 
+            // btn_ModProv
+            // 
+            btn_ModProv.Location = new Point(659, 104);
+            btn_ModProv.Name = "btn_ModProv";
+            btn_ModProv.Size = new Size(170, 38);
+            btn_ModProv.TabIndex = 21;
+            btn_ModProv.Text = "MODIFICAR";
+            btn_ModProv.UseVisualStyleBackColor = true;
+            // 
+            // btn_AgProv
+            // 
+            btn_AgProv.Location = new Point(659, 49);
+            btn_AgProv.Name = "btn_AgProv";
+            btn_AgProv.Size = new Size(170, 38);
+            btn_AgProv.TabIndex = 20;
+            btn_AgProv.Text = "AGREGAR";
+            btn_AgProv.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_Prov
+            // 
+            checkBox_Prov.AutoSize = true;
+            checkBox_Prov.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBox_Prov.Location = new Point(488, 134);
+            checkBox_Prov.Name = "checkBox_Prov";
+            checkBox_Prov.Size = new Size(79, 25);
+            checkBox_Prov.TabIndex = 22;
+            checkBox_Prov.Text = "Estado ";
+            checkBox_Prov.UseVisualStyleBackColor = true;
+            // 
             // CRUD_Proveedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(716, 467);
+            ClientSize = new Size(1104, 467);
             Controls.Add(btn_InProveedor);
-            Controls.Add(btn_ModProveedor);
-            Controls.Add(btn_AgrProveedor);
+            Controls.Add(btn_EditProveedor);
+            Controls.Add(btn_NuevProveedor);
             Controls.Add(groupBox1);
             Controls.Add(dgv_Proveedores);
             Controls.Add(label1);
@@ -206,8 +241,8 @@
         #endregion
 
         private Button btn_InProveedor;
-        private Button btn_ModProveedor;
-        private Button btn_AgrProveedor;
+        private Button btn_EditProveedor;
+        private Button btn_NuevProveedor;
         private GroupBox groupBox1;
         private TextBox txt_TelfProveedor;
         private Label label5;
@@ -219,5 +254,8 @@
         private Label label2;
         private DataGridView dgv_Proveedores;
         private Label label1;
+        private Button btn_ModProv;
+        private Button btn_AgProv;
+        private CheckBox checkBox_Prov;
     }
 }

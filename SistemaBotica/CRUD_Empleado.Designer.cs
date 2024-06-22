@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             btn_InEmpleado = new Button();
-            btn_ModEmpleado = new Button();
-            btn_AgrEmpleado = new Button();
             groupBox1 = new GroupBox();
             txt_CargoEmpleado = new TextBox();
             label5 = new Label();
@@ -42,43 +40,32 @@
             label2 = new Label();
             dgv_Empleados = new DataGridView();
             label1 = new Label();
+            btn_EditEmplead = new Button();
+            btn_NuevEmplead = new Button();
+            checkBox_Emple = new CheckBox();
+            btn_ModEmple = new Button();
+            btn_AgEmpl = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Empleados).BeginInit();
             SuspendLayout();
             // 
             // btn_InEmpleado
             // 
-            btn_InEmpleado.Location = new Point(448, 372);
+            btn_InEmpleado.Location = new Point(656, 176);
             btn_InEmpleado.Name = "btn_InEmpleado";
             btn_InEmpleado.Size = new Size(170, 38);
             btn_InEmpleado.TabIndex = 13;
             btn_InEmpleado.Text = "INHABILITAR EMPLEADO";
             btn_InEmpleado.UseVisualStyleBackColor = true;
             // 
-            // btn_ModEmpleado
-            // 
-            btn_ModEmpleado.Location = new Point(448, 317);
-            btn_ModEmpleado.Name = "btn_ModEmpleado";
-            btn_ModEmpleado.Size = new Size(170, 38);
-            btn_ModEmpleado.TabIndex = 12;
-            btn_ModEmpleado.Text = "MODIFICAR DATOS";
-            btn_ModEmpleado.UseVisualStyleBackColor = true;
-            // 
-            // btn_AgrEmpleado
-            // 
-            btn_AgrEmpleado.Location = new Point(448, 262);
-            btn_AgrEmpleado.Name = "btn_AgrEmpleado";
-            btn_AgrEmpleado.Size = new Size(170, 38);
-            btn_AgrEmpleado.TabIndex = 11;
-            btn_AgrEmpleado.Text = "AGREGAR EMPLEADO";
-            btn_AgrEmpleado.UseVisualStyleBackColor = true;
-            btn_AgrEmpleado.Click += button1_Click;
-            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(txt_CargoEmpleado);
             groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(checkBox_Emple);
             groupBox1.Controls.Add(txt_TelfEmpleado);
+            groupBox1.Controls.Add(btn_ModEmple);
+            groupBox1.Controls.Add(btn_AgEmpl);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(txt_NombEmpleado);
             groupBox1.Controls.Add(txt_DniEmpleado);
@@ -87,7 +74,7 @@
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             groupBox1.Location = new Point(24, 250);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(378, 179);
+            groupBox1.Size = new Size(684, 179);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "DETALLES";
@@ -183,14 +170,61 @@
             label1.TabIndex = 8;
             label1.Text = "EMPLEADOS";
             // 
+            // btn_EditEmplead
+            // 
+            btn_EditEmplead.Location = new Point(656, 120);
+            btn_EditEmplead.Name = "btn_EditEmplead";
+            btn_EditEmplead.Size = new Size(170, 38);
+            btn_EditEmplead.TabIndex = 29;
+            btn_EditEmplead.Text = "EDITAR DATOS";
+            btn_EditEmplead.UseVisualStyleBackColor = true;
+            // 
+            // btn_NuevEmplead
+            // 
+            btn_NuevEmplead.Location = new Point(656, 66);
+            btn_NuevEmplead.Name = "btn_NuevEmplead";
+            btn_NuevEmplead.Size = new Size(170, 38);
+            btn_NuevEmplead.TabIndex = 28;
+            btn_NuevEmplead.Text = "NUEVO EMPLEADO";
+            btn_NuevEmplead.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_Emple
+            // 
+            checkBox_Emple.AutoSize = true;
+            checkBox_Emple.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBox_Emple.Location = new Point(384, 112);
+            checkBox_Emple.Name = "checkBox_Emple";
+            checkBox_Emple.Size = new Size(79, 25);
+            checkBox_Emple.TabIndex = 32;
+            checkBox_Emple.Text = "Estado ";
+            checkBox_Emple.UseVisualStyleBackColor = true;
+            // 
+            // btn_ModEmple
+            // 
+            btn_ModEmple.Location = new Point(488, 104);
+            btn_ModEmple.Name = "btn_ModEmple";
+            btn_ModEmple.Size = new Size(170, 38);
+            btn_ModEmple.TabIndex = 31;
+            btn_ModEmple.Text = "MODIFICAR";
+            btn_ModEmple.UseVisualStyleBackColor = true;
+            // 
+            // btn_AgEmpl
+            // 
+            btn_AgEmpl.Location = new Point(488, 48);
+            btn_AgEmpl.Name = "btn_AgEmpl";
+            btn_AgEmpl.Size = new Size(170, 38);
+            btn_AgEmpl.TabIndex = 30;
+            btn_AgEmpl.Text = "AGREGAR";
+            btn_AgEmpl.UseVisualStyleBackColor = true;
+            // 
             // CRUD_Empleado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(666, 454);
+            ClientSize = new Size(847, 454);
+            Controls.Add(btn_EditEmplead);
+            Controls.Add(btn_NuevEmplead);
             Controls.Add(btn_InEmpleado);
-            Controls.Add(btn_ModEmpleado);
-            Controls.Add(btn_AgrEmpleado);
             Controls.Add(groupBox1);
             Controls.Add(dgv_Empleados);
             Controls.Add(label1);
@@ -206,8 +240,6 @@
         #endregion
 
         private Button btn_InEmpleado;
-        private Button btn_ModEmpleado;
-        private Button btn_AgrEmpleado;
         private GroupBox groupBox1;
         private TextBox txt_CargoEmpleado;
         private Label label5;
@@ -219,5 +251,10 @@
         private Label label2;
         private DataGridView dgv_Empleados;
         private Label label1;
+        private Button btn_EditEmplead;
+        private Button btn_NuevEmplead;
+        private CheckBox checkBox_Emple;
+        private Button btn_ModEmple;
+        private Button btn_AgEmpl;
     }
 }

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             btn_InCliente = new Button();
-            btn_ModCliente = new Button();
-            btn_AgrCliente = new Button();
             groupBox1 = new GroupBox();
             txt_TelfCliente = new TextBox();
             label5 = new Label();
@@ -42,42 +40,32 @@
             label2 = new Label();
             dgv_Clientes = new DataGridView();
             label1 = new Label();
+            btn_EditClient = new Button();
+            btn_NuevClient = new Button();
+            checkBox_Clie = new CheckBox();
+            btn_ModClie = new Button();
+            btn_AgClien = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Clientes).BeginInit();
             SuspendLayout();
             // 
             // btn_InCliente
             // 
-            btn_InCliente.Location = new Point(507, 394);
+            btn_InCliente.Location = new Point(699, 171);
             btn_InCliente.Name = "btn_InCliente";
             btn_InCliente.Size = new Size(170, 38);
             btn_InCliente.TabIndex = 13;
             btn_InCliente.Text = "INHABILITAR CLIENTE";
             btn_InCliente.UseVisualStyleBackColor = true;
             // 
-            // btn_ModCliente
-            // 
-            btn_ModCliente.Location = new Point(507, 339);
-            btn_ModCliente.Name = "btn_ModCliente";
-            btn_ModCliente.Size = new Size(170, 38);
-            btn_ModCliente.TabIndex = 12;
-            btn_ModCliente.Text = "MODIFICAR DATOS";
-            btn_ModCliente.UseVisualStyleBackColor = true;
-            // 
-            // btn_AgrCliente
-            // 
-            btn_AgrCliente.Location = new Point(507, 284);
-            btn_AgrCliente.Name = "btn_AgrCliente";
-            btn_AgrCliente.Size = new Size(170, 38);
-            btn_AgrCliente.TabIndex = 11;
-            btn_AgrCliente.Text = "AGREGAR CLIENTE";
-            btn_AgrCliente.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(txt_TelfCliente);
             groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(checkBox_Clie);
             groupBox1.Controls.Add(txt_CorreoCliente);
+            groupBox1.Controls.Add(btn_ModClie);
+            groupBox1.Controls.Add(btn_AgClien);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(txt_NombCliente);
             groupBox1.Controls.Add(txt_DniCliente);
@@ -86,7 +74,7 @@
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             groupBox1.Location = new Point(22, 255);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(462, 192);
+            groupBox1.Size = new Size(825, 192);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "DETALLES";
@@ -182,14 +170,61 @@
             label1.TabIndex = 8;
             label1.Text = "CLIENTES";
             // 
+            // btn_EditClient
+            // 
+            btn_EditClient.Location = new Point(699, 117);
+            btn_EditClient.Name = "btn_EditClient";
+            btn_EditClient.Size = new Size(170, 38);
+            btn_EditClient.TabIndex = 34;
+            btn_EditClient.Text = "EDITAR DATOS";
+            btn_EditClient.UseVisualStyleBackColor = true;
+            // 
+            // btn_NuevClient
+            // 
+            btn_NuevClient.Location = new Point(699, 62);
+            btn_NuevClient.Name = "btn_NuevClient";
+            btn_NuevClient.Size = new Size(170, 38);
+            btn_NuevClient.TabIndex = 33;
+            btn_NuevClient.Text = "NUEVO EMPLEADO";
+            btn_NuevClient.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_Clie
+            // 
+            checkBox_Clie.AutoSize = true;
+            checkBox_Clie.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBox_Clie.Location = new Point(487, 141);
+            checkBox_Clie.Name = "checkBox_Clie";
+            checkBox_Clie.Size = new Size(79, 25);
+            checkBox_Clie.TabIndex = 37;
+            checkBox_Clie.Text = "Estado ";
+            checkBox_Clie.UseVisualStyleBackColor = true;
+            // 
+            // btn_ModClie
+            // 
+            btn_ModClie.Location = new Point(628, 104);
+            btn_ModClie.Name = "btn_ModClie";
+            btn_ModClie.Size = new Size(170, 38);
+            btn_ModClie.TabIndex = 36;
+            btn_ModClie.Text = "MODIFICAR";
+            btn_ModClie.UseVisualStyleBackColor = true;
+            // 
+            // btn_AgClien
+            // 
+            btn_AgClien.Location = new Point(628, 48);
+            btn_AgClien.Name = "btn_AgClien";
+            btn_AgClien.Size = new Size(170, 38);
+            btn_AgClien.TabIndex = 35;
+            btn_AgClien.Text = "AGREGAR";
+            btn_AgClien.UseVisualStyleBackColor = true;
+            // 
             // CRUD_Cliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(695, 459);
+            ClientSize = new Size(913, 459);
+            Controls.Add(btn_EditClient);
+            Controls.Add(btn_NuevClient);
             Controls.Add(btn_InCliente);
-            Controls.Add(btn_ModCliente);
-            Controls.Add(btn_AgrCliente);
             Controls.Add(groupBox1);
             Controls.Add(dgv_Clientes);
             Controls.Add(label1);
@@ -205,8 +240,6 @@
         #endregion
 
         private Button btn_InCliente;
-        private Button btn_ModCliente;
-        private Button btn_AgrCliente;
         private GroupBox groupBox1;
         private TextBox txt_TelfCliente;
         private Label label5;
@@ -218,5 +251,10 @@
         private Label label2;
         private DataGridView dgv_Clientes;
         private Label label1;
+        private CheckBox checkBox_Clie;
+        private Button btn_ModClie;
+        private Button btn_AgClien;
+        private Button btn_EditClient;
+        private Button btn_NuevClient;
     }
 }

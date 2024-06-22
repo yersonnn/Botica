@@ -41,9 +41,12 @@
             txt_CodProducto = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            btn_ModProducto = new Button();
-            btn_AgrProducto = new Button();
             btn_InProducto = new Button();
+            btn_EditProduc = new Button();
+            btn_NuevProduc = new Button();
+            checkBox_Produc = new CheckBox();
+            btn_ModProduc = new Button();
+            btn_AgProduc = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_Productos).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -70,7 +73,10 @@
             // 
             groupBox1.Controls.Add(txt_StockProducto);
             groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(checkBox_Produc);
             groupBox1.Controls.Add(txt_PrecProducto);
+            groupBox1.Controls.Add(btn_ModProduc);
+            groupBox1.Controls.Add(btn_AgProduc);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(txt_CatProducto);
             groupBox1.Controls.Add(label4);
@@ -81,7 +87,7 @@
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             groupBox1.Location = new Point(12, 250);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(338, 222);
+            groupBox1.Size = new Size(667, 222);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "DETALLES";
@@ -177,41 +183,70 @@
             label2.TabIndex = 6;
             label2.Text = "Codigo:";
             // 
-            // btn_ModProducto
-            // 
-            btn_ModProducto.Location = new Point(396, 336);
-            btn_ModProducto.Name = "btn_ModProducto";
-            btn_ModProducto.Size = new Size(170, 38);
-            btn_ModProducto.TabIndex = 6;
-            btn_ModProducto.Text = "MODIFICAR PRODUCTO";
-            btn_ModProducto.UseVisualStyleBackColor = true;
-            // 
-            // btn_AgrProducto
-            // 
-            btn_AgrProducto.Location = new Point(396, 281);
-            btn_AgrProducto.Name = "btn_AgrProducto";
-            btn_AgrProducto.Size = new Size(170, 38);
-            btn_AgrProducto.TabIndex = 5;
-            btn_AgrProducto.Text = "AGREGAR PRODUCTO";
-            btn_AgrProducto.UseVisualStyleBackColor = true;
-            // 
             // btn_InProducto
             // 
-            btn_InProducto.Location = new Point(396, 391);
+            btn_InProducto.Location = new Point(660, 174);
             btn_InProducto.Name = "btn_InProducto";
             btn_InProducto.Size = new Size(170, 38);
             btn_InProducto.TabIndex = 7;
             btn_InProducto.Text = "INHABILITAR PRODUCTO";
             btn_InProducto.UseVisualStyleBackColor = true;
             // 
+            // btn_EditProduc
+            // 
+            btn_EditProduc.Location = new Point(660, 116);
+            btn_EditProduc.Name = "btn_EditProduc";
+            btn_EditProduc.Size = new Size(170, 38);
+            btn_EditProduc.TabIndex = 24;
+            btn_EditProduc.Text = "EDITAR DATOS";
+            btn_EditProduc.UseVisualStyleBackColor = true;
+            // 
+            // btn_NuevProduc
+            // 
+            btn_NuevProduc.Location = new Point(660, 62);
+            btn_NuevProduc.Name = "btn_NuevProduc";
+            btn_NuevProduc.Size = new Size(170, 38);
+            btn_NuevProduc.TabIndex = 23;
+            btn_NuevProduc.Text = "NUEVO PRODUCTO";
+            btn_NuevProduc.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_Produc
+            // 
+            checkBox_Produc.AutoSize = true;
+            checkBox_Produc.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBox_Produc.Location = new Point(329, 174);
+            checkBox_Produc.Name = "checkBox_Produc";
+            checkBox_Produc.Size = new Size(79, 25);
+            checkBox_Produc.TabIndex = 27;
+            checkBox_Produc.Text = "Estado ";
+            checkBox_Produc.UseVisualStyleBackColor = true;
+            // 
+            // btn_ModProduc
+            // 
+            btn_ModProduc.Location = new Point(474, 113);
+            btn_ModProduc.Name = "btn_ModProduc";
+            btn_ModProduc.Size = new Size(170, 38);
+            btn_ModProduc.TabIndex = 26;
+            btn_ModProduc.Text = "MODIFICAR";
+            btn_ModProduc.UseVisualStyleBackColor = true;
+            // 
+            // btn_AgProduc
+            // 
+            btn_AgProduc.Location = new Point(474, 57);
+            btn_AgProduc.Name = "btn_AgProduc";
+            btn_AgProduc.Size = new Size(170, 38);
+            btn_AgProduc.TabIndex = 25;
+            btn_AgProduc.Text = "AGREGAR";
+            btn_AgProduc.UseVisualStyleBackColor = true;
+            // 
             // CRUD_Producto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(641, 492);
+            ClientSize = new Size(847, 492);
+            Controls.Add(btn_EditProduc);
+            Controls.Add(btn_NuevProduc);
             Controls.Add(btn_InProducto);
-            Controls.Add(btn_ModProducto);
-            Controls.Add(btn_AgrProducto);
             Controls.Add(groupBox1);
             Controls.Add(dgv_Productos);
             Controls.Add(label1);
@@ -239,8 +274,11 @@
         private Label label5;
         private TextBox txt_CatProducto;
         private Label label4;
-        private Button btn_ModProducto;
-        private Button btn_AgrProducto;
         private Button btn_InProducto;
+        private CheckBox checkBox_Produc;
+        private Button btn_ModProduc;
+        private Button btn_AgProduc;
+        private Button btn_EditProduc;
+        private Button btn_NuevProduc;
     }
 }
