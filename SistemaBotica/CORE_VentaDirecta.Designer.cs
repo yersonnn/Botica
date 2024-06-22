@@ -38,6 +38,8 @@
             label3 = new Label();
             label2 = new Label();
             groupBox2 = new GroupBox();
+            textBox5 = new TextBox();
+            label8 = new Label();
             textBox4 = new TextBox();
             label7 = new Label();
             label6 = new Label();
@@ -50,8 +52,6 @@
             groupBox3 = new GroupBox();
             dateTimePicker1 = new DateTimePicker();
             button5 = new Button();
-            textBox5 = new TextBox();
-            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -161,7 +161,25 @@
             groupBox2.Size = new Size(429, 162);
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
-            groupBox2.Text = "VENTA DIRECTA";
+            groupBox2.Text = "VENTA PRODUCTO";
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 9.75F);
+            textBox5.Location = new Point(102, 62);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(272, 25);
+            textBox5.TabIndex = 12;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(19, 67);
+            label8.Name = "label8";
+            label8.Size = new Size(67, 20);
+            label8.TabIndex = 11;
+            label8.Text = "Nombre:";
             // 
             // textBox4
             // 
@@ -272,24 +290,6 @@
             button5.TabIndex = 10;
             button5.Text = "MODIFICAR VENTA";
             button5.UseVisualStyleBackColor = true;
-            // 
-            // textBox5
-            // 
-            textBox5.Font = new Font("Segoe UI", 9.75F);
-            textBox5.Location = new Point(102, 62);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(272, 25);
-            textBox5.TabIndex = 12;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(19, 67);
-            label8.Name = "label8";
-            label8.Size = new Size(67, 20);
-            label8.TabIndex = 11;
-            label8.Text = "Nombre:";
             // 
             // CORE_VentaDirecta
             // 
