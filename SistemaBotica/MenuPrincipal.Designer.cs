@@ -38,6 +38,7 @@
             btn_Inventario = new Button();
             panelmenu = new Panel();
             btn_MetPago = new Button();
+            label2 = new Label();
             panelmenu.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             // btn_Proveedor
             // 
             btn_Proveedor.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Proveedor.Location = new Point(8, 487);
+            btn_Proveedor.Location = new Point(1, 397);
             btn_Proveedor.Name = "btn_Proveedor";
             btn_Proveedor.Size = new Size(194, 60);
             btn_Proveedor.TabIndex = 5;
@@ -63,7 +64,7 @@
             // btn_Cliente
             // 
             btn_Cliente.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Cliente.Location = new Point(8, 287);
+            btn_Cliente.Location = new Point(1, 197);
             btn_Cliente.Name = "btn_Cliente";
             btn_Cliente.Size = new Size(194, 60);
             btn_Cliente.TabIndex = 1;
@@ -74,7 +75,7 @@
             // btn_Empleado
             // 
             btn_Empleado.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Empleado.Location = new Point(8, 353);
+            btn_Empleado.Location = new Point(1, 263);
             btn_Empleado.Name = "btn_Empleado";
             btn_Empleado.Size = new Size(194, 60);
             btn_Empleado.TabIndex = 3;
@@ -85,18 +86,19 @@
             // btn_Venta
             // 
             btn_Venta.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Venta.Location = new Point(8, 101);
+            btn_Venta.Location = new Point(8, 37);
             btn_Venta.Name = "btn_Venta";
             btn_Venta.Size = new Size(194, 60);
             btn_Venta.TabIndex = 6;
             btn_Venta.Text = "VENTA";
             btn_Venta.UseVisualStyleBackColor = true;
+            btn_Venta.Visible = false;
             btn_Venta.Click += btn_Venta_Click;
             // 
             // btn_Producto
             // 
             btn_Producto.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Producto.Location = new Point(8, 419);
+            btn_Producto.Location = new Point(1, 329);
             btn_Producto.Name = "btn_Producto";
             btn_Producto.Size = new Size(194, 60);
             btn_Producto.TabIndex = 4;
@@ -108,7 +110,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(21, 35);
+            label1.Location = new Point(18, 3);
             label1.Name = "label1";
             label1.Size = new Size(181, 28);
             label1.TabIndex = 2;
@@ -117,16 +119,18 @@
             // btn_Inventario
             // 
             btn_Inventario.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Inventario.Location = new Point(8, 167);
+            btn_Inventario.Location = new Point(8, 103);
             btn_Inventario.Name = "btn_Inventario";
             btn_Inventario.Size = new Size(194, 60);
             btn_Inventario.TabIndex = 7;
             btn_Inventario.Text = "INVENTARIO";
             btn_Inventario.UseVisualStyleBackColor = true;
+            btn_Inventario.Visible = false;
             btn_Inventario.Click += btn_Inventario_Click;
             // 
             // panelmenu
             // 
+            panelmenu.Controls.Add(label2);
             panelmenu.Controls.Add(btn_MetPago);
             panelmenu.Controls.Add(btn_Inventario);
             panelmenu.Controls.Add(label1);
@@ -143,13 +147,24 @@
             // btn_MetPago
             // 
             btn_MetPago.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_MetPago.Location = new Point(11, 558);
+            btn_MetPago.Location = new Point(4, 468);
             btn_MetPago.Name = "btn_MetPago";
             btn_MetPago.Size = new Size(194, 60);
             btn_MetPago.TabIndex = 8;
             btn_MetPago.Text = "Metodo de Pago";
             btn_MetPago.UseVisualStyleBackColor = true;
             btn_MetPago.Click += btn_MetPago_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(11, 166);
+            label2.Name = "label2";
+            label2.Size = new Size(177, 28);
+            label2.TabIndex = 9;
+            label2.Text = "MANTENEDORES";
+            label2.Click += label2_Click;
             // 
             // MenuPrincipal
             // 
@@ -177,5 +192,6 @@
         private Button btn_Inventario;
         private Panel panelmenu;
         private Button btn_MetPago;
+        private Label label2;
     }
 }
