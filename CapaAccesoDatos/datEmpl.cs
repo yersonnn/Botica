@@ -101,7 +101,7 @@ namespace CapaAccesoDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarEmpl", cn);
+                cmd = new SqlCommand("spEditarEmpl", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Nombempleado", Empl.NombEmpl);
                 cmd.Parameters.AddWithValue("@Celemplead", Empl.CeluEmpl);

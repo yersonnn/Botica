@@ -23,7 +23,7 @@ namespace CapaPresentacion
 
             InitializeComponent();
             OcultarBarra();
-            listarCli();
+            //listarCli();
             groupBox1.Enabled = false;
             //txtidCliente.Enabled = false;
         }
