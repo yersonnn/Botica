@@ -37,8 +37,8 @@
             label1 = new Label();
             btn_Inventario = new Button();
             panelmenu = new Panel();
-            btn_MetPago = new Button();
             label2 = new Label();
+            btn_MetPago = new Button();
             panelmenu.SuspendLayout();
             SuspendLayout();
             // 
@@ -143,17 +143,7 @@
             panelmenu.Name = "panelmenu";
             panelmenu.Size = new Size(208, 727);
             panelmenu.TabIndex = 1;
-            // 
-            // btn_MetPago
-            // 
-            btn_MetPago.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_MetPago.Location = new Point(4, 468);
-            btn_MetPago.Name = "btn_MetPago";
-            btn_MetPago.Size = new Size(194, 60);
-            btn_MetPago.TabIndex = 8;
-            btn_MetPago.Text = "Metodo de Pago";
-            btn_MetPago.UseVisualStyleBackColor = true;
-            btn_MetPago.Click += btn_MetPago_Click;
+            panelmenu.Paint += panelmenu_Paint;
             // 
             // label2
             // 
@@ -165,6 +155,17 @@
             label2.TabIndex = 9;
             label2.Text = "MANTENEDORES";
             label2.Click += label2_Click;
+            // 
+            // btn_MetPago
+            // 
+            btn_MetPago.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_MetPago.Location = new Point(4, 468);
+            btn_MetPago.Name = "btn_MetPago";
+            btn_MetPago.Size = new Size(194, 60);
+            btn_MetPago.TabIndex = 8;
+            btn_MetPago.Text = "Metodo de Pago";
+            btn_MetPago.UseVisualStyleBackColor = true;
+            btn_MetPago.Click += btn_MetPago_Click;
             // 
             // MenuPrincipal
             // 

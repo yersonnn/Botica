@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,7 @@ namespace CapaPresentacion
         public MenuPrincipal()
         {
             InitializeComponent();
+            MessageBox.Show("CONFIGURAR NOMBRE DEL HOST EN LA CLASE CONEXION");
         }
 
 
@@ -33,7 +35,7 @@ namespace CapaPresentacion
             PanelCont.Controls.Add(f);
             f.Show();
         }
-
+      
 
         private void btn_Venta_Click(object sender, EventArgs e)
         {
@@ -77,6 +79,11 @@ namespace CapaPresentacion
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelmenu_Paint(object sender, PaintEventArgs e)
         {
 
         }

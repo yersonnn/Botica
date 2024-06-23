@@ -25,7 +25,7 @@ namespace CapaPresentacion
             OcultarBarra();
             listarCli();
             groupBox1.Enabled = false;
-            //txtidCliente.Enabled = false;
+            
         }
         void OcultarBarra()
         {

@@ -20,7 +20,7 @@ namespace CapaPresentacion
             OcultarBarra();
             listarEmpl();
             groupBox1.Enabled = false;
-            txt_DniEmpleado.Enabled = false;
+            
         }
 
         void OcultarBarra()

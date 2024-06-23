@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 
 
+
 namespace CapaAccesoDatos
 {
     public class Conexion
@@ -19,6 +20,8 @@ namespace CapaAccesoDatos
         }
         public SqlConnection Conectar()
         {
+            /////CAMBIAR NOMBRE DEL HOST////////
+
             SqlConnection cn = new SqlConnection();
             cn.ConnectionString = "Data Source=DESKTOP-CODMBQV\\SQLEXPRESS; Initial Catalog =FARMACIA_BOTICA;" +
                                 "Integrated Security=true";
