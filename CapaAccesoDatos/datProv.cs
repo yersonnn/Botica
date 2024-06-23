@@ -71,6 +71,7 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarProv", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ProveedorID", Prov.idProv);
                 cmd.Parameters.AddWithValue("@Nombempresa", Prov.NombProv);
                 cmd.Parameters.AddWithValue("@CiudadID", Prov.CiudadProv);
                 cmd.Parameters.AddWithValue("@Telfempresa", Prov.TelfProv);
@@ -103,6 +104,7 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spEditarProv", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ProveedorID", Prov.idProv);
                 cmd.Parameters.AddWithValue("@Nombempresa", Prov.NombProv);
                 cmd.Parameters.AddWithValue("@CiudadID", Prov.CiudadProv);
                 cmd.Parameters.AddWithValue("@Telfempresa", Prov.TelfProv);

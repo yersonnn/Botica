@@ -82,6 +82,7 @@ namespace CapaPresentacion
             try
             {
                 entProv Prov = new entProv();
+                Prov.idProv = int.Parse(txt_CodProveedor.Text.Trim());
                 Prov.NombProv = txt_NombProveedor.Text.Trim();
                 Prov.CiudadProv = int.Parse(txt_CiudProveedor.Text.Trim());
                 //c.fecRegCliente = dtPickerRegCliente.Value;
@@ -103,6 +104,7 @@ namespace CapaPresentacion
             try
             {
                 entProv Prov = new entProv();
+                Prov.idProv = int.Parse(txt_CodProveedor.Text.Trim());
                 Prov.NombProv = txt_NombProveedor.Text.Trim();
                 Prov.CiudadProv = int.Parse(txt_CiudProveedor.Text.Trim());
                 //c.fecRegCliente = dtPickerRegCliente.Value;

@@ -71,6 +71,7 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarCli", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ClienteID", Cli.idCli);
                 cmd.Parameters.AddWithValue("@Nombclient", Cli.NombCli);
                 cmd.Parameters.AddWithValue("@Correoclient", Cli.CorreoCli);
                 cmd.Parameters.AddWithValue("@Celclient", Cli.CeluCli);
@@ -103,6 +104,7 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spEditarCli", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ClienteID", Cli.idCli);
                 cmd.Parameters.AddWithValue("@Nombclient", Cli.NombCli);
                 cmd.Parameters.AddWithValue("@Correoclient", Cli.CorreoCli);
                 cmd.Parameters.AddWithValue("@Celclient", Cli.CeluCli);

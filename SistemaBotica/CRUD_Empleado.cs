@@ -85,6 +85,7 @@ namespace CapaPresentacion
             try
             {
                 entEmpl empl = new entEmpl();
+                empl.idEmpl= int.Parse(txt_DniEmpleado.Text.Trim());
                 empl.NombEmpl = txt_NombEmpleado.Text.Trim();
                 empl.CeluEmpl = int.Parse(txt_TelfEmpleado.Text.Trim());
                 empl.CargoEmpl = txt_CargoEmpleado.Text.Trim();
@@ -114,6 +115,7 @@ namespace CapaPresentacion
             try
             {
                 entEmpl empl = new entEmpl();
+                empl.idEmpl = int.Parse(txt_DniEmpleado.Text.Trim());
                 empl.NombEmpl = txt_NombEmpleado.Text.Trim();
                 empl.CeluEmpl = int.Parse(txt_TelfEmpleado.Text.Trim());
                 empl.CargoEmpl = txt_CargoEmpleado.Text.Trim();

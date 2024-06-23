@@ -73,6 +73,7 @@ namespace CapaPresentacion
             try
             {
                 entCliente cli = new entCliente();
+                cli.idCli= int.Parse(txt_DniCliente.Text.Trim());
                 cli.NombCli = txt_NombCliente.Text.Trim();
                 cli.CorreoCli = txt_CorreoCliente.Text.Trim();
                 //c.fecRegCliente = dtPickerRegCliente.Value;
@@ -94,6 +95,7 @@ namespace CapaPresentacion
             try
             {
                 entCliente cli = new entCliente();
+                cli.idCli = int.Parse(txt_DniCliente.Text.Trim());
                 cli.NombCli = txt_NombCliente.Text.Trim();
                 cli.CorreoCli = txt_CorreoCliente.Text.Trim();
                 //c.fecRegCliente = dtPickerRegCliente.Value;
