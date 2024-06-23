@@ -22,7 +22,7 @@ namespace CapaPresentacion
             OcultarBarra();
             listarMetPag();
             groupBoxMetPag.Enabled = false;
-            //txtidCliente.Enabled = false;
+            txt_CodMetodo.Enabled = false;
 
         }
 

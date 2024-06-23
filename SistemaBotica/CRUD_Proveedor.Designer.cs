@@ -32,9 +32,12 @@
             btn_EditProveedor = new Button();
             btn_NuevProveedor = new Button();
             groupBox1 = new GroupBox();
+            checkBox_Prov = new CheckBox();
+            btn_ModProv = new Button();
             txt_TelfProveedor = new TextBox();
+            btn_AgProv = new Button();
             label5 = new Label();
-            txt_CorreoProveedor = new TextBox();
+            txt_CiudProveedor = new TextBox();
             label4 = new Label();
             txt_NombProveedor = new TextBox();
             txt_CodProveedor = new TextBox();
@@ -42,9 +45,6 @@
             label2 = new Label();
             dgv_Proveedores = new DataGridView();
             label1 = new Label();
-            btn_ModProv = new Button();
-            btn_AgProv = new Button();
-            checkBox_Prov = new CheckBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Proveedores).BeginInit();
             SuspendLayout();
@@ -57,6 +57,7 @@
             btn_InProveedor.TabIndex = 19;
             btn_InProveedor.Text = "INHABILITAR PROVEEDOR";
             btn_InProveedor.UseVisualStyleBackColor = true;
+            btn_InProveedor.Click += btn_InProveedor_Click;
             // 
             // btn_EditProveedor
             // 
@@ -66,6 +67,7 @@
             btn_EditProveedor.TabIndex = 18;
             btn_EditProveedor.Text = "EDITAR DATOS";
             btn_EditProveedor.UseVisualStyleBackColor = true;
+            btn_EditProveedor.Click += btn_EditProveedor_Click;
             // 
             // btn_NuevProveedor
             // 
@@ -75,6 +77,7 @@
             btn_NuevProveedor.TabIndex = 17;
             btn_NuevProveedor.Text = "NUEVO PROVEEDOR";
             btn_NuevProveedor.UseVisualStyleBackColor = true;
+            btn_NuevProveedor.Click += btn_NuevProveedor_Click;
             // 
             // groupBox1
             // 
@@ -83,7 +86,7 @@
             groupBox1.Controls.Add(txt_TelfProveedor);
             groupBox1.Controls.Add(btn_AgProv);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(txt_CorreoProveedor);
+            groupBox1.Controls.Add(txt_CiudProveedor);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(txt_NombProveedor);
             groupBox1.Controls.Add(txt_CodProveedor);
@@ -97,6 +100,27 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "DETALLES";
             // 
+            // checkBox_Prov
+            // 
+            checkBox_Prov.AutoSize = true;
+            checkBox_Prov.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBox_Prov.Location = new Point(488, 134);
+            checkBox_Prov.Name = "checkBox_Prov";
+            checkBox_Prov.Size = new Size(79, 25);
+            checkBox_Prov.TabIndex = 22;
+            checkBox_Prov.Text = "Estado ";
+            checkBox_Prov.UseVisualStyleBackColor = true;
+            // 
+            // btn_ModProv
+            // 
+            btn_ModProv.Location = new Point(659, 104);
+            btn_ModProv.Name = "btn_ModProv";
+            btn_ModProv.Size = new Size(170, 38);
+            btn_ModProv.TabIndex = 21;
+            btn_ModProv.Text = "MODIFICAR";
+            btn_ModProv.UseVisualStyleBackColor = true;
+            btn_ModProv.Click += btn_ModProv_Click;
+            // 
             // txt_TelfProveedor
             // 
             txt_TelfProveedor.Font = new Font("Segoe UI", 9.75F);
@@ -104,6 +128,16 @@
             txt_TelfProveedor.Name = "txt_TelfProveedor";
             txt_TelfProveedor.Size = new Size(193, 25);
             txt_TelfProveedor.TabIndex = 13;
+            // 
+            // btn_AgProv
+            // 
+            btn_AgProv.Location = new Point(659, 49);
+            btn_AgProv.Name = "btn_AgProv";
+            btn_AgProv.Size = new Size(170, 38);
+            btn_AgProv.TabIndex = 20;
+            btn_AgProv.Text = "AGREGAR";
+            btn_AgProv.UseVisualStyleBackColor = true;
+            btn_AgProv.Click += btn_AgProv_Click;
             // 
             // label5
             // 
@@ -115,13 +149,13 @@
             label5.TabIndex = 12;
             label5.Text = "Telefono:";
             // 
-            // txt_CorreoProveedor
+            // txt_CiudProveedor
             // 
-            txt_CorreoProveedor.Font = new Font("Segoe UI", 9.75F);
-            txt_CorreoProveedor.Location = new Point(154, 103);
-            txt_CorreoProveedor.Name = "txt_CorreoProveedor";
-            txt_CorreoProveedor.Size = new Size(288, 25);
-            txt_CorreoProveedor.TabIndex = 11;
+            txt_CiudProveedor.Font = new Font("Segoe UI", 9.75F);
+            txt_CiudProveedor.Location = new Point(154, 103);
+            txt_CiudProveedor.Name = "txt_CiudProveedor";
+            txt_CiudProveedor.Size = new Size(288, 25);
+            txt_CiudProveedor.TabIndex = 11;
             // 
             // label4
             // 
@@ -178,6 +212,7 @@
             dgv_Proveedores.Name = "dgv_Proveedores";
             dgv_Proveedores.Size = new Size(655, 181);
             dgv_Proveedores.TabIndex = 15;
+            dgv_Proveedores.CellDoubleClick += dgv_Proveedores_CellDoubleClick;
             // 
             // label1
             // 
@@ -188,35 +223,6 @@
             label1.Size = new Size(160, 30);
             label1.TabIndex = 14;
             label1.Text = "PROVEEDORES";
-            // 
-            // btn_ModProv
-            // 
-            btn_ModProv.Location = new Point(659, 104);
-            btn_ModProv.Name = "btn_ModProv";
-            btn_ModProv.Size = new Size(170, 38);
-            btn_ModProv.TabIndex = 21;
-            btn_ModProv.Text = "MODIFICAR";
-            btn_ModProv.UseVisualStyleBackColor = true;
-            // 
-            // btn_AgProv
-            // 
-            btn_AgProv.Location = new Point(659, 49);
-            btn_AgProv.Name = "btn_AgProv";
-            btn_AgProv.Size = new Size(170, 38);
-            btn_AgProv.TabIndex = 20;
-            btn_AgProv.Text = "AGREGAR";
-            btn_AgProv.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_Prov
-            // 
-            checkBox_Prov.AutoSize = true;
-            checkBox_Prov.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox_Prov.Location = new Point(488, 134);
-            checkBox_Prov.Name = "checkBox_Prov";
-            checkBox_Prov.Size = new Size(79, 25);
-            checkBox_Prov.TabIndex = 22;
-            checkBox_Prov.Text = "Estado ";
-            checkBox_Prov.UseVisualStyleBackColor = true;
             // 
             // CRUD_Proveedor
             // 
@@ -246,7 +252,7 @@
         private GroupBox groupBox1;
         private TextBox txt_TelfProveedor;
         private Label label5;
-        private TextBox txt_CorreoProveedor;
+        private TextBox txt_CiudProveedor;
         private Label label4;
         private TextBox txt_NombProveedor;
         private TextBox txt_CodProveedor;

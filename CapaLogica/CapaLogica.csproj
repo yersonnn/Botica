@@ -45,6 +45,7 @@
     <Compile Include="logEmpl.cs" />
     <Compile Include="logMetPag.cs" />
     <Compile Include="logProd.cs" />
+    <Compile Include="logProv.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

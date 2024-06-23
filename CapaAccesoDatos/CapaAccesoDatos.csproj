@@ -46,6 +46,7 @@
     <Compile Include="datEmpl.cs" />
     <Compile Include="datMetPag.cs" />
     <Compile Include="datProd.cs" />
+    <Compile Include="datProv.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

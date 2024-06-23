@@ -22,7 +22,7 @@ namespace CapaPresentacion
             OcultarBarra();
             listarProd();
             groupBox1.Enabled = false;
-            //txtidCliente.Enabled = false;
+            txt_CodProducto.Enabled = false;
         }
 
         void OcultarBarra()
