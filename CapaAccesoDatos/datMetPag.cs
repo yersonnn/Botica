@@ -40,13 +40,13 @@ namespace CapaAccesoDatos
                 while (dr.Read())
                 {
                     entMetodoPago Met = new entMetodoPago();
-                    Met.idMetPago = Convert.ToInt32(dr["idMetodoPago"]);
-                    Met.NombMetPag = dr["NombMetPago"].ToString();
-                    Met.TipoMetPago = dr["TipoMetPago"].ToString();
+                    Met.idMetPago = Convert.ToInt32(dr["MetodoDePagoID"]);
+                    Met.NombMetPag = dr["Nombmetpago"].ToString();
+                    Met.TipoMetPago = dr["Tipometpago"].ToString();
                     //Cli.idTipoCliente = Convert.ToInt32(dr["idTipoCliente"]);
                     //Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
                     //Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
-                    Met.estMetPag = Convert.ToBoolean(dr["estMetPag"]);
+                    Met.estMetPag = Convert.ToBoolean(dr["EstCmetpag"]);
                     lista.Add(Met);
                 }
 

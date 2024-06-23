@@ -40,13 +40,13 @@ namespace CapaAccesoDatos
                 while (dr.Read())
                 {
                     entEmpl Empl = new entEmpl();
-                   Empl.idEmpl = Convert.ToInt32(dr["idEmpl"]);
-                    Empl.NombEmpl = dr["NombEmpl"].ToString();                   
-                    Empl.CeluEmpl = Convert.ToInt32(dr["CeluEmpl"]);
-                    Empl.CargoEmpl = dr["CargoEmpl"].ToString();
+                   Empl.idEmpl = Convert.ToInt32(dr["EmpleadoID"]);
+                    Empl.NombEmpl = dr["Nombempleado"].ToString();                   
+                    Empl.CeluEmpl = Convert.ToInt32(dr["Celemplead"]);
+                    Empl.CargoEmpl = dr["Cargo"].ToString();
                     //Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
                     //Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
-                    Empl.estEmpl = Convert.ToBoolean(dr["estEmpl"]);
+                    Empl.estEmpl = Convert.ToBoolean(dr["Estemplead"]);
                     lista.Add(Empl);
                 }
 

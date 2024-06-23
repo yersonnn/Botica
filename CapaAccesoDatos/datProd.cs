@@ -40,14 +40,14 @@ namespace CapaAccesoDatos
                 while (dr.Read())
                 {
                     entProd Prod = new entProd();
-                    Prod.idProd = Convert.ToInt32(dr["idProd"]);
-                    Prod.NombProd = dr["NombProd"].ToString();
-                    Prod.CatProd = Convert.ToInt32(dr["CatProd"]);
-                    Prod.PrecProd = Convert.ToDouble(dr["PrecProd"]);
+                    Prod.idProd = Convert.ToInt32(dr["ProductoID"]);
+                    Prod.NombProd = dr["Nombproducto"].ToString();
+                    Prod.CatProd = Convert.ToInt32(dr["CategoriaID"]);
+                    Prod.PrecProd = Convert.ToDouble(dr["Precioprod"]);
                     //Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
                     //Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
-                    Prod.StockProd = Convert.ToInt32(dr["StockProd"]);
-                    Prod.estProd = Convert.ToBoolean(dr["estProd"]);
+                    Prod.StockProd = Convert.ToInt32(dr["Stock"]);
+                    Prod.estProd = Convert.ToBoolean(dr["Estprod"]);
                     lista.Add(Prod);
                 }
 

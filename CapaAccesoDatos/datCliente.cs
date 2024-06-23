@@ -40,13 +40,13 @@ namespace CapaAccesoDatos
                 while (dr.Read())
                 {
                     entCliente Cli = new entCliente();
-                    Cli.idCli = Convert.ToInt32(dr["idCli"]);
-                    Cli.NombCli = dr["NombCli"].ToString();
-                    Cli.CorreoCli = dr["CorreoCli"].ToString();
-                    Cli.CeluCli = Convert.ToInt32(dr["CeluCli"]);
+                    Cli.idCli = Convert.ToInt32(dr["ClienteID"]);
+                    Cli.NombCli = dr["Nombclient"].ToString();
+                    Cli.CorreoCli = dr["Correoclient"].ToString();
+                    Cli.CeluCli = Convert.ToInt32(dr["Celclient"]);
                     //Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
                     //Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
-                    Cli.estCli = Convert.ToBoolean(dr["estCli"]);
+                    Cli.estCli = Convert.ToBoolean(dr["Estclient"]);
                     lista.Add(Cli);
                 }
 

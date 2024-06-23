@@ -40,13 +40,13 @@ namespace CapaAccesoDatos
                 while (dr.Read())
                 {
                     entProv Prov = new entProv();
-                    Prov.idProv = Convert.ToInt32(dr["idProv"]);
-                    Prov.NombProv = dr["NombProv"].ToString();
-                    Prov.CiudadProv = Convert.ToInt32(dr["CiudadProv"]);
-                    Prov.TelfProv = Convert.ToInt32(dr["TelfProv"]);
+                    Prov.idProv = Convert.ToInt32(dr["ProveedorID"]);
+                    Prov.NombProv = dr["Nombempresa"].ToString();
+                    Prov.CiudadProv = Convert.ToInt32(dr["CiudadID"]);
+                    Prov.TelfProv = Convert.ToInt32(dr["Telfempresa"]);
                     //Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
                     //Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
-                    Prov.estProv = Convert.ToBoolean(dr["estProv"]);
+                    Prov.estProv = Convert.ToBoolean(dr["Estproveed"]);
                     lista.Add(Prov);
                 }
 
