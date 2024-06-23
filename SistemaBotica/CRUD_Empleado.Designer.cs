@@ -32,7 +32,10 @@
             groupBox1 = new GroupBox();
             txt_CargoEmpleado = new TextBox();
             label5 = new Label();
+            checkBox_Emple = new CheckBox();
             txt_TelfEmpleado = new TextBox();
+            btn_ModEmple = new Button();
+            btn_AgEmpl = new Button();
             label4 = new Label();
             txt_NombEmpleado = new TextBox();
             txt_DniEmpleado = new TextBox();
@@ -42,9 +45,6 @@
             label1 = new Label();
             btn_EditEmplead = new Button();
             btn_NuevEmplead = new Button();
-            checkBox_Emple = new CheckBox();
-            btn_ModEmple = new Button();
-            btn_AgEmpl = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Empleados).BeginInit();
             SuspendLayout();
@@ -57,6 +57,7 @@
             btn_InEmpleado.TabIndex = 13;
             btn_InEmpleado.Text = "INHABILITAR EMPLEADO";
             btn_InEmpleado.UseVisualStyleBackColor = true;
+            btn_InEmpleado.Click += btn_InEmpleado_Click;
             // 
             // groupBox1
             // 
@@ -97,6 +98,17 @@
             label5.TabIndex = 12;
             label5.Text = "Cargo/Ocupacion:";
             // 
+            // checkBox_Emple
+            // 
+            checkBox_Emple.AutoSize = true;
+            checkBox_Emple.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBox_Emple.Location = new Point(384, 112);
+            checkBox_Emple.Name = "checkBox_Emple";
+            checkBox_Emple.Size = new Size(79, 25);
+            checkBox_Emple.TabIndex = 32;
+            checkBox_Emple.Text = "Estado ";
+            checkBox_Emple.UseVisualStyleBackColor = true;
+            // 
             // txt_TelfEmpleado
             // 
             txt_TelfEmpleado.Font = new Font("Segoe UI", 9.75F);
@@ -104,6 +116,26 @@
             txt_TelfEmpleado.Name = "txt_TelfEmpleado";
             txt_TelfEmpleado.Size = new Size(193, 25);
             txt_TelfEmpleado.TabIndex = 11;
+            // 
+            // btn_ModEmple
+            // 
+            btn_ModEmple.Location = new Point(488, 104);
+            btn_ModEmple.Name = "btn_ModEmple";
+            btn_ModEmple.Size = new Size(170, 38);
+            btn_ModEmple.TabIndex = 31;
+            btn_ModEmple.Text = "MODIFICAR";
+            btn_ModEmple.UseVisualStyleBackColor = true;
+            btn_ModEmple.Click += btn_ModEmple_Click;
+            // 
+            // btn_AgEmpl
+            // 
+            btn_AgEmpl.Location = new Point(488, 48);
+            btn_AgEmpl.Name = "btn_AgEmpl";
+            btn_AgEmpl.Size = new Size(170, 38);
+            btn_AgEmpl.TabIndex = 30;
+            btn_AgEmpl.Text = "AGREGAR";
+            btn_AgEmpl.UseVisualStyleBackColor = true;
+            btn_AgEmpl.Click += btn_AgEmpl_Click;
             // 
             // label4
             // 
@@ -159,6 +191,7 @@
             dgv_Empleados.Name = "dgv_Empleados";
             dgv_Empleados.Size = new Size(607, 181);
             dgv_Empleados.TabIndex = 9;
+            dgv_Empleados.CellDoubleClick += dgv_Empleados_CellDoubleClick;
             // 
             // label1
             // 
@@ -178,6 +211,7 @@
             btn_EditEmplead.TabIndex = 29;
             btn_EditEmplead.Text = "EDITAR DATOS";
             btn_EditEmplead.UseVisualStyleBackColor = true;
+            btn_EditEmplead.Click += btn_EditEmplead_Click;
             // 
             // btn_NuevEmplead
             // 
@@ -187,35 +221,7 @@
             btn_NuevEmplead.TabIndex = 28;
             btn_NuevEmplead.Text = "NUEVO EMPLEADO";
             btn_NuevEmplead.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_Emple
-            // 
-            checkBox_Emple.AutoSize = true;
-            checkBox_Emple.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox_Emple.Location = new Point(384, 112);
-            checkBox_Emple.Name = "checkBox_Emple";
-            checkBox_Emple.Size = new Size(79, 25);
-            checkBox_Emple.TabIndex = 32;
-            checkBox_Emple.Text = "Estado ";
-            checkBox_Emple.UseVisualStyleBackColor = true;
-            // 
-            // btn_ModEmple
-            // 
-            btn_ModEmple.Location = new Point(488, 104);
-            btn_ModEmple.Name = "btn_ModEmple";
-            btn_ModEmple.Size = new Size(170, 38);
-            btn_ModEmple.TabIndex = 31;
-            btn_ModEmple.Text = "MODIFICAR";
-            btn_ModEmple.UseVisualStyleBackColor = true;
-            // 
-            // btn_AgEmpl
-            // 
-            btn_AgEmpl.Location = new Point(488, 48);
-            btn_AgEmpl.Name = "btn_AgEmpl";
-            btn_AgEmpl.Size = new Size(170, 38);
-            btn_AgEmpl.TabIndex = 30;
-            btn_AgEmpl.Text = "AGREGAR";
-            btn_AgEmpl.UseVisualStyleBackColor = true;
+            btn_NuevEmplead.Click += btn_NuevEmplead_Click;
             // 
             // CRUD_Empleado
             // 

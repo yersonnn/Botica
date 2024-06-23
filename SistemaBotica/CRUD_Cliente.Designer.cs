@@ -32,7 +32,10 @@
             groupBox1 = new GroupBox();
             txt_TelfCliente = new TextBox();
             label5 = new Label();
+            checkBox_Clie = new CheckBox();
             txt_CorreoCliente = new TextBox();
+            btn_ModClie = new Button();
+            btn_AgClien = new Button();
             label4 = new Label();
             txt_NombCliente = new TextBox();
             txt_DniCliente = new TextBox();
@@ -42,9 +45,6 @@
             label1 = new Label();
             btn_EditClient = new Button();
             btn_NuevClient = new Button();
-            checkBox_Clie = new CheckBox();
-            btn_ModClie = new Button();
-            btn_AgClien = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Clientes).BeginInit();
             SuspendLayout();
@@ -57,6 +57,7 @@
             btn_InCliente.TabIndex = 13;
             btn_InCliente.Text = "INHABILITAR CLIENTE";
             btn_InCliente.UseVisualStyleBackColor = true;
+            btn_InCliente.Click += btn_InCliente_Click;
             // 
             // groupBox1
             // 
@@ -97,6 +98,17 @@
             label5.TabIndex = 12;
             label5.Text = "Telf. Celular:";
             // 
+            // checkBox_Clie
+            // 
+            checkBox_Clie.AutoSize = true;
+            checkBox_Clie.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBox_Clie.Location = new Point(487, 141);
+            checkBox_Clie.Name = "checkBox_Clie";
+            checkBox_Clie.Size = new Size(79, 25);
+            checkBox_Clie.TabIndex = 37;
+            checkBox_Clie.Text = "Estado ";
+            checkBox_Clie.UseVisualStyleBackColor = true;
+            // 
             // txt_CorreoCliente
             // 
             txt_CorreoCliente.Font = new Font("Segoe UI", 9.75F);
@@ -104,6 +116,26 @@
             txt_CorreoCliente.Name = "txt_CorreoCliente";
             txt_CorreoCliente.Size = new Size(288, 25);
             txt_CorreoCliente.TabIndex = 11;
+            // 
+            // btn_ModClie
+            // 
+            btn_ModClie.Location = new Point(628, 104);
+            btn_ModClie.Name = "btn_ModClie";
+            btn_ModClie.Size = new Size(170, 38);
+            btn_ModClie.TabIndex = 36;
+            btn_ModClie.Text = "MODIFICAR";
+            btn_ModClie.UseVisualStyleBackColor = true;
+            btn_ModClie.Click += btn_ModClie_Click;
+            // 
+            // btn_AgClien
+            // 
+            btn_AgClien.Location = new Point(628, 48);
+            btn_AgClien.Name = "btn_AgClien";
+            btn_AgClien.Size = new Size(170, 38);
+            btn_AgClien.TabIndex = 35;
+            btn_AgClien.Text = "AGREGAR";
+            btn_AgClien.UseVisualStyleBackColor = true;
+            btn_AgClien.Click += btn_AgClien_Click;
             // 
             // label4
             // 
@@ -159,6 +191,7 @@
             dgv_Clientes.Name = "dgv_Clientes";
             dgv_Clientes.Size = new Size(655, 181);
             dgv_Clientes.TabIndex = 9;
+            dgv_Clientes.CellDoubleClick += dgv_Clientes_CellDoubleClick;
             // 
             // label1
             // 
@@ -178,6 +211,7 @@
             btn_EditClient.TabIndex = 34;
             btn_EditClient.Text = "EDITAR DATOS";
             btn_EditClient.UseVisualStyleBackColor = true;
+            btn_EditClient.Click += btn_EditClient_Click;
             // 
             // btn_NuevClient
             // 
@@ -187,35 +221,7 @@
             btn_NuevClient.TabIndex = 33;
             btn_NuevClient.Text = "NUEVO EMPLEADO";
             btn_NuevClient.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_Clie
-            // 
-            checkBox_Clie.AutoSize = true;
-            checkBox_Clie.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox_Clie.Location = new Point(487, 141);
-            checkBox_Clie.Name = "checkBox_Clie";
-            checkBox_Clie.Size = new Size(79, 25);
-            checkBox_Clie.TabIndex = 37;
-            checkBox_Clie.Text = "Estado ";
-            checkBox_Clie.UseVisualStyleBackColor = true;
-            // 
-            // btn_ModClie
-            // 
-            btn_ModClie.Location = new Point(628, 104);
-            btn_ModClie.Name = "btn_ModClie";
-            btn_ModClie.Size = new Size(170, 38);
-            btn_ModClie.TabIndex = 36;
-            btn_ModClie.Text = "MODIFICAR";
-            btn_ModClie.UseVisualStyleBackColor = true;
-            // 
-            // btn_AgClien
-            // 
-            btn_AgClien.Location = new Point(628, 48);
-            btn_AgClien.Name = "btn_AgClien";
-            btn_AgClien.Size = new Size(170, 38);
-            btn_AgClien.TabIndex = 35;
-            btn_AgClien.Text = "AGREGAR";
-            btn_AgClien.UseVisualStyleBackColor = true;
+            btn_NuevClient.Click += btn_NuevClient_Click;
             // 
             // CRUD_Cliente
             // 

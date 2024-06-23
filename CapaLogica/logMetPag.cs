@@ -38,7 +38,7 @@ namespace CapaLogica
         {
             datMetPag.Instancia.EditarMetPag(Met);
         }
-        public void DeshabilitarCliente(entMetodoPago Met)
+        public void DeshabilitarMetPag(entMetodoPago Met)
         {
             datMetPag.Instancia.DeshabilitarMetPag(Met);
         }

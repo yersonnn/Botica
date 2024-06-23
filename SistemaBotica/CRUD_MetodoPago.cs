@@ -42,7 +42,7 @@ namespace CapaPresentacion
         {
             txt_NombMetodo.Text = "";
             txt_TipoMetodo.Text = " ";
-            //cbkEstadoCliente.Checked = false;
+            checkBox_MetPag.Checked = false;
 
         }
 
@@ -71,7 +71,7 @@ namespace CapaPresentacion
             }
             LimpiarVariables();
             groupBoxMetPag.Enabled = false;
-            //listarMetPag();
+            listarMetPag();
         }
 
         private void btn_ModMetodo_Click(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace CapaPresentacion
                 //c.idCiudad = int.Parse(txtidCiudad.Text.Trim());
                 met.estMetPag = checkBox_MetPag.Checked;
 
-                //logMetPag.Instancia.EditaCliente(met);
+                logMetPag.Instancia.EditaMetPag(met);
             }
             catch (Exception ex)
             {
@@ -95,7 +95,7 @@ namespace CapaPresentacion
             }
             LimpiarVariables();
             groupBoxMetPag.Enabled = false;
-            //listarMetPag();
+            listarMetPag();
 
 
         }
@@ -124,11 +124,11 @@ namespace CapaPresentacion
             {
                 entMetodoPago met = new entMetodoPago();
 
-                //met.idMetPag = int.Parse(txt_CodMetodo.Text.Trim());
+                met.idMetPago = int.Parse(txt_CodMetodo.Text.Trim());
                 //cbkEstadoCliente.Checked = false;
                 //c.estCliente = cbkEstadoCliente.Checked;
                 met.estMetPag = checkBox_MetPag.Checked;
-                //logMetPag.Instancia.DeshabilitarMetPag(met);
+                logMetPag.Instancia.DeshabilitarMetPag(met);
             }
             catch (Exception ex)
             {
@@ -136,18 +136,21 @@ namespace CapaPresentacion
             }
             LimpiarVariables();
             groupBoxMetPag.Enabled = false;
-            //listarMetPag();
+            listarMetPag();
 
         }
 
         private void dgv_MetPago_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow filaActual = dgv_MetPago.Rows[e.RowIndex]; 
+            DataGridViewRow filaActual = dgv_MetPago.Rows[e.RowIndex];
             txt_CodMetodo.Text = filaActual.Cells[0].Value.ToString();
             txt_NombMetodo.Text = filaActual.Cells[1].Value.ToString();
             txt_TipoMetodo.Text = filaActual.Cells[2].Value.ToString();
             checkBox_MetPag.Checked = Convert.ToBoolean(filaActual.Cells[3].Value);
+        }
 
+        private void txt_CodMetodo_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

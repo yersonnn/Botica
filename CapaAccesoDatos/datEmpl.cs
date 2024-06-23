@@ -9,45 +9,45 @@ using System.Data.SqlClient;
 
 namespace CapaAccesoDatos
 {
-    public class datCliente
+    public class datEmpl
     {
         #region sigleton
         //Patron Singleton
         // Variable estática para la instancia
-        private static readonly datCliente _instancia = new datCliente();
+        private static readonly datEmpl _instancia = new datEmpl();
         //privado para evitar la instanciación directa
-        public static datCliente Instancia
+        public static datEmpl Instancia
         {
             get
             {
-                return datCliente._instancia;
+                return datEmpl._instancia;
             }
         }
         #endregion singleton
         #region metodos
         ////////////////////listado de Clientes
-        public List<entCliente> ListarCli()
+        public List<entEmpl> ListarEmpl()
         {
             SqlCommand cmd = null;
-            List<entCliente> lista = new List<entCliente>();
+            List<entEmpl> lista = new List<entEmpl>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("spListarCliente", cn);
+                cmd = new SqlCommand("spListarEmpl", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entCliente Cli = new entCliente();
-                    Cli.idCli = Convert.ToInt32(dr["idCli"]);
-                    Cli.NombCli = dr["NombCli"].ToString();
-                    Cli.CorreoCli = dr["CorreoCli"].ToString();
-                    Cli.CeluCli = Convert.ToInt32(dr["CeluCli"]);
+                    entEmpl Empl = new entEmpl();
+                   Empl.idEmpl = Convert.ToInt32(dr["idEmpl"]);
+                    Empl.NombEmpl = dr["NombEmpl"].ToString();                   
+                    Empl.CeluEmpl = Convert.ToInt32(dr["CeluEmpl"]);
+                    Empl.CargoEmpl = dr["CargoEmpl"].ToString();
                     //Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
                     //Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
-                    Cli.estCli = Convert.ToBoolean(dr["estCli"]);
-                    lista.Add(Cli);
+                    Empl.estEmpl = Convert.ToBoolean(dr["estEmpl"]);
+                    lista.Add(Empl);
                 }
 
             }
@@ -62,21 +62,21 @@ namespace CapaAccesoDatos
             return lista;
         }
         /////////////////////////InsertaCliente
-        public Boolean InsertaCli(entCliente Cli)
+        public Boolean InsertaEmpl(entEmpl Empl)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarCli", cn);
+                cmd = new SqlCommand("spInsertarEmpl", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombclient", Cli.NombCli);
-                cmd.Parameters.AddWithValue("@Correoclient", Cli.CorreoCli);
-                cmd.Parameters.AddWithValue("@Celclient", Cli.CeluCli);
+                cmd.Parameters.AddWithValue("@Nombempleado", Empl.NombEmpl);
+                cmd.Parameters.AddWithValue("@Celemplead", Empl.CeluEmpl);
+                cmd.Parameters.AddWithValue("@Cargo", Empl.CargoEmpl);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
-                cmd.Parameters.AddWithValue("@Estclient", Cli.estCli);
+                cmd.Parameters.AddWithValue("@Estemplead", Empl.estEmpl);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -94,21 +94,21 @@ namespace CapaAccesoDatos
 
 
         //////////////////////////////////EditaCliente
-        public Boolean EditarCli(entCliente Cli)
+        public Boolean EditarEmpl(entEmpl Empl)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarCli", cn);
+                cmd = new SqlCommand("spInsertarEmpl", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombclient", Cli.NombCli);
-                cmd.Parameters.AddWithValue("@Correoclient", Cli.CorreoCli);
-                cmd.Parameters.AddWithValue("@Celclient", Cli.CeluCli);
+                cmd.Parameters.AddWithValue("@Nombempleado", Empl.NombEmpl);
+                cmd.Parameters.AddWithValue("@Celemplead", Empl.CeluEmpl);
+                cmd.Parameters.AddWithValue("@Cargo", Empl.CargoEmpl);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
-                cmd.Parameters.AddWithValue("@Estclient", Cli.estCli);
+                cmd.Parameters.AddWithValue("@Estemplead", Empl.estEmpl);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -126,17 +126,17 @@ namespace CapaAccesoDatos
 
         //deshabilitaCliente
 
-        public Boolean DeshabilitarCli(entCliente Cli)
+        public Boolean DeshabilitarEmpl(entEmpl Empl)
         {
             SqlCommand cmd = null;
             Boolean delete = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDesabilitarCli", cn);
+                cmd = new SqlCommand("spDesabilitarEmpl", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ClienteID", Cli.idCli);
-                cmd.Parameters.AddWithValue("@Estclient", Cli.estCli);
+                cmd.Parameters.AddWithValue("@EmpleadoID", Empl.idEmpl);
+                cmd.Parameters.AddWithValue("@Estemplead", Empl.estEmpl);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -153,7 +153,6 @@ namespace CapaAccesoDatos
         }
 
         #endregion metodos
-
 
 
     }

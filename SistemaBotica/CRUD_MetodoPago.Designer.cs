@@ -32,6 +32,7 @@
             btn_ModMetodo = new Button();
             btn_AgrMetodo = new Button();
             groupBoxMetPag = new GroupBox();
+            checkBox_MetPag = new CheckBox();
             txt_TipoMetodo = new TextBox();
             label4 = new Label();
             txt_NombMetodo = new TextBox();
@@ -42,7 +43,6 @@
             label1 = new Label();
             btn_Nuevo = new Button();
             btn_Editar = new Button();
-            checkBox_MetPag = new CheckBox();
             groupBoxMetPag.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_MetPago).BeginInit();
             SuspendLayout();
@@ -96,6 +96,17 @@
             groupBoxMetPag.TabStop = false;
             groupBoxMetPag.Text = "DETALLES";
             // 
+            // checkBox_MetPag
+            // 
+            checkBox_MetPag.AutoSize = true;
+            checkBox_MetPag.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBox_MetPag.Location = new Point(370, 95);
+            checkBox_MetPag.Name = "checkBox_MetPag";
+            checkBox_MetPag.Size = new Size(79, 25);
+            checkBox_MetPag.TabIndex = 19;
+            checkBox_MetPag.Text = "Estado ";
+            checkBox_MetPag.UseVisualStyleBackColor = true;
+            // 
             // txt_TipoMetodo
             // 
             txt_TipoMetodo.Font = new Font("Segoe UI", 9.75F);
@@ -129,6 +140,7 @@
             txt_CodMetodo.Name = "txt_CodMetodo";
             txt_CodMetodo.Size = new Size(193, 25);
             txt_CodMetodo.TabIndex = 8;
+            txt_CodMetodo.TextChanged += txt_CodMetodo_TextChanged;
             // 
             // label3
             // 
@@ -188,17 +200,6 @@
             btn_Editar.Text = "EDITAR";
             btn_Editar.UseVisualStyleBackColor = true;
             btn_Editar.Click += btn_Editar_Click;
-            // 
-            // checkBox_MetPag
-            // 
-            checkBox_MetPag.AutoSize = true;
-            checkBox_MetPag.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox_MetPag.Location = new Point(370, 95);
-            checkBox_MetPag.Name = "checkBox_MetPag";
-            checkBox_MetPag.Size = new Size(79, 25);
-            checkBox_MetPag.TabIndex = 19;
-            checkBox_MetPag.Text = "Estado ";
-            checkBox_MetPag.UseVisualStyleBackColor = true;
             // 
             // CRUD_MetodoPago
             // 

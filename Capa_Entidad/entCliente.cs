@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace Capa_Entidad
 {
-    public class entMetodoPago
+    public class entCliente
     {
-        public int idMetPago { get; set; }
-        public string NombMetPag { get; set; }
-        public string TipoMetPago { get; set; }
-       
 
+        public int idCli { get; set; }
+        public string NombCli { get; set; }
+        public string CorreoCli { get; set; }
+
+        public int CeluCli { get; set; }
         //public DateTime fecRegCliente { get; set; }
         //public int idCiudad { get; set; }      /// public entCiudad Ciudad{ get; set; }
 
-        public Boolean estMetPag { get; set; }
+        public Boolean estCli { get; set; }
 
     }
 }
