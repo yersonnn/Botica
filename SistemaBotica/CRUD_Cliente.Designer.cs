@@ -219,7 +219,7 @@
             btn_NuevClient.Name = "btn_NuevClient";
             btn_NuevClient.Size = new Size(170, 38);
             btn_NuevClient.TabIndex = 33;
-            btn_NuevClient.Text = "NUEVO EMPLEADO";
+            btn_NuevClient.Text = "NUEVO CLIENTE";
             btn_NuevClient.UseVisualStyleBackColor = true;
             btn_NuevClient.Click += btn_NuevClient_Click;
             // 
