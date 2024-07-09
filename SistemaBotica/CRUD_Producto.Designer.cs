@@ -133,11 +133,11 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(48, 141);
+            label5.Location = new Point(17, 141);
             label5.Name = "label5";
-            label5.Size = new Size(53, 20);
+            label5.Size = new Size(84, 20);
             label5.TabIndex = 12;
-            label5.Text = "Precio:";
+            label5.Text = "Precio Unit:";
             // 
             // label4
             // 

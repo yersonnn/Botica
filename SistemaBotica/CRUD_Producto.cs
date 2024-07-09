@@ -23,6 +23,7 @@ namespace CapaPresentacion
             listarProd();
             groupBox1.Enabled = false;
             txt_CodProducto.Enabled = false;
+            dgv_Productos.Columns["IDCatProd"].Visible = false;
         }
 
         void OcultarBarra()
@@ -39,7 +40,7 @@ namespace CapaPresentacion
 
         private void LimpiarVariables()
         {
-            comboBoxCatProd.SelectedIndex = 0;
+            comboBoxCatProd.Text = "";
             txt_NombProducto.Text = "";
             comboBoxCatProd.Text = " ";
             txt_PrecProducto.Text = " ";
@@ -72,10 +73,10 @@ namespace CapaPresentacion
             try
             {
                 entProd Prod = new entProd();
-                Prod.NombProd = txt_NombProducto.Text.Trim();
+                Prod.Producto = txt_NombProducto.Text.Trim();
                 Prod.IDCatProd = Convert.ToInt32(comboBoxCatProd.SelectedValue);
                 //c.fecRegCliente = dtPickerRegCliente.Value;
-                Prod.PrecProd = double.Parse(txt_PrecProducto.Text.Trim());
+                Prod.PrecioUnitario = double.Parse(txt_PrecProducto.Text.Trim());
                 //Prod.StockProd = int.Parse(txt_StockProducto.Text.Trim());
                 Prod.estProd = checkBox_Produc.Checked;
                 logProd.Instancia.InsertaProd(Prod);
@@ -94,10 +95,10 @@ namespace CapaPresentacion
             try
             {
                 entProd Prod = new entProd();
-                Prod.NombProd = txt_NombProducto.Text.Trim();
+                Prod.Producto = txt_NombProducto.Text.Trim();
                 Prod.IDCatProd = (int)comboBoxCatProd.SelectedValue;
                 //c.fecRegCliente = dtPickerRegCliente.Value;
-                Prod.PrecProd = double.Parse(txt_PrecProducto.Text.Trim());
+                Prod.PrecioUnitario = double.Parse(txt_PrecProducto.Text.Trim());
                 //Prod.StockProd = int.Parse(txt_StockProducto.Text.Trim());
                 Prod.estProd = checkBox_Produc.Checked;
 

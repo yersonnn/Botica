@@ -59,8 +59,8 @@ namespace CapaPresentacion
             try
             {
                 entMetodoPago met = new entMetodoPago();
-                met.NombMetPag = txt_NombMetodo.Text.Trim();
-                met.TipoMetPago = comboBoxTipoMetPag.Text.Trim();
+                met.MetodoPago = txt_NombMetodo.Text.Trim();
+                met.Tipo = comboBoxTipoMetPag.Text.Trim();
                 //c.fecRegCliente = dtPickerRegCliente.Value;
                 //c.idCiudad = int.Parse(txtidCiudad.Text.Trim());
                 met.estMetPag = checkBox_MetPag.Checked;
@@ -82,8 +82,8 @@ namespace CapaPresentacion
             {
                 entMetodoPago met = new entMetodoPago();
                 met.MetodoDePagoID = int.Parse(txt_CodMetodo.Text.Trim());
-                met.NombMetPag = txt_NombMetodo.Text.Trim();
-                met.TipoMetPago = comboBoxTipoMetPag.Text.Trim();
+                met.MetodoPago = txt_NombMetodo.Text.Trim();
+                met.Tipo = comboBoxTipoMetPag.Text.Trim();
                 //c.idTipoCliente = int.Parse(txtidTipoCliente.Text.Trim());
                 //c.fecRegCliente = dtPickerRegCliente.Value;
                 //c.idCiudad = int.Parse(txtidCiudad.Text.Trim());

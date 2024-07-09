@@ -9,7 +9,7 @@ namespace Capa_Entidad
     public class entCategoria
     {
         public int CategoriaID { get; set; }
-        public string NomCategoria { get; set; }
+        public string Categoria { get; set; }
         public Boolean estCategoria { get; set; }
 
     }

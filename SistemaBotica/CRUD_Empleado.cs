@@ -87,9 +87,9 @@ namespace CapaPresentacion
             {
                 entEmpl empl = new entEmpl();
                 empl.idEmpl= int.Parse(txt_DniEmpleado.Text.Trim());
-                empl.NombEmpl = txt_NombEmpleado.Text.Trim();
-                empl.CeluEmpl = int.Parse(txt_TelfEmpleado.Text.Trim());
-                empl.CargoEmpl = comboBoxCargo.Text.Trim();
+                empl.NombreEmpleado = txt_NombEmpleado.Text.Trim();
+                empl.CelularEmpleado = int.Parse(txt_TelfEmpleado.Text.Trim());
+                empl.Cargo = comboBoxCargo.Text.Trim();
                 //c.fecRegCliente = dtPickerRegCliente.Value;
 
                 empl.estEmpl = checkBox_Emple.Checked;
@@ -117,9 +117,9 @@ namespace CapaPresentacion
             {
                 entEmpl empl = new entEmpl();
                 empl.idEmpl = int.Parse(txt_DniEmpleado.Text.Trim());
-                empl.NombEmpl = txt_NombEmpleado.Text.Trim();
-                empl.CeluEmpl = int.Parse(txt_TelfEmpleado.Text.Trim());
-                empl.CargoEmpl = comboBoxCargo.Text.Trim();
+                empl.NombreEmpleado = txt_NombEmpleado.Text.Trim();
+                empl.CelularEmpleado = int.Parse(txt_TelfEmpleado.Text.Trim());
+                empl.Cargo = comboBoxCargo.Text.Trim();
                 //c.fecRegCliente = dtPickerRegCliente.Value;
 
                 empl.estEmpl = checkBox_Emple.Checked;

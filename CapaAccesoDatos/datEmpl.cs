@@ -41,9 +41,9 @@ namespace CapaAccesoDatos
                 {
                     entEmpl Empl = new entEmpl();
                    Empl.idEmpl = Convert.ToInt32(dr["EmpleadoID"]);
-                    Empl.NombEmpl = dr["Nombempleado"].ToString();                   
-                    Empl.CeluEmpl = Convert.ToInt32(dr["Celemplead"]);
-                    Empl.CargoEmpl = dr["Cargo"].ToString();
+                    Empl.NombreEmpleado = dr["Nombempleado"].ToString();                   
+                    Empl.CelularEmpleado = Convert.ToInt32(dr["Celemplead"]);
+                    Empl.Cargo = dr["Cargo"].ToString();
                     //Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
                     //Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
                     Empl.estEmpl = Convert.ToBoolean(dr["Estemplead"]);
@@ -72,9 +72,9 @@ namespace CapaAccesoDatos
                 cmd = new SqlCommand("spInsertarEmpl", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@EmpleadoID", Empl.idEmpl);
-                cmd.Parameters.AddWithValue("@Nombempleado", Empl.NombEmpl);
-                cmd.Parameters.AddWithValue("@Celemplead", Empl.CeluEmpl);
-                cmd.Parameters.AddWithValue("@Cargo", Empl.CargoEmpl);
+                cmd.Parameters.AddWithValue("@Nombempleado", Empl.NombreEmpleado);
+                cmd.Parameters.AddWithValue("@Celemplead", Empl.CelularEmpleado);
+                cmd.Parameters.AddWithValue("@Cargo", Empl.Cargo);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
                 cmd.Parameters.AddWithValue("@Estemplead", Empl.estEmpl);
@@ -105,9 +105,9 @@ namespace CapaAccesoDatos
                 cmd = new SqlCommand("spEditarEmpl", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@EmpleadoID", Empl.idEmpl);
-                cmd.Parameters.AddWithValue("@Nombempleado", Empl.NombEmpl);
-                cmd.Parameters.AddWithValue("@Celemplead", Empl.CeluEmpl);
-                cmd.Parameters.AddWithValue("@Cargo", Empl.CargoEmpl);
+                cmd.Parameters.AddWithValue("@Nombempleado", Empl.NombreEmpleado);
+                cmd.Parameters.AddWithValue("@Celemplead", Empl.CelularEmpleado);
+                cmd.Parameters.AddWithValue("@Cargo", Empl.Cargo);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
                 cmd.Parameters.AddWithValue("@Estemplead", Empl.estEmpl);

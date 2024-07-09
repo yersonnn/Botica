@@ -60,7 +60,7 @@ namespace CapaPresentacion
             try
             {
                 entCategoria cat = new entCategoria();
-                cat.NomCategoria = txt_NombCat.Text.Trim();
+                cat.Categoria = txt_NombCat.Text.Trim();
 
                 cat.estCategoria = checkBox_CAT.Checked;
                 logCategoria.Instancia.InsertaCategoria(cat);
@@ -80,7 +80,7 @@ namespace CapaPresentacion
             {
                 entCategoria cat = new entCategoria();
                 cat.CategoriaID = int.Parse(txt_CodCat.Text.Trim());
-                cat.NomCategoria = txt_NombCat.Text.Trim();
+                cat.Categoria = txt_NombCat.Text.Trim();
                 cat.estCategoria = checkBox_CAT.Checked;
 
                 logCategoria.Instancia.EditarCat(cat);

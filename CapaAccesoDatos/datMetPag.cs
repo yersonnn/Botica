@@ -41,8 +41,8 @@ namespace CapaAccesoDatos
                 {
                     entMetodoPago Met = new entMetodoPago();
                     Met.MetodoDePagoID = Convert.ToInt32(dr["MetodoDePagoID"]);
-                    Met.NombMetPag = dr["Nombmetpago"].ToString();
-                    Met.TipoMetPago = dr["Tipometpag"].ToString();
+                    Met.MetodoPago = dr["Nombmetpago"].ToString();
+                    Met.Tipo = dr["Tipometpag"].ToString();
                     //Cli.idTipoCliente = Convert.ToInt32(dr["idTipoCliente"]);
                     //Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
                     //Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
@@ -71,8 +71,8 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarMetPag", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombmetpago", Met.NombMetPag);
-                cmd.Parameters.AddWithValue("@Tipometpag", Met.TipoMetPago);
+                cmd.Parameters.AddWithValue("@Nombmetpago", Met.MetodoPago);
+                cmd.Parameters.AddWithValue("@Tipometpag", Met.Tipo);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
                 cmd.Parameters.AddWithValue("@Estmetpag", Met.estMetPag);
@@ -103,8 +103,8 @@ namespace CapaAccesoDatos
                 cmd = new SqlCommand("spEditarMetPag", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@MetodoDePagoID", Met.MetodoDePagoID);     
-                cmd.Parameters.AddWithValue("@Nombmetpago", Met.NombMetPag);
-                cmd.Parameters.AddWithValue("@Tipometpag", Met.TipoMetPago);
+                cmd.Parameters.AddWithValue("@Nombmetpago", Met.MetodoPago);
+                cmd.Parameters.AddWithValue("@Tipometpag", Met.Tipo);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
                 cmd.Parameters.AddWithValue("@Estmetpag", Met.estMetPag);

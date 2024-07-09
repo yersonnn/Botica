@@ -41,7 +41,7 @@ namespace CapaPresentacion
         private void LimpiarVariables()
         {
             txt_NombProveedor.Text = "";
-            comboBoxCiudad.SelectedIndex = 0;
+            comboBoxCiudad.Text = " ";
             txt_TelfProveedor.Text = " ";
             checkBox_Prov.Checked = false;
 
@@ -83,11 +83,11 @@ namespace CapaPresentacion
             try
             {
                 entProv Prov = new entProv();
-                Prov.idProv = int.Parse(txt_CodProveedor.Text.Trim());
-                Prov.NombProv = txt_NombProveedor.Text.Trim();
+                Prov.ProvID = int.Parse(txt_CodProveedor.Text.Trim());
+                Prov.Proveedor = txt_NombProveedor.Text.Trim();
                 Prov.CiudadID = Convert.ToInt32(comboBoxCiudad.SelectedValue);
                 //c.fecRegCliente = dtPickerRegCliente.Value;
-                Prov.TelfProv = int.Parse(txt_TelfProveedor.Text.Trim());
+                Prov.Telefono = int.Parse(txt_TelfProveedor.Text.Trim());
                 Prov.estProv = checkBox_Prov.Checked;
                 logProv.Instancia.InsertaProv(Prov);
             }
@@ -105,11 +105,11 @@ namespace CapaPresentacion
             try
             {
                 entProv Prov = new entProv();
-                Prov.idProv = int.Parse(txt_CodProveedor.Text.Trim());
-                Prov.NombProv = txt_NombProveedor.Text.Trim();
+                Prov.ProvID = int.Parse(txt_CodProveedor.Text.Trim());
+                Prov.Proveedor = txt_NombProveedor.Text.Trim();
                 Prov.CiudadID = (int)comboBoxCiudad.SelectedValue;
                 //c.fecRegCliente = dtPickerRegCliente.Value;
-                Prov.TelfProv = int.Parse(txt_TelfProveedor.Text.Trim());
+                Prov.Telefono = int.Parse(txt_TelfProveedor.Text.Trim());
                 Prov.estProv = checkBox_Prov.Checked;
 
                 logProv.Instancia.EditarProv(Prov);
@@ -129,7 +129,7 @@ namespace CapaPresentacion
             {
                 entProv Prov = new entProv();
 
-                Prov.idProv = int.Parse(txt_CodProveedor.Text.Trim());
+                Prov.ProvID = int.Parse(txt_CodProveedor.Text.Trim());
                 //cbkEstadoCliente.Checked = false;
                 //c.estCliente = cbkEstadoCliente.Checked;
                 Prov.estProv = checkBox_Prov.Checked;
@@ -149,9 +149,9 @@ namespace CapaPresentacion
             DataGridViewRow filaActual = dgv_Proveedores.Rows[e.RowIndex]; //
             txt_CodProveedor.Text = filaActual.Cells[0].Value.ToString();
             txt_NombProveedor.Text = filaActual.Cells[1].Value.ToString();
-            comboBoxCiudad.Text = filaActual.Cells[2].Value.ToString();
-            txt_TelfProveedor.Text = filaActual.Cells[3].Value.ToString();
-            checkBox_Prov.Checked = Convert.ToBoolean(filaActual.Cells[4].Value);
+            comboBoxCiudad.Text = filaActual.Cells[3].Value.ToString();
+            txt_TelfProveedor.Text = filaActual.Cells[4].Value.ToString();
+            checkBox_Prov.Checked = Convert.ToBoolean(filaActual.Cells[5].Value);
         }
 
         private void comboBoxCiudad_SelectedIndexChanged(object sender, EventArgs e)

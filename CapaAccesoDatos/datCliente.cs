@@ -41,9 +41,9 @@ namespace CapaAccesoDatos
                 {
                     entCliente Cli = new entCliente();
                     Cli.idCli = Convert.ToInt32(dr["ClienteID"]);
-                    Cli.NombCli = dr["Nombclient"].ToString();
-                    Cli.CorreoCli = dr["Correoclient"].ToString();
-                    Cli.CeluCli = Convert.ToInt32(dr["Celclient"]);
+                    Cli.NombreCliente = dr["Nombclient"].ToString();
+                    Cli.Correo = dr["Correoclient"].ToString();
+                    Cli.CelularCliente = Convert.ToInt32(dr["Celclient"]);
                     //Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
                     //Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
                     Cli.estCli = Convert.ToBoolean(dr["Estclient"]);
@@ -72,9 +72,9 @@ namespace CapaAccesoDatos
                 cmd = new SqlCommand("spInsertarCli", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ClienteID", Cli.idCli);
-                cmd.Parameters.AddWithValue("@Nombclient", Cli.NombCli);
-                cmd.Parameters.AddWithValue("@Correoclient", Cli.CorreoCli);
-                cmd.Parameters.AddWithValue("@Celclient", Cli.CeluCli);
+                cmd.Parameters.AddWithValue("@Nombclient", Cli.NombreCliente);
+                cmd.Parameters.AddWithValue("@Correoclient", Cli.Correo);
+                cmd.Parameters.AddWithValue("@Celclient", Cli.CelularCliente);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
                 cmd.Parameters.AddWithValue("@Estclient", Cli.estCli);
@@ -105,9 +105,9 @@ namespace CapaAccesoDatos
                 cmd = new SqlCommand("spEditarCli", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ClienteID", Cli.idCli);
-                cmd.Parameters.AddWithValue("@Nombclient", Cli.NombCli);
-                cmd.Parameters.AddWithValue("@Correoclient", Cli.CorreoCli);
-                cmd.Parameters.AddWithValue("@Celclient", Cli.CeluCli);
+                cmd.Parameters.AddWithValue("@Nombclient", Cli.NombreCliente);
+                cmd.Parameters.AddWithValue("@Correoclient", Cli.Correo);
+                cmd.Parameters.AddWithValue("@Celclient", Cli.CelularCliente);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
                 cmd.Parameters.AddWithValue("@Estclient", Cli.estCli);

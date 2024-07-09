@@ -75,10 +75,10 @@ namespace CapaPresentacion
             {
                 entCliente cli = new entCliente();
                 cli.idCli = int.Parse(txt_DniCliente.Text.Trim());
-                cli.NombCli = txt_NombCliente.Text.Trim();
-                cli.CorreoCli = txt_CorreoCliente.Text.Trim();
+                cli.NombreCliente = txt_NombCliente.Text.Trim();
+                cli.Correo = txt_CorreoCliente.Text.Trim();
                 //c.fecRegCliente = dtPickerRegCliente.Value;
-                cli.CeluCli = int.Parse(txt_TelfCliente.Text.Trim());
+                cli.CelularCliente = int.Parse(txt_TelfCliente.Text.Trim());
                 cli.estCli = checkBox_Clie.Checked;
                 logClient.Instancia.InsertaCli(cli);
             }
@@ -97,10 +97,10 @@ namespace CapaPresentacion
             {
                 entCliente cli = new entCliente();
                 cli.idCli = int.Parse(txt_DniCliente.Text.Trim());
-                cli.NombCli = txt_NombCliente.Text.Trim();
-                cli.CorreoCli = txt_CorreoCliente.Text.Trim();
+                cli.NombreCliente = txt_NombCliente.Text.Trim();
+                cli.Correo = txt_CorreoCliente.Text.Trim();
                 //c.fecRegCliente = dtPickerRegCliente.Value;
-                cli.CeluCli = int.Parse(txt_TelfCliente.Text.Trim());
+                cli.CelularCliente = int.Parse(txt_TelfCliente.Text.Trim());
                 cli.estCli = checkBox_Clie.Checked;
 
                 logClient.Instancia.EditaCli(cli);

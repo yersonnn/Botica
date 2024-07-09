@@ -40,10 +40,10 @@ namespace CapaAccesoDatos
                 while (dr.Read())
                 {
                     entProv Prov = new entProv();
-                    Prov.idProv = Convert.ToInt32(dr["ProveedorID"]);
-                    Prov.NombProv = dr["Nombempresa"].ToString();
-                    Prov.nombCiudad = dr["Nombciudad"].ToString();
-                    Prov.TelfProv = Convert.ToInt32(dr["Telfempresa"]);
+                    Prov.ProvID = Convert.ToInt32(dr["ProveedorID"]);
+                    Prov.Proveedor = dr["Nombempresa"].ToString();
+                    Prov.Ciudad = dr["Nombciudad"].ToString();
+                    Prov.Telefono = Convert.ToInt32(dr["Telfempresa"]);
                     //Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
                     //Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
                     Prov.estProv = Convert.ToBoolean(dr["Estproveed"]);
@@ -71,10 +71,10 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarProv", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ProveedorID", Prov.idProv);
-                cmd.Parameters.AddWithValue("@Nombempresa", Prov.NombProv);
+                cmd.Parameters.AddWithValue("@ProveedorID", Prov.ProvID);
+                cmd.Parameters.AddWithValue("@Nombempresa", Prov.Proveedor);
                 cmd.Parameters.AddWithValue("@CiudadID", Prov.CiudadID);
-                cmd.Parameters.AddWithValue("@Telfempresa", Prov.TelfProv);
+                cmd.Parameters.AddWithValue("@Telfempresa", Prov.Telefono);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
                 cmd.Parameters.AddWithValue("@Estproveed", Prov.estProv);
@@ -104,10 +104,10 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spEditarProv", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ProveedorID", Prov.idProv);
-                cmd.Parameters.AddWithValue("@Nombempresa", Prov.NombProv);
+                cmd.Parameters.AddWithValue("@ProveedorID", Prov.ProvID);
+                cmd.Parameters.AddWithValue("@Nombempresa", Prov.Proveedor);
                 cmd.Parameters.AddWithValue("@CiudadID", Prov.CiudadID);
-                cmd.Parameters.AddWithValue("@Telfempresa", Prov.TelfProv);
+                cmd.Parameters.AddWithValue("@Telfempresa", Prov.Telefono);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
                 cmd.Parameters.AddWithValue("@Estproveed", Prov.estProv);
@@ -137,7 +137,7 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spDesabilitarProv", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ProveedorID", Prov.idProv);
+                cmd.Parameters.AddWithValue("@ProveedorID", Prov.ProvID);
                 cmd.Parameters.AddWithValue("@Estproveed", Prov.estProv);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();

@@ -41,12 +41,12 @@ namespace CapaAccesoDatos
                 {
                     entProd Prod = new entProd();
                     Prod.idProd = Convert.ToInt32(dr["ProductoID"]);
-                    Prod.NombProd = dr["Nombproducto"].ToString();
-                    Prod.IDCatProd = Convert.ToInt32(dr["CategoriaID"]);
-                    Prod.PrecProd = Convert.ToDouble(dr["Precioprod"]);
+                    Prod.Producto = dr["Nombproducto"].ToString();
+                    Prod.NombCategoria = dr["Nombcategoria"].ToString();
+                    Prod.PrecioUnitario = Convert.ToDouble(dr["Precioprod"]);
                     //Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
                     //Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
-                    Prod.StockProd = Convert.ToInt32(dr["Stock"]);
+                    Prod.Stock = Convert.ToInt32(dr["Stock"]);
                     Prod.estProd = Convert.ToBoolean(dr["Estprod"]);
                     lista.Add(Prod);
                 }
@@ -72,10 +72,10 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarProd", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombproducto", Prod.NombProd);
+                cmd.Parameters.AddWithValue("@Nombproducto", Prod.Producto);
                 cmd.Parameters.AddWithValue("@CategoriaID", Prod.IDCatProd);
-                cmd.Parameters.AddWithValue("@Precioprod", Prod.PrecProd);
-                cmd.Parameters.AddWithValue("@Stock", Prod.StockProd);
+                cmd.Parameters.AddWithValue("@Precioprod", Prod.PrecioUnitario);
+                cmd.Parameters.AddWithValue("@Stock", Prod.Stock);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
                 cmd.Parameters.AddWithValue("@Estprod", Prod.estProd);
@@ -105,10 +105,10 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spEditarProd", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombproducto", Prod.NombProd);
+                cmd.Parameters.AddWithValue("@Nombproducto", Prod.Producto);
                 cmd.Parameters.AddWithValue("@CategoriaID", Prod.IDCatProd);
-                cmd.Parameters.AddWithValue("@Precioprod", Prod.PrecProd);
-                cmd.Parameters.AddWithValue("@Stock", Prod.StockProd);
+                cmd.Parameters.AddWithValue("@Precioprod", Prod.PrecioUnitario);
+                cmd.Parameters.AddWithValue("@Stock", Prod.Stock);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
                 cmd.Parameters.AddWithValue("@Estprod", Prod.estProd);

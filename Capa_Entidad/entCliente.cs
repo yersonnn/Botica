@@ -10,10 +10,10 @@ namespace Capa_Entidad
     {
 
         public int idCli { get; set; }
-        public string NombCli { get; set; }
-        public string CorreoCli { get; set; }
+        public string NombreCliente { get; set; }
+        public string Correo { get; set; }
 
-        public int CeluCli { get; set; }
+        public int CelularCliente { get; set; }
         //public DateTime fecRegCliente { get; set; }
         //public int idCiudad { get; set; }      /// public entCiudad Ciudad{ get; set; }
 

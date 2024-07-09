@@ -11,12 +11,12 @@ namespace Capa_Entidad
 
 
         public int idEmpl { get; set; }
-        public string NombEmpl { get; set; }
+        public string NombreEmpleado { get; set; }
         
 
-        public int CeluEmpl { get; set; }
+        public int CelularEmpleado { get; set; }
 
-        public string CargoEmpl { get; set; }
+        public string Cargo { get; set; }
         //public DateTime fecRegCliente { get; set; }
         //public int idCiudad { get; set; }      /// public entCiudad Ciudad{ get; set; }
 

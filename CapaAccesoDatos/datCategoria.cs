@@ -43,7 +43,7 @@ namespace CapaAccesoDatos
                 {
                     entCategoria Cat = new entCategoria();
                     Cat.CategoriaID = Convert.ToInt32(dr["CategoriaID"]);
-                    Cat.NomCategoria = dr["NombCategoria"].ToString();                   
+                    Cat.Categoria = dr["NombCategoria"].ToString();                   
                     Cat.estCategoria = Convert.ToBoolean(dr["estCategoria"]);
                     lista.Add(Cat);
                 }
@@ -70,7 +70,7 @@ namespace CapaAccesoDatos
                 cmd = new SqlCommand("spEditarCat", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@CategoriaID", Cat.CategoriaID);
-                cmd.Parameters.AddWithValue("@Nombcategoria", Cat.NomCategoria);
+                cmd.Parameters.AddWithValue("@Nombcategoria", Cat.Categoria);
                 cmd.Parameters.AddWithValue("@EstCategoria", Cat.estCategoria);
                 cn.Open();
 
@@ -100,7 +100,7 @@ namespace CapaAccesoDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarCategoria", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@NombCategoria", Cat.NomCategoria);
+                cmd.Parameters.AddWithValue("@NombCategoria", Cat.Categoria);
                 cmd.Parameters.AddWithValue("@estCategoria", Cat.estCategoria);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();

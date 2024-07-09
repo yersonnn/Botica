@@ -23,7 +23,7 @@ namespace CapaAccesoDatos
             /////CAMBIAR NOMBRE DEL HOST////////
 
             SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Data Source=DESKTOP-CODMBQV\\SQLEXPRESS; Initial Catalog =ANGEL_GUARDIAN;" +
+            cn.ConnectionString = "Data Source=DESKTOP-CODMBQV\\SQLEXPRESS; Initial Catalog =BOTI;" +
                                 "Integrated Security=true";
 
             return cn;
