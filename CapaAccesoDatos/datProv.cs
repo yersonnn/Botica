@@ -42,7 +42,7 @@ namespace CapaAccesoDatos
                     entProv Prov = new entProv();
                     Prov.idProv = Convert.ToInt32(dr["ProveedorID"]);
                     Prov.NombProv = dr["Nombempresa"].ToString();
-                    Prov.CiudadProv = Convert.ToInt32(dr["CiudadID"]);
+                    Prov.nombCiudad = dr["Nombciudad"].ToString();
                     Prov.TelfProv = Convert.ToInt32(dr["Telfempresa"]);
                     //Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
                     //Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
@@ -73,7 +73,7 @@ namespace CapaAccesoDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ProveedorID", Prov.idProv);
                 cmd.Parameters.AddWithValue("@Nombempresa", Prov.NombProv);
-                cmd.Parameters.AddWithValue("@CiudadID", Prov.CiudadProv);
+                cmd.Parameters.AddWithValue("@CiudadID", Prov.CiudadID);
                 cmd.Parameters.AddWithValue("@Telfempresa", Prov.TelfProv);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
@@ -106,7 +106,7 @@ namespace CapaAccesoDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ProveedorID", Prov.idProv);
                 cmd.Parameters.AddWithValue("@Nombempresa", Prov.NombProv);
-                cmd.Parameters.AddWithValue("@CiudadID", Prov.CiudadProv);
+                cmd.Parameters.AddWithValue("@CiudadID", Prov.CiudadID);
                 cmd.Parameters.AddWithValue("@Telfempresa", Prov.TelfProv);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
@@ -153,6 +153,30 @@ namespace CapaAccesoDatos
             finally { cmd.Connection.Close(); }
             return delete;
         }
+
+        public DataTable CargarCiudad()
+        {
+            SqlConnection cn = Conexion.Instancia.Conectar();
+            SqlDataAdapter da = new SqlDataAdapter("spCargarCiudad", cn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable CargarNombreCiudad(int idCiudad)
+        {
+            SqlCommand cmd = null;
+            SqlConnection cn = Conexion.Instancia.Conectar();
+            cmd = new SqlCommand("spCargarNombreCiudad", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CiudadID", idCiudad);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
 
         #endregion metodos
 

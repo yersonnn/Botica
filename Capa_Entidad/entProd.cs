@@ -11,7 +11,7 @@ namespace Capa_Entidad
 
         public int idProd { get; set; }
         public string NombProd { get; set; }
-        public int CatProd { get; set; }
+        public int IDCatProd { get; set; }
 
         public double PrecProd { get; set; }
         //public DateTime fecRegCliente { get; set; }

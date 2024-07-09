@@ -1,6 +1,7 @@
 ﻿using Capa_Entidad;
 using CapaAccesoDatos;
 using System.Collections.Generic;
+using System.Data;
 
 namespace CapaLogica
 {
@@ -44,6 +45,17 @@ namespace CapaLogica
         {
             datProv.Instancia.DeshabilitarProv(Prov);
         }
+
+        public DataTable CargarCiudad()
+        {
+            return datProv.Instancia.CargarCiudad();
+        }
+
+        public DataTable CargarNombreCiudad(int idCiudad)
+        {
+            return datProv.Instancia.CargarNombreCiudad(idCiudad);
+        }
+
         #endregion metodos
     }
 }

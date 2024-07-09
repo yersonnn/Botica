@@ -23,7 +23,8 @@ namespace CapaPresentacion
             OcultarBarra();
             listarProv();
             groupBox1.Enabled = false;
-            
+            dgv_Proveedores.Columns["CiudadID"].Visible = false;
+
         }
         void OcultarBarra()
         {
@@ -40,7 +41,7 @@ namespace CapaPresentacion
         private void LimpiarVariables()
         {
             txt_NombProveedor.Text = "";
-            txt_CiudProveedor.Text = " ";
+            comboBoxCiudad.SelectedIndex = 0;
             txt_TelfProveedor.Text = " ";
             checkBox_Prov.Checked = false;
 
@@ -84,7 +85,7 @@ namespace CapaPresentacion
                 entProv Prov = new entProv();
                 Prov.idProv = int.Parse(txt_CodProveedor.Text.Trim());
                 Prov.NombProv = txt_NombProveedor.Text.Trim();
-                Prov.CiudadProv = int.Parse(txt_CiudProveedor.Text.Trim());
+                Prov.CiudadID = Convert.ToInt32(comboBoxCiudad.SelectedValue);
                 //c.fecRegCliente = dtPickerRegCliente.Value;
                 Prov.TelfProv = int.Parse(txt_TelfProveedor.Text.Trim());
                 Prov.estProv = checkBox_Prov.Checked;
@@ -106,7 +107,7 @@ namespace CapaPresentacion
                 entProv Prov = new entProv();
                 Prov.idProv = int.Parse(txt_CodProveedor.Text.Trim());
                 Prov.NombProv = txt_NombProveedor.Text.Trim();
-                Prov.CiudadProv = int.Parse(txt_CiudProveedor.Text.Trim());
+                Prov.CiudadID = (int)comboBoxCiudad.SelectedValue;
                 //c.fecRegCliente = dtPickerRegCliente.Value;
                 Prov.TelfProv = int.Parse(txt_TelfProveedor.Text.Trim());
                 Prov.estProv = checkBox_Prov.Checked;
@@ -148,9 +149,38 @@ namespace CapaPresentacion
             DataGridViewRow filaActual = dgv_Proveedores.Rows[e.RowIndex]; //
             txt_CodProveedor.Text = filaActual.Cells[0].Value.ToString();
             txt_NombProveedor.Text = filaActual.Cells[1].Value.ToString();
-            txt_CiudProveedor.Text = filaActual.Cells[2].Value.ToString();
+            comboBoxCiudad.Text = filaActual.Cells[2].Value.ToString();
             txt_TelfProveedor.Text = filaActual.Cells[3].Value.ToString();
             checkBox_Prov.Checked = Convert.ToBoolean(filaActual.Cells[4].Value);
+        }
+
+        private void comboBoxCiudad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxCiudad.SelectedValue != null)
+            {
+                if (comboBoxCiudad.SelectedValue is DataRowView)
+                {
+                    DataRowView drv = (DataRowView)comboBoxCiudad.SelectedValue;
+                    int idCiudad = Convert.ToInt32(drv["CiudadID"]);
+                    comboBoxCiudad.DataSource = logProv.Instancia.CargarNombreCiudad(idCiudad);
+
+                }
+                else
+                {
+                    int idCiudad = Convert.ToInt32(comboBoxCiudad.SelectedValue);
+                    comboBoxCiudad.DataSource = logProv.Instancia.CargarNombreCiudad(idCiudad);
+
+                }
+                comboBoxCiudad.DisplayMember = "Nombciudad";
+                comboBoxCiudad.ValueMember = "CiudadID";
+            }
+        }
+
+        private void CRUD_Proveedor_Load(object sender, EventArgs e)
+        {
+            comboBoxCiudad.DataSource = logProv.Instancia.CargarCiudad();
+            comboBoxCiudad.DisplayMember = "Nombciudad";
+            comboBoxCiudad.ValueMember = "CiudadID";
         }
     }
 }

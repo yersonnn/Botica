@@ -10,8 +10,8 @@ namespace Capa_Entidad
     {
         public int idProv { get; set; }
         public string NombProv { get; set; }
-        public int CiudadProv { get; set; }
-
+        public int CiudadID { get; set; }
+        public string nombCiudad { get; set; }
         public int TelfProv { get; set; }
         //public DateTime fecRegCliente { get; set; }
         //public int idCiudad { get; set; }      /// public entCiudad Ciudad{ get; set; }

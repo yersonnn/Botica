@@ -1,6 +1,7 @@
 ﻿using Capa_Entidad;
 using CapaAccesoDatos;
 using System.Collections.Generic;
+using System.Data;
 
 namespace CapaLogica
 {
@@ -44,6 +45,16 @@ namespace CapaLogica
         {
             datProd.Instancia.DeshabilitarProd(Prod);
         }
+        public DataTable CargarCategoria()
+        {
+            return datProd.Instancia.CargarCategoria();
+        }
+
+        public DataTable CargarNombre(int idCat)
+        {
+            return datProd.Instancia.CargarNombre(idCat);
+        }
+
         #endregion metodos
 
     }

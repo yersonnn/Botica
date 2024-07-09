@@ -32,12 +32,12 @@
             btn_EditProveedor = new Button();
             btn_NuevProveedor = new Button();
             groupBox1 = new GroupBox();
+            comboBoxCiudad = new ComboBox();
             checkBox_Prov = new CheckBox();
             btn_ModProv = new Button();
             txt_TelfProveedor = new TextBox();
             btn_AgProv = new Button();
             label5 = new Label();
-            txt_CiudProveedor = new TextBox();
             label4 = new Label();
             txt_NombProveedor = new TextBox();
             txt_CodProveedor = new TextBox();
@@ -83,12 +83,12 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(comboBoxCiudad);
             groupBox1.Controls.Add(checkBox_Prov);
             groupBox1.Controls.Add(btn_ModProv);
             groupBox1.Controls.Add(txt_TelfProveedor);
             groupBox1.Controls.Add(btn_AgProv);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(txt_CiudProveedor);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(txt_NombProveedor);
             groupBox1.Controls.Add(txt_CodProveedor);
@@ -101,6 +101,15 @@
             groupBox1.TabIndex = 16;
             groupBox1.TabStop = false;
             groupBox1.Text = "DETALLES";
+            // 
+            // comboBoxCiudad
+            // 
+            comboBoxCiudad.FormattingEnabled = true;
+            comboBoxCiudad.Location = new Point(152, 102);
+            comboBoxCiudad.Name = "comboBoxCiudad";
+            comboBoxCiudad.Size = new Size(290, 29);
+            comboBoxCiudad.TabIndex = 23;
+            comboBoxCiudad.SelectedIndexChanged += comboBoxCiudad_SelectedIndexChanged;
             // 
             // checkBox_Prov
             // 
@@ -150,14 +159,6 @@
             label5.Size = new Size(70, 20);
             label5.TabIndex = 12;
             label5.Text = "Telefono:";
-            // 
-            // txt_CiudProveedor
-            // 
-            txt_CiudProveedor.Font = new Font("Segoe UI", 9.75F);
-            txt_CiudProveedor.Location = new Point(154, 103);
-            txt_CiudProveedor.Name = "txt_CiudProveedor";
-            txt_CiudProveedor.Size = new Size(288, 25);
-            txt_CiudProveedor.TabIndex = 11;
             // 
             // label4
             // 
@@ -250,6 +251,7 @@
             Controls.Add(dgv_Proveedores);
             Name = "CRUD_Proveedor";
             Text = "CRUD_Proveedor";
+            Load += CRUD_Proveedor_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Proveedores).EndInit();
@@ -266,7 +268,6 @@
         private GroupBox groupBox1;
         private TextBox txt_TelfProveedor;
         private Label label5;
-        private TextBox txt_CiudProveedor;
         private Label label4;
         private TextBox txt_NombProveedor;
         private TextBox txt_CodProveedor;
@@ -278,5 +279,6 @@
         private CheckBox checkBox_Prov;
         private Panel panel1;
         private Label label7;
+        private ComboBox comboBoxCiudad;
     }
 }

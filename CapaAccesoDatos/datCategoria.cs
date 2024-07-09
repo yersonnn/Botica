@@ -86,6 +86,8 @@ namespace CapaAccesoDatos
             }
             finally { cmd.Connection.Close(); }
             return edita;
+
+          
         }
 
         /////////////////////////InsertaCategoria

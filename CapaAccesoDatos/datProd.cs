@@ -42,7 +42,7 @@ namespace CapaAccesoDatos
                     entProd Prod = new entProd();
                     Prod.idProd = Convert.ToInt32(dr["ProductoID"]);
                     Prod.NombProd = dr["Nombproducto"].ToString();
-                    Prod.CatProd = Convert.ToInt32(dr["CategoriaID"]);
+                    Prod.IDCatProd = Convert.ToInt32(dr["CategoriaID"]);
                     Prod.PrecProd = Convert.ToDouble(dr["Precioprod"]);
                     //Cli.fecRegCliente = Convert.ToDateTime(dr["fecRegCliente"]);
                     //Cli.idCiudad = Convert.ToInt32(dr["idCiudad"]);
@@ -73,7 +73,7 @@ namespace CapaAccesoDatos
                 cmd = new SqlCommand("spInsertarProd", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Nombproducto", Prod.NombProd);
-                cmd.Parameters.AddWithValue("@CategoriaID", Prod.CatProd);
+                cmd.Parameters.AddWithValue("@CategoriaID", Prod.IDCatProd);
                 cmd.Parameters.AddWithValue("@Precioprod", Prod.PrecProd);
                 cmd.Parameters.AddWithValue("@Stock", Prod.StockProd);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
@@ -106,7 +106,7 @@ namespace CapaAccesoDatos
                 cmd = new SqlCommand("spEditarProd", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Nombproducto", Prod.NombProd);
-                cmd.Parameters.AddWithValue("@CategoriaID", Prod.CatProd);
+                cmd.Parameters.AddWithValue("@CategoriaID", Prod.IDCatProd);
                 cmd.Parameters.AddWithValue("@Precioprod", Prod.PrecProd);
                 cmd.Parameters.AddWithValue("@Stock", Prod.StockProd);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
@@ -154,6 +154,29 @@ namespace CapaAccesoDatos
             }
             finally { cmd.Connection.Close(); }
             return delete;
+        }
+
+        public DataTable CargarCategoria()
+        {
+            SqlConnection cn = Conexion.Instancia.Conectar();
+            SqlDataAdapter da = new SqlDataAdapter("spCargarCategoria", cn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable CargarNombre(int idCat)
+        {
+            SqlCommand cmd = null;
+            SqlConnection cn = Conexion.Instancia.Conectar();
+            cmd = new SqlCommand("spCargarNombreCat", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CategoriaID", idCat);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
 
         #endregion metodos

@@ -79,6 +79,7 @@ namespace CapaPresentacion
             try
             {
                 entCategoria cat = new entCategoria();
+                cat.CategoriaID = int.Parse(txt_CodCat.Text.Trim());
                 cat.NomCategoria = txt_NombCat.Text.Trim();
                 cat.estCategoria = checkBox_CAT.Checked;
 

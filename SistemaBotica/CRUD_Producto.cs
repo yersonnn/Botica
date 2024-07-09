@@ -39,7 +39,7 @@ namespace CapaPresentacion
 
         private void LimpiarVariables()
         {
-            txt_CodProducto.Text = "";
+            comboBoxCatProd.SelectedIndex = 0;
             txt_NombProducto.Text = "";
             comboBoxCatProd.Text = " ";
             txt_PrecProducto.Text = " ";
@@ -73,7 +73,7 @@ namespace CapaPresentacion
             {
                 entProd Prod = new entProd();
                 Prod.NombProd = txt_NombProducto.Text.Trim();
-                Prod.CatProd = int.Parse(comboBoxCatProd.Text.Trim());
+                Prod.IDCatProd = Convert.ToInt32(comboBoxCatProd.SelectedValue);
                 //c.fecRegCliente = dtPickerRegCliente.Value;
                 Prod.PrecProd = double.Parse(txt_PrecProducto.Text.Trim());
                 //Prod.StockProd = int.Parse(txt_StockProducto.Text.Trim());
@@ -95,7 +95,7 @@ namespace CapaPresentacion
             {
                 entProd Prod = new entProd();
                 Prod.NombProd = txt_NombProducto.Text.Trim();
-                Prod.CatProd = int.Parse(comboBoxCatProd.Text.Trim());
+                Prod.IDCatProd = (int)comboBoxCatProd.SelectedValue;
                 //c.fecRegCliente = dtPickerRegCliente.Value;
                 Prod.PrecProd = double.Parse(txt_PrecProducto.Text.Trim());
                 //Prod.StockProd = int.Parse(txt_StockProducto.Text.Trim());
@@ -153,6 +153,35 @@ namespace CapaPresentacion
         private void txt_CatProducto_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxCatProd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxCatProd.SelectedValue != null)
+            {
+                if (comboBoxCatProd.SelectedValue is DataRowView)
+                {
+                    DataRowView drv = (DataRowView)comboBoxCatProd.SelectedValue;
+                    int idCategoria = Convert.ToInt32(drv["CategoriaID"]);
+                    comboBoxCatProd.DataSource = logProd.Instancia.CargarNombre(idCategoria);
+
+                }
+                else
+                {
+                    int idCategoria = Convert.ToInt32(comboBoxCatProd.SelectedValue);
+                    comboBoxCatProd.DataSource = logProd.Instancia.CargarNombre(idCategoria);
+
+                }
+                comboBoxCatProd.DisplayMember = "Nombcategoria";
+                comboBoxCatProd.ValueMember = "CategoriaID";
+            }
+        }
+
+        private void CRUD_Producto_Load(object sender, EventArgs e)
+        {
+            comboBoxCatProd.DataSource = logProd.Instancia.CargarCategoria();
+            comboBoxCatProd.DisplayMember = "Nombcategoria";
+            comboBoxCatProd.ValueMember = "CategoriaID";
         }
     }
 }

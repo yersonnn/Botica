@@ -88,6 +88,7 @@
             comboBoxCatProd.Name = "comboBoxCatProd";
             comboBoxCatProd.Size = new Size(194, 29);
             comboBoxCatProd.TabIndex = 28;
+            comboBoxCatProd.SelectedIndexChanged += comboBoxCatProd_SelectedIndexChanged;
             // 
             // checkBox_Produc
             // 
@@ -250,6 +251,7 @@
             ForeColor = SystemColors.ControlText;
             Name = "CRUD_Producto";
             Text = "CRUD_Producto";
+            Load += CRUD_Producto_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_Productos).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

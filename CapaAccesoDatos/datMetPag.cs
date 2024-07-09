@@ -107,7 +107,7 @@ namespace CapaAccesoDatos
                 cmd.Parameters.AddWithValue("@Tipometpag", Met.TipoMetPago);
                 //cmd.Parameters.AddWithValue("@fecRegCliente", Cli.fecRegCliente);
                 //cmd.Parameters.AddWithValue("@idCiudad", Cli.idCiudad);
-                cmd.Parameters.AddWithValue("@EstCmetpag", Met.estMetPag);
+                cmd.Parameters.AddWithValue("@Estmetpag", Met.estMetPag);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -121,31 +121,6 @@ namespace CapaAccesoDatos
             }
             finally { cmd.Connection.Close(); }
             return edita;
-        }
-
-        public Boolean HabilitarMetodoPago(entMetodoPago mp)
-        {
-            SqlCommand cmd = null;
-            Boolean delete = false;
-            try
-            {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spHabilitarMetodoPago", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@MetodoDePagoID", mp.MetodoDePagoID);
-                cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                {
-                    delete = true;
-                }
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally { cmd.Connection.Close(); }
-            return delete;
         }
 
         //deshabilitaCliente
