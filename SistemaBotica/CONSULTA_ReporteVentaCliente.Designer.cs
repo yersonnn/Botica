@@ -32,9 +32,11 @@
             dataGridView1 = new DataGridView();
             button2 = new Button();
             label2 = new Label();
-            label1 = new Label();
             button1 = new Button();
+            panel1 = new Panel();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // textBox1
@@ -72,17 +74,6 @@
             label2.TabIndex = 20;
             label2.Text = "Dni:";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold | FontStyle.Italic);
-            label1.Location = new Point(12, 15);
-            label1.Name = "label1";
-            label1.Size = new Size(357, 30);
-            label1.TabIndex = 19;
-            label1.Text = "REPORTE DE VENTAS POR CLIENTE";
-            label1.UseMnemonic = false;
-            // 
             // button1
             // 
             button1.Font = new Font("Segoe UI", 11.25F);
@@ -93,20 +84,43 @@
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.GradientInactiveCaption;
+            panel1.Controls.Add(label7);
+            panel1.Location = new Point(-266, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1171, 47);
+            panel1.TabIndex = 24;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Nirmala UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(0, 0, 64);
+            label7.Location = new Point(263, 2);
+            label7.Name = "label7";
+            label7.Size = new Size(545, 45);
+            label7.TabIndex = 1;
+            label7.Text = "REPORTE DE VENTAS POR CLIENTE";
+            // 
             // CONSULTA_ReporteVentaCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(638, 440);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(706, 440);
+            Controls.Add(panel1);
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(button2);
             Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(button1);
             Name = "CONSULTA_ReporteVentaCliente";
             Text = "CONSULTA_ReporteVentaCliente";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -117,7 +131,8 @@
         private DataGridView dataGridView1;
         private Button button2;
         private Label label2;
-        private Label label1;
         private Button button1;
+        private Panel panel1;
+        private Label label7;
     }
 }

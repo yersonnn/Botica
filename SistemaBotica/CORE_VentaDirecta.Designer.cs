@@ -33,10 +33,12 @@
             button1 = new Button();
             button2 = new Button();
             groupBox1 = new GroupBox();
+            labelNombreCliente = new Label();
             textBox2 = new TextBox();
             label3 = new Label();
             label2 = new Label();
             groupBox2 = new GroupBox();
+            labelNombreProd = new Label();
             label8 = new Label();
             textBox4 = new TextBox();
             labelPrecio = new Label();
@@ -50,24 +52,25 @@
             groupBox3 = new GroupBox();
             dateTimePicker1 = new DateTimePicker();
             button5 = new Button();
-            labelNombreProd = new Label();
             groupBox4 = new GroupBox();
-            label9 = new Label();
             comboBox1 = new ComboBox();
-            labelNombreCliente = new Label();
+            label9 = new Label();
+            panel1 = new Panel();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(18, 386);
+            label1.Location = new Point(18, 455);
             label1.Name = "label1";
             label1.Size = new Size(227, 30);
             label1.TabIndex = 0;
@@ -76,14 +79,14 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 423);
+            dataGridView1.Location = new Point(12, 492);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(854, 181);
             dataGridView1.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(921, 444);
+            button1.Location = new Point(921, 513);
             button1.Name = "button1";
             button1.Size = new Size(170, 38);
             button1.TabIndex = 2;
@@ -92,7 +95,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(921, 549);
+            button2.Location = new Point(921, 618);
             button2.Name = "button2";
             button2.Size = new Size(170, 38);
             button2.TabIndex = 3;
@@ -106,12 +109,22 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(575, 212);
+            groupBox1.Location = new Point(575, 281);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(447, 108);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cliente:";
+            // 
+            // labelNombreCliente
+            // 
+            labelNombreCliente.AutoSize = true;
+            labelNombreCliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelNombreCliente.Location = new Point(157, 66);
+            labelNombreCliente.Name = "labelNombreCliente";
+            labelNombreCliente.Size = new Size(21, 20);
+            labelNombreCliente.TabIndex = 13;
+            labelNombreCliente.Text = "--";
             // 
             // textBox2
             // 
@@ -152,12 +165,22 @@
             groupBox2.Controls.Add(textBox3);
             groupBox2.Controls.Add(label4);
             groupBox2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            groupBox2.Location = new Point(575, 35);
+            groupBox2.Location = new Point(575, 104);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(429, 162);
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Text = "PRODUCTOS FARMACEUTICOS";
+            // 
+            // labelNombreProd
+            // 
+            labelNombreProd.AutoSize = true;
+            labelNombreProd.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelNombreProd.Location = new Point(102, 67);
+            labelNombreProd.Name = "labelNombreProd";
+            labelNombreProd.Size = new Size(21, 20);
+            labelNombreProd.TabIndex = 12;
+            labelNombreProd.Text = "--";
             // 
             // label8
             // 
@@ -228,7 +251,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(1023, 57);
+            button3.Location = new Point(1023, 126);
             button3.Name = "button3";
             button3.Size = new Size(135, 51);
             button3.TabIndex = 6;
@@ -237,7 +260,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(1023, 121);
+            button4.Location = new Point(1023, 190);
             button4.Name = "button4";
             button4.Size = new Size(135, 51);
             button4.TabIndex = 7;
@@ -247,7 +270,7 @@
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(12, 108);
+            dataGridView2.Location = new Point(12, 177);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.Size = new Size(549, 260);
             dataGridView2.TabIndex = 8;
@@ -256,7 +279,7 @@
             // 
             groupBox3.Controls.Add(dateTimePicker1);
             groupBox3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            groupBox3.Location = new Point(12, 17);
+            groupBox3.Location = new Point(12, 86);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(254, 85);
             groupBox3.TabIndex = 9;
@@ -272,34 +295,32 @@
             // 
             // button5
             // 
-            button5.Location = new Point(920, 495);
+            button5.Location = new Point(920, 564);
             button5.Name = "button5";
             button5.Size = new Size(170, 38);
             button5.TabIndex = 10;
             button5.Text = "MODIFICAR VENTA";
             button5.UseVisualStyleBackColor = true;
             // 
-            // labelNombreProd
-            // 
-            labelNombreProd.AutoSize = true;
-            labelNombreProd.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelNombreProd.Location = new Point(102, 67);
-            labelNombreProd.Name = "labelNombreProd";
-            labelNombreProd.Size = new Size(21, 20);
-            labelNombreProd.TabIndex = 12;
-            labelNombreProd.Text = "--";
-            // 
             // groupBox4
             // 
             groupBox4.Controls.Add(comboBox1);
             groupBox4.Controls.Add(label9);
             groupBox4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox4.Location = new Point(567, 326);
+            groupBox4.Location = new Point(567, 395);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(447, 67);
             groupBox4.TabIndex = 6;
             groupBox4.TabStop = false;
             groupBox4.Text = "Pago:";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(143, 28);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(198, 29);
+            comboBox1.TabIndex = 1;
             // 
             // label9
             // 
@@ -311,29 +332,33 @@
             label9.TabIndex = 0;
             label9.Text = "Metodo de Pago:";
             // 
-            // comboBox1
+            // panel1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(143, 28);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(198, 29);
-            comboBox1.TabIndex = 1;
+            panel1.BackColor = SystemColors.GradientInactiveCaption;
+            panel1.Controls.Add(label7);
+            panel1.Location = new Point(1, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1171, 63);
+            panel1.TabIndex = 11;
             // 
-            // labelNombreCliente
+            // label7
             // 
-            labelNombreCliente.AutoSize = true;
-            labelNombreCliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelNombreCliente.Location = new Point(157, 66);
-            labelNombreCliente.Name = "labelNombreCliente";
-            labelNombreCliente.Size = new Size(21, 20);
-            labelNombreCliente.TabIndex = 13;
-            labelNombreCliente.Text = "--";
+            label7.AutoSize = true;
+            label7.Font = new Font("Nirmala UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(0, 0, 64);
+            label7.Location = new Point(11, 7);
+            label7.Name = "label7";
+            label7.Size = new Size(446, 45);
+            label7.TabIndex = 0;
+            label7.Text = "VENTA DE FARMACEUTICOS";
             // 
             // CORE_VentaDirecta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1166, 639);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(1166, 719);
+            Controls.Add(panel1);
             Controls.Add(groupBox4);
             Controls.Add(button5);
             Controls.Add(groupBox3);
@@ -357,6 +382,8 @@
             groupBox3.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -390,5 +417,7 @@
         private GroupBox groupBox4;
         private ComboBox comboBox1;
         private Label label9;
+        private Panel panel1;
+        private Label label7;
     }
 }

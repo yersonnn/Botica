@@ -39,10 +39,10 @@ namespace CapaPresentacion
 
         private void LimpiarVariables()
         {
+            txt_CodProducto.Text = "";
             txt_NombProducto.Text = "";
-            txt_CatProducto.Text = " ";
+            comboBoxCatProd.Text = " ";
             txt_PrecProducto.Text = " ";
-            txt_StockProducto.Text = " ";
             checkBox_Produc.Checked = false;
 
         }
@@ -73,10 +73,10 @@ namespace CapaPresentacion
             {
                 entProd Prod = new entProd();
                 Prod.NombProd = txt_NombProducto.Text.Trim();
-                Prod.CatProd = int.Parse(txt_CatProducto.Text.Trim());
+                Prod.CatProd = int.Parse(comboBoxCatProd.Text.Trim());
                 //c.fecRegCliente = dtPickerRegCliente.Value;
                 Prod.PrecProd = double.Parse(txt_PrecProducto.Text.Trim());
-                Prod.StockProd = int.Parse(txt_StockProducto.Text.Trim());
+                //Prod.StockProd = int.Parse(txt_StockProducto.Text.Trim());
                 Prod.estProd = checkBox_Produc.Checked;
                 logProd.Instancia.InsertaProd(Prod);
             }
@@ -95,10 +95,10 @@ namespace CapaPresentacion
             {
                 entProd Prod = new entProd();
                 Prod.NombProd = txt_NombProducto.Text.Trim();
-                Prod.CatProd = int.Parse(txt_CatProducto.Text.Trim());
+                Prod.CatProd = int.Parse(comboBoxCatProd.Text.Trim());
                 //c.fecRegCliente = dtPickerRegCliente.Value;
                 Prod.PrecProd = double.Parse(txt_PrecProducto.Text.Trim());
-                Prod.StockProd = int.Parse(txt_StockProducto.Text.Trim());
+                //Prod.StockProd = int.Parse(txt_StockProducto.Text.Trim());
                 Prod.estProd = checkBox_Produc.Checked;
 
                 logProd.Instancia.EditaProd(Prod);
@@ -145,10 +145,14 @@ namespace CapaPresentacion
             DataGridViewRow filaActual = dgv_Productos.Rows[e.RowIndex]; //
             txt_CodProducto.Text = filaActual.Cells[0].Value.ToString();
             txt_NombProducto.Text = filaActual.Cells[1].Value.ToString();
-            txt_CatProducto.Text = filaActual.Cells[2].Value.ToString();
+            comboBoxCatProd.Text = filaActual.Cells[2].Value.ToString();
             txt_PrecProducto.Text = filaActual.Cells[3].Value.ToString();
-            txt_StockProducto.Text = filaActual.Cells[3].Value.ToString();
             checkBox_Produc.Checked = Convert.ToBoolean(filaActual.Cells[4].Value);
+        }
+
+        private void txt_CatProducto_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -25,7 +25,7 @@ namespace CapaPresentacion
             OcultarBarra();
             listarCli();
             groupBox1.Enabled = false;
-            
+
         }
         void OcultarBarra()
         {
@@ -41,6 +41,7 @@ namespace CapaPresentacion
 
         private void LimpiarVariables()
         {
+            txt_DniCliente.Text = "";
             txt_NombCliente.Text = "";
             txt_CorreoCliente.Text = " ";
             txt_TelfCliente.Text = " ";
@@ -73,7 +74,7 @@ namespace CapaPresentacion
             try
             {
                 entCliente cli = new entCliente();
-                cli.idCli= int.Parse(txt_DniCliente.Text.Trim());
+                cli.idCli = int.Parse(txt_DniCliente.Text.Trim());
                 cli.NombCli = txt_NombCliente.Text.Trim();
                 cli.CorreoCli = txt_CorreoCliente.Text.Trim();
                 //c.fecRegCliente = dtPickerRegCliente.Value;
@@ -149,6 +150,11 @@ namespace CapaPresentacion
             txt_CorreoCliente.Text = filaActual.Cells[2].Value.ToString();
             txt_TelfCliente.Text = filaActual.Cells[3].Value.ToString();
             checkBox_Clie.Checked = Convert.ToBoolean(filaActual.Cells[4].Value);
+
+        }
+
+        private void btn_Habilitar_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -37,9 +37,10 @@ namespace CapaPresentacion
 
         private void LimpiarVariables()
         {
+            txt_DniEmpleado.Text = "";
             txt_NombEmpleado.Text = "";
             txt_TelfEmpleado.Text = " ";
-            txt_CargoEmpleado.Text = " ";
+            comboBoxCargo.Text = " ";
             checkBox_Emple.Checked = false;
 
         }
@@ -66,7 +67,7 @@ namespace CapaPresentacion
             txt_DniEmpleado.Text = filaActual.Cells[0].Value.ToString();
             txt_NombEmpleado.Text = filaActual.Cells[1].Value.ToString();
             txt_TelfEmpleado.Text = filaActual.Cells[2].Value.ToString();
-            txt_CargoEmpleado.Text = filaActual.Cells[3].Value.ToString();
+            comboBoxCargo.Text = filaActual.Cells[3].Value.ToString();
             checkBox_Emple.Checked = Convert.ToBoolean(filaActual.Cells[4].Value);
         }
 
@@ -88,7 +89,7 @@ namespace CapaPresentacion
                 empl.idEmpl= int.Parse(txt_DniEmpleado.Text.Trim());
                 empl.NombEmpl = txt_NombEmpleado.Text.Trim();
                 empl.CeluEmpl = int.Parse(txt_TelfEmpleado.Text.Trim());
-                empl.CargoEmpl = txt_CargoEmpleado.Text.Trim();
+                empl.CargoEmpl = comboBoxCargo.Text.Trim();
                 //c.fecRegCliente = dtPickerRegCliente.Value;
 
                 empl.estEmpl = checkBox_Emple.Checked;
@@ -118,7 +119,7 @@ namespace CapaPresentacion
                 empl.idEmpl = int.Parse(txt_DniEmpleado.Text.Trim());
                 empl.NombEmpl = txt_NombEmpleado.Text.Trim();
                 empl.CeluEmpl = int.Parse(txt_TelfEmpleado.Text.Trim());
-                empl.CargoEmpl = txt_CargoEmpleado.Text.Trim();
+                empl.CargoEmpl = comboBoxCargo.Text.Trim();
                 //c.fecRegCliente = dtPickerRegCliente.Value;
 
                 empl.estEmpl = checkBox_Emple.Checked;

@@ -32,9 +32,11 @@
             dataGridView1 = new DataGridView();
             button2 = new Button();
             label2 = new Label();
-            label1 = new Label();
             button1 = new Button();
+            panel1 = new Panel();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // textBox1
@@ -72,17 +74,6 @@
             label2.TabIndex = 14;
             label2.Text = "Codigo:";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold | FontStyle.Italic);
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(552, 30);
-            label1.TabIndex = 13;
-            label1.Text = "REPORTE DE VENTAS POR MEDICAMENTO/PRODUCTO";
-            label1.UseMnemonic = false;
-            // 
             // button1
             // 
             button1.Font = new Font("Segoe UI", 11.25F);
@@ -93,20 +84,43 @@
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.GradientInactiveCaption;
+            panel1.Controls.Add(label7);
+            panel1.Location = new Point(-278, -3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1630, 56);
+            panel1.TabIndex = 25;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Nirmala UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(0, 0, 64);
+            label7.Location = new Point(273, 4);
+            label7.Name = "label7";
+            label7.Size = new Size(661, 45);
+            label7.TabIndex = 1;
+            label7.Text = "REPORTE DE VENTAS POR MEDICAMENTO";
+            // 
             // CONSULTA_ReporteVentasProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(615, 450);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(1122, 450);
+            Controls.Add(panel1);
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(button2);
             Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(button1);
             Name = "CONSULTA_ReporteVentasProducto";
             Text = "CONSULTA_ReporteVentasProducto";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -117,7 +131,8 @@
         private DataGridView dataGridView1;
         private Button button2;
         private Label label2;
-        private Label label1;
         private Button button1;
+        private Panel panel1;
+        private Label label7;
     }
 }

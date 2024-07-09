@@ -32,24 +32,26 @@
             btn_ModMetodo = new Button();
             btn_AgrMetodo = new Button();
             groupBoxMetPag = new GroupBox();
+            comboBoxTipoMetPag = new ComboBox();
             checkBox_MetPag = new CheckBox();
-            txt_TipoMetodo = new TextBox();
             label4 = new Label();
             txt_NombMetodo = new TextBox();
             txt_CodMetodo = new TextBox();
             label3 = new Label();
             label2 = new Label();
             dgv_MetPago = new DataGridView();
-            label1 = new Label();
             btn_Nuevo = new Button();
             btn_Editar = new Button();
+            panel1 = new Panel();
+            label7 = new Label();
             groupBoxMetPag.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_MetPago).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btn_InMetodo
             // 
-            btn_InMetodo.Location = new Point(645, 170);
+            btn_InMetodo.Location = new Point(657, 178);
             btn_InMetodo.Name = "btn_InMetodo";
             btn_InMetodo.Size = new Size(170, 38);
             btn_InMetodo.TabIndex = 19;
@@ -79,8 +81,8 @@
             // 
             // groupBoxMetPag
             // 
+            groupBoxMetPag.Controls.Add(comboBoxTipoMetPag);
             groupBoxMetPag.Controls.Add(checkBox_MetPag);
-            groupBoxMetPag.Controls.Add(txt_TipoMetodo);
             groupBoxMetPag.Controls.Add(label4);
             groupBoxMetPag.Controls.Add(txt_NombMetodo);
             groupBoxMetPag.Controls.Add(btn_ModMetodo);
@@ -89,12 +91,21 @@
             groupBoxMetPag.Controls.Add(label3);
             groupBoxMetPag.Controls.Add(label2);
             groupBoxMetPag.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            groupBoxMetPag.Location = new Point(12, 250);
+            groupBoxMetPag.Location = new Point(12, 279);
             groupBoxMetPag.Name = "groupBoxMetPag";
             groupBoxMetPag.Size = new Size(732, 138);
             groupBoxMetPag.TabIndex = 16;
             groupBoxMetPag.TabStop = false;
             groupBoxMetPag.Text = "DETALLES";
+            // 
+            // comboBoxTipoMetPag
+            // 
+            comboBoxTipoMetPag.FormattingEnabled = true;
+            comboBoxTipoMetPag.Items.AddRange(new object[] { "Tarjeta de Debito", "Billetera Electronica", "Efectivo" });
+            comboBoxTipoMetPag.Location = new Point(154, 98);
+            comboBoxTipoMetPag.Name = "comboBoxTipoMetPag";
+            comboBoxTipoMetPag.Size = new Size(193, 29);
+            comboBoxTipoMetPag.TabIndex = 20;
             // 
             // checkBox_MetPag
             // 
@@ -106,14 +117,6 @@
             checkBox_MetPag.TabIndex = 19;
             checkBox_MetPag.Text = "Estado ";
             checkBox_MetPag.UseVisualStyleBackColor = true;
-            // 
-            // txt_TipoMetodo
-            // 
-            txt_TipoMetodo.Font = new Font("Segoe UI", 9.75F);
-            txt_TipoMetodo.Location = new Point(154, 100);
-            txt_TipoMetodo.Name = "txt_TipoMetodo";
-            txt_TipoMetodo.Size = new Size(193, 25);
-            txt_TipoMetodo.TabIndex = 11;
             // 
             // label4
             // 
@@ -165,25 +168,16 @@
             // dgv_MetPago
             // 
             dgv_MetPago.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_MetPago.Location = new Point(12, 47);
+            dgv_MetPago.Location = new Point(12, 76);
             dgv_MetPago.Name = "dgv_MetPago";
             dgv_MetPago.Size = new Size(607, 181);
             dgv_MetPago.TabIndex = 15;
+            dgv_MetPago.CellContentClick += dgv_MetPago_CellContentClick;
             dgv_MetPago.CellDoubleClick += dgv_MetPago_CellDoubleClick;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(210, 30);
-            label1.TabIndex = 14;
-            label1.Text = "METODOS DE PAGO";
             // 
             // btn_Nuevo
             // 
-            btn_Nuevo.Location = new Point(645, 64);
+            btn_Nuevo.Location = new Point(657, 70);
             btn_Nuevo.Name = "btn_Nuevo";
             btn_Nuevo.Size = new Size(170, 38);
             btn_Nuevo.TabIndex = 20;
@@ -193,7 +187,7 @@
             // 
             // btn_Editar
             // 
-            btn_Editar.Location = new Point(645, 117);
+            btn_Editar.Location = new Point(657, 125);
             btn_Editar.Name = "btn_Editar";
             btn_Editar.Size = new Size(170, 38);
             btn_Editar.TabIndex = 21;
@@ -201,24 +195,46 @@
             btn_Editar.UseVisualStyleBackColor = true;
             btn_Editar.Click += btn_Editar_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.GradientInactiveCaption;
+            panel1.Controls.Add(label7);
+            panel1.Location = new Point(-95, 1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1171, 51);
+            panel1.TabIndex = 25;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Nirmala UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(0, 0, 64);
+            label7.Location = new Point(96, 4);
+            label7.Name = "label7";
+            label7.Size = new Size(323, 45);
+            label7.TabIndex = 1;
+            label7.Text = "METODOS DE PAGO";
+            // 
             // CRUD_MetodoPago
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(835, 432);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(980, 503);
+            Controls.Add(panel1);
             Controls.Add(btn_Editar);
             Controls.Add(btn_Nuevo);
             Controls.Add(btn_InMetodo);
             Controls.Add(groupBoxMetPag);
             Controls.Add(dgv_MetPago);
-            Controls.Add(label1);
             Name = "CRUD_MetodoPago";
             Text = "CRUD_MetodoPago";
             groupBoxMetPag.ResumeLayout(false);
             groupBoxMetPag.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_MetPago).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -232,11 +248,12 @@
         private Label label3;
         private Label label2;
         private DataGridView dgv_MetPago;
-        private Label label1;
-        private TextBox txt_TipoMetodo;
         private Label label4;
         private Button btn_Nuevo;
         private Button btn_Editar;
         private CheckBox checkBox_MetPag;
+        private Panel panel1;
+        private Label label7;
+        private ComboBox comboBoxTipoMetPag;
     }
 }

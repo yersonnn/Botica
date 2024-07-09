@@ -40,8 +40,9 @@ namespace CapaPresentacion
 
         private void LimpiarVariables()
         {
+            txt_CodMetodo.Text = "";
             txt_NombMetodo.Text = "";
-            txt_TipoMetodo.Text = " ";
+            comboBoxTipoMetPag.Text = " ";
             checkBox_MetPag.Checked = false;
 
         }
@@ -59,11 +60,11 @@ namespace CapaPresentacion
             {
                 entMetodoPago met = new entMetodoPago();
                 met.NombMetPag = txt_NombMetodo.Text.Trim();
-                met.TipoMetPago = txt_TipoMetodo.Text.Trim();
+                met.TipoMetPago = comboBoxTipoMetPag.Text.Trim();
                 //c.fecRegCliente = dtPickerRegCliente.Value;
                 //c.idCiudad = int.Parse(txtidCiudad.Text.Trim());
                 met.estMetPag = checkBox_MetPag.Checked;
-                //logMetPag.Instancia.InsertaCliente(met);
+                logMetPag.Instancia.InsertaMetPag(met);
             }
             catch (Exception ex)
             {
@@ -81,7 +82,7 @@ namespace CapaPresentacion
             {
                 entMetodoPago met = new entMetodoPago();
                 met.NombMetPag = txt_NombMetodo.Text.Trim();
-                met.TipoMetPago = txt_TipoMetodo.Text.Trim();
+                met.TipoMetPago = comboBoxTipoMetPag.Text.Trim();
                 //c.idTipoCliente = int.Parse(txtidTipoCliente.Text.Trim());
                 //c.fecRegCliente = dtPickerRegCliente.Value;
                 //c.idCiudad = int.Parse(txtidCiudad.Text.Trim());
@@ -124,7 +125,7 @@ namespace CapaPresentacion
             {
                 entMetodoPago met = new entMetodoPago();
 
-                met.idMetPago = int.Parse(txt_CodMetodo.Text.Trim());
+                met.MetodoDePagoID = int.Parse(txt_CodMetodo.Text.Trim());
                 //cbkEstadoCliente.Checked = false;
                 //c.estCliente = cbkEstadoCliente.Checked;
                 met.estMetPag = checkBox_MetPag.Checked;
@@ -145,7 +146,7 @@ namespace CapaPresentacion
             DataGridViewRow filaActual = dgv_MetPago.Rows[e.RowIndex];
             txt_CodMetodo.Text = filaActual.Cells[0].Value.ToString();
             txt_NombMetodo.Text = filaActual.Cells[1].Value.ToString();
-            txt_TipoMetodo.Text = filaActual.Cells[2].Value.ToString();
+            comboBoxTipoMetPag.Text = filaActual.Cells[2].Value.ToString();
             checkBox_MetPag.Checked = Convert.ToBoolean(filaActual.Cells[3].Value);
         }
 
@@ -153,5 +154,14 @@ namespace CapaPresentacion
         {
 
         }
+
+
+
+        private void dgv_MetPago_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+       
     }
 }

@@ -138,7 +138,6 @@ namespace CapaAccesoDatos
                 cmd = new SqlCommand("spDesabilitarEmpl", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@EmpleadoID", Empl.idEmpl);
-                cmd.Parameters.AddWithValue("@Estemplead", Empl.estEmpl);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

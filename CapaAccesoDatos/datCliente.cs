@@ -138,7 +138,6 @@ namespace CapaAccesoDatos
                 cmd = new SqlCommand("spDesabilitarCli", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ClienteID", Cli.idCli);
-                cmd.Parameters.AddWithValue("@Estclient", Cli.estCli);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -152,6 +151,7 @@ namespace CapaAccesoDatos
             }
             finally { cmd.Connection.Close(); }
             return delete;
+
         }
 
         #endregion metodos

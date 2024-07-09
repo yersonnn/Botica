@@ -30,7 +30,7 @@
         {
             btn_InEmpleado = new Button();
             groupBox1 = new GroupBox();
-            txt_CargoEmpleado = new TextBox();
+            comboBoxCargo = new ComboBox();
             label5 = new Label();
             checkBox_Emple = new CheckBox();
             txt_TelfEmpleado = new TextBox();
@@ -42,16 +42,18 @@
             label3 = new Label();
             label2 = new Label();
             dgv_Empleados = new DataGridView();
-            label1 = new Label();
             btn_EditEmplead = new Button();
             btn_NuevEmplead = new Button();
+            label7 = new Label();
+            panel1 = new Panel();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Empleados).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btn_InEmpleado
             // 
-            btn_InEmpleado.Location = new Point(656, 176);
+            btn_InEmpleado.Location = new Point(644, 206);
             btn_InEmpleado.Name = "btn_InEmpleado";
             btn_InEmpleado.Size = new Size(170, 38);
             btn_InEmpleado.TabIndex = 13;
@@ -61,7 +63,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(txt_CargoEmpleado);
+            groupBox1.Controls.Add(comboBoxCargo);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(checkBox_Emple);
             groupBox1.Controls.Add(txt_TelfEmpleado);
@@ -73,20 +75,21 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            groupBox1.Location = new Point(24, 250);
+            groupBox1.Location = new Point(12, 280);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(684, 179);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             groupBox1.Text = "DETALLES";
             // 
-            // txt_CargoEmpleado
+            // comboBoxCargo
             // 
-            txt_CargoEmpleado.Font = new Font("Segoe UI", 9.75F);
-            txt_CargoEmpleado.Location = new Point(161, 136);
-            txt_CargoEmpleado.Name = "txt_CargoEmpleado";
-            txt_CargoEmpleado.Size = new Size(193, 25);
-            txt_CargoEmpleado.TabIndex = 13;
+            comboBoxCargo.FormattingEnabled = true;
+            comboBoxCargo.Items.AddRange(new object[] { "Farmaceutico", "Asistente de Almacen", "Tecnico de Farmacia" });
+            comboBoxCargo.Location = new Point(161, 137);
+            comboBoxCargo.Name = "comboBoxCargo";
+            comboBoxCargo.Size = new Size(193, 29);
+            comboBoxCargo.TabIndex = 33;
             // 
             // label5
             // 
@@ -187,25 +190,15 @@
             // dgv_Empleados
             // 
             dgv_Empleados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_Empleados.Location = new Point(24, 47);
+            dgv_Empleados.Location = new Point(12, 77);
             dgv_Empleados.Name = "dgv_Empleados";
             dgv_Empleados.Size = new Size(607, 181);
             dgv_Empleados.TabIndex = 9;
             dgv_Empleados.CellDoubleClick += dgv_Empleados_CellDoubleClick;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(24, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(137, 30);
-            label1.TabIndex = 8;
-            label1.Text = "EMPLEADOS";
-            // 
             // btn_EditEmplead
             // 
-            btn_EditEmplead.Location = new Point(656, 120);
+            btn_EditEmplead.Location = new Point(644, 150);
             btn_EditEmplead.Name = "btn_EditEmplead";
             btn_EditEmplead.Size = new Size(170, 38);
             btn_EditEmplead.TabIndex = 29;
@@ -215,7 +208,7 @@
             // 
             // btn_NuevEmplead
             // 
-            btn_NuevEmplead.Location = new Point(656, 66);
+            btn_NuevEmplead.Location = new Point(644, 96);
             btn_NuevEmplead.Name = "btn_NuevEmplead";
             btn_NuevEmplead.Size = new Size(170, 38);
             btn_NuevEmplead.TabIndex = 28;
@@ -223,31 +216,52 @@
             btn_NuevEmplead.UseVisualStyleBackColor = true;
             btn_NuevEmplead.Click += btn_NuevEmplead_Click;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Nirmala UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(0, 0, 64);
+            label7.Location = new Point(359, 4);
+            label7.Name = "label7";
+            label7.Size = new Size(210, 45);
+            label7.TabIndex = 0;
+            label7.Text = "EMPLEADOS";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.GradientInactiveCaption;
+            panel1.Controls.Add(label7);
+            panel1.Location = new Point(-347, -1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1541, 58);
+            panel1.TabIndex = 30;
+            // 
             // CRUD_Empleado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(847, 454);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(1024, 534);
+            Controls.Add(panel1);
             Controls.Add(btn_EditEmplead);
             Controls.Add(btn_NuevEmplead);
             Controls.Add(btn_InEmpleado);
             Controls.Add(groupBox1);
             Controls.Add(dgv_Empleados);
-            Controls.Add(label1);
             Name = "CRUD_Empleado";
             Text = "CRUD_Empleado";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Empleados).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Button btn_InEmpleado;
         private GroupBox groupBox1;
-        private TextBox txt_CargoEmpleado;
         private Label label5;
         private TextBox txt_TelfEmpleado;
         private Label label4;
@@ -256,11 +270,13 @@
         private Label label3;
         private Label label2;
         private DataGridView dgv_Empleados;
-        private Label label1;
         private Button btn_EditEmplead;
         private Button btn_NuevEmplead;
         private CheckBox checkBox_Emple;
         private Button btn_ModEmple;
         private Button btn_AgEmpl;
+        private Label label7;
+        private Panel panel1;
+        private ComboBox comboBoxCargo;
     }
 }

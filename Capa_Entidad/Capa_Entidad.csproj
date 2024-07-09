@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entCategoria.cs" />
     <Compile Include="entCliente.cs" />
     <Compile Include="entEmpl.cs" />
     <Compile Include="entMetodoPago.cs" />

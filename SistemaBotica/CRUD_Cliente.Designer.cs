@@ -42,16 +42,18 @@
             label3 = new Label();
             label2 = new Label();
             dgv_Clientes = new DataGridView();
-            label1 = new Label();
             btn_EditClient = new Button();
             btn_NuevClient = new Button();
+            panel1 = new Panel();
+            label7 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Clientes).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btn_InCliente
             // 
-            btn_InCliente.Location = new Point(699, 171);
+            btn_InCliente.Location = new Point(699, 205);
             btn_InCliente.Name = "btn_InCliente";
             btn_InCliente.Size = new Size(170, 38);
             btn_InCliente.TabIndex = 13;
@@ -73,7 +75,7 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            groupBox1.Location = new Point(22, 255);
+            groupBox1.Location = new Point(22, 288);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(825, 192);
             groupBox1.TabIndex = 10;
@@ -187,25 +189,15 @@
             // dgv_Clientes
             // 
             dgv_Clientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_Clientes.Location = new Point(22, 47);
+            dgv_Clientes.Location = new Point(22, 80);
             dgv_Clientes.Name = "dgv_Clientes";
             dgv_Clientes.Size = new Size(655, 181);
             dgv_Clientes.TabIndex = 9;
             dgv_Clientes.CellDoubleClick += dgv_Clientes_CellDoubleClick;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(22, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(107, 30);
-            label1.TabIndex = 8;
-            label1.Text = "CLIENTES";
-            // 
             // btn_EditClient
             // 
-            btn_EditClient.Location = new Point(699, 117);
+            btn_EditClient.Location = new Point(699, 148);
             btn_EditClient.Name = "btn_EditClient";
             btn_EditClient.Size = new Size(170, 38);
             btn_EditClient.TabIndex = 34;
@@ -215,7 +207,7 @@
             // 
             // btn_NuevClient
             // 
-            btn_NuevClient.Location = new Point(699, 62);
+            btn_NuevClient.Location = new Point(699, 95);
             btn_NuevClient.Name = "btn_NuevClient";
             btn_NuevClient.Size = new Size(170, 38);
             btn_NuevClient.TabIndex = 33;
@@ -223,24 +215,46 @@
             btn_NuevClient.UseVisualStyleBackColor = true;
             btn_NuevClient.Click += btn_NuevClient_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.GradientInactiveCaption;
+            panel1.Controls.Add(label7);
+            panel1.Location = new Point(-81, -1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1348, 52);
+            panel1.TabIndex = 35;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Nirmala UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(0, 0, 64);
+            label7.Location = new Point(93, 4);
+            label7.Name = "label7";
+            label7.Size = new Size(162, 45);
+            label7.TabIndex = 1;
+            label7.Text = "CLIENTES";
+            // 
             // CRUD_Cliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(913, 459);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(1008, 562);
+            Controls.Add(panel1);
             Controls.Add(btn_EditClient);
             Controls.Add(btn_NuevClient);
             Controls.Add(btn_InCliente);
             Controls.Add(groupBox1);
             Controls.Add(dgv_Clientes);
-            Controls.Add(label1);
             Name = "CRUD_Cliente";
             Text = "CRUD_Cliente";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Clientes).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -256,11 +270,12 @@
         private Label label3;
         private Label label2;
         private DataGridView dgv_Clientes;
-        private Label label1;
         private CheckBox checkBox_Clie;
         private Button btn_ModClie;
         private Button btn_AgClien;
         private Button btn_EditClient;
         private Button btn_NuevClient;
+        private Panel panel1;
+        private Label label7;
     }
 }

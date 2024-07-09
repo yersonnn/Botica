@@ -1,6 +1,7 @@
 ﻿using Capa_Entidad;
 using CapaAccesoDatos;
 using System.Collections.Generic;
+using System.Data;
 namespace CapaLogica
 {
     public class logMetPag
@@ -38,10 +39,14 @@ namespace CapaLogica
         {
             datMetPag.Instancia.EditarMetPag(Met);
         }
+   
+
         public void DeshabilitarMetPag(entMetodoPago Met)
         {
             datMetPag.Instancia.DeshabilitarMetPag(Met);
         }
+
+
         #endregion metodos
     }
 }

@@ -35,7 +35,7 @@ namespace CapaPresentacion
             PanelCont.Controls.Add(f);
             f.Show();
         }
-      
+
 
         private void btn_Venta_Click(object sender, EventArgs e)
         {
@@ -86,6 +86,11 @@ namespace CapaPresentacion
         private void panelmenu_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btn_Categoria_Click(object sender, EventArgs e)
+        {
+            Cambiar(new CRUD_CategoriaProducto());
         }
     }
 }
