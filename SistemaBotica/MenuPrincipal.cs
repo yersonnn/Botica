@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using SistemaBotica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -91,6 +92,16 @@ namespace CapaPresentacion
         private void btn_Categoria_Click(object sender, EventArgs e)
         {
             Cambiar(new CRUD_CategoriaProducto());
+        }
+
+        private void btn_DispMedic_Click(object sender, EventArgs e)
+        {
+            Cambiar(new CONSULTA_DisponibilidadMedicamentos());
+        }
+
+        private void btn_ProdProv_Click(object sender, EventArgs e)
+        {
+            Cambiar(new CONSULTA_ProductosProvedor());
         }
     }
 }

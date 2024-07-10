@@ -206,6 +206,20 @@ namespace CapaAccesoDatos
             finally { cmd.Connection.Close(); }
             return Prod;
         }
+
+        public DataTable ObtenerStockProducto(int idProd)
+        {
+            SqlCommand cmd = null;
+            SqlConnection cn = Conexion.Instancia.Conectar();
+            cmd = new SqlCommand("spObtenerStockProducto", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@ProductoID", idProd);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
         #endregion metodos
 
 

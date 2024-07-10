@@ -145,6 +145,19 @@ namespace CapaAccesoDatos
             da.Fill(dt);
             return dt;
         }
+
+        public DataTable CargarNombreMetodoPago(int idMP)
+        {
+            SqlCommand cmd = null;
+            SqlConnection cn = Conexion.Instancia.Conectar();
+            cmd = new SqlCommand("spCargarNombreMetPag", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MetodoDePagoID", idMP);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
         #endregion metodos
 
     }

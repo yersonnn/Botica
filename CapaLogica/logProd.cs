@@ -63,6 +63,11 @@ namespace CapaLogica
             }
             catch (Exception e) { throw e; }
         }
+
+        public DataTable ObtenerStockProducto(int idProd)
+        {
+            return datProd.Instancia.ObtenerStockProducto(idProd);
+        }
         #endregion metodos
 
     }

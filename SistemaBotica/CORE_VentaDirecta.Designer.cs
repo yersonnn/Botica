@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            dataGridView1 = new DataGridView();
+            dgvVentaRealizada = new DataGridView();
             button1 = new Button();
             button2 = new Button();
             groupBox1 = new GroupBox();
@@ -51,10 +51,8 @@
             label5 = new Label();
             btn_AgCarrito = new Button();
             btn_QuitarCarri = new Button();
-            dataGridView2 = new DataGridView();
             groupBox3 = new GroupBox();
-            dateTimePicker1 = new DateTimePicker();
-            button5 = new Button();
+            dateFecha = new DateTimePicker();
             groupBox4 = new GroupBox();
             comboBoxMetodoPago = new ComboBox();
             label9 = new Label();
@@ -62,36 +60,41 @@
             label7 = new Label();
             label4 = new Label();
             textBox_MontoTotal = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvDetVent = new DataGridView();
+            PRODUCTO = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            PrecioUnit = new DataGridViewTextBoxColumn();
+            SubTotal = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvVentaRealizada).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDetVent).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(18, 455);
+            label1.Location = new Point(18, 490);
             label1.Name = "label1";
             label1.Size = new Size(227, 30);
             label1.TabIndex = 0;
             label1.Text = "VENTAS REALIZADAS";
             // 
-            // dataGridView1
+            // dgvVentaRealizada
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 492);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(854, 181);
-            dataGridView1.TabIndex = 1;
+            dgvVentaRealizada.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvVentaRealizada.Location = new Point(12, 527);
+            dgvVentaRealizada.Name = "dgvVentaRealizada";
+            dgvVentaRealizada.Size = new Size(854, 181);
+            dgvVentaRealizada.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(921, 513);
+            button1.Location = new Point(921, 548);
             button1.Name = "button1";
             button1.Size = new Size(170, 38);
             button1.TabIndex = 2;
@@ -100,7 +103,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(921, 618);
+            button2.Location = new Point(921, 602);
             button2.Name = "button2";
             button2.Size = new Size(170, 38);
             button2.TabIndex = 3;
@@ -115,9 +118,9 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(575, 247);
+            groupBox1.Location = new Point(27, 338);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(447, 108);
+            groupBox1.Size = new Size(447, 133);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cliente:";
@@ -125,7 +128,7 @@
             // btn_buscarCliente
             // 
             btn_buscarCliente.Font = new Font("Segoe UI", 9.75F);
-            btn_buscarCliente.Location = new Point(297, 28);
+            btn_buscarCliente.Location = new Point(297, 39);
             btn_buscarCliente.Name = "btn_buscarCliente";
             btn_buscarCliente.Size = new Size(92, 25);
             btn_buscarCliente.TabIndex = 14;
@@ -137,7 +140,7 @@
             // 
             labelNombreCliente.AutoSize = true;
             labelNombreCliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelNombreCliente.Location = new Point(157, 66);
+            labelNombreCliente.Location = new Point(155, 91);
             labelNombreCliente.Name = "labelNombreCliente";
             labelNombreCliente.Size = new Size(21, 20);
             labelNombreCliente.TabIndex = 13;
@@ -146,7 +149,7 @@
             // textBoxDNI_Cliente
             // 
             textBoxDNI_Cliente.Font = new Font("Segoe UI", 9.75F);
-            textBoxDNI_Cliente.Location = new Point(155, 28);
+            textBoxDNI_Cliente.Location = new Point(155, 39);
             textBoxDNI_Cliente.Name = "textBoxDNI_Cliente";
             textBoxDNI_Cliente.Size = new Size(136, 25);
             textBoxDNI_Cliente.TabIndex = 5;
@@ -155,7 +158,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(111, 31);
+            label3.Location = new Point(111, 42);
             label3.Name = "label3";
             label3.Size = new Size(38, 20);
             label3.TabIndex = 1;
@@ -165,7 +168,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(14, 66);
+            label2.Location = new Point(12, 91);
             label2.Name = "label2";
             label2.Size = new Size(137, 20);
             label2.TabIndex = 0;
@@ -288,65 +291,50 @@
             // 
             // btn_AgCarrito
             // 
-            btn_AgCarrito.Location = new Point(1023, 126);
+            btn_AgCarrito.Location = new Point(1023, 81);
             btn_AgCarrito.Name = "btn_AgCarrito";
             btn_AgCarrito.Size = new Size(135, 51);
             btn_AgCarrito.TabIndex = 6;
             btn_AgCarrito.Text = "AGREGAR AL CARRITO";
             btn_AgCarrito.UseVisualStyleBackColor = true;
+            btn_AgCarrito.Click += btn_AgCarrito_Click;
             // 
             // btn_QuitarCarri
             // 
-            btn_QuitarCarri.Location = new Point(1023, 190);
+            btn_QuitarCarri.Location = new Point(1023, 143);
             btn_QuitarCarri.Name = "btn_QuitarCarri";
             btn_QuitarCarri.Size = new Size(135, 51);
             btn_QuitarCarri.TabIndex = 7;
             btn_QuitarCarri.Text = "QUITAR DEL CARRITO";
             btn_QuitarCarri.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(12, 158);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(549, 224);
-            dataGridView2.TabIndex = 8;
+            btn_QuitarCarri.Click += btn_QuitarCarri_Click;
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(dateTimePicker1);
+            groupBox3.Controls.Add(dateFecha);
             groupBox3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            groupBox3.Location = new Point(12, 67);
+            groupBox3.Location = new Point(861, 400);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(335, 85);
+            groupBox3.Size = new Size(320, 71);
             groupBox3.TabIndex = 9;
             groupBox3.TabStop = false;
             groupBox3.Text = "Fecha:";
             // 
-            // dateTimePicker1
+            // dateFecha
             // 
-            dateTimePicker1.Location = new Point(15, 34);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(304, 29);
-            dateTimePicker1.TabIndex = 0;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(920, 564);
-            button5.Name = "button5";
-            button5.Size = new Size(170, 38);
-            button5.TabIndex = 10;
-            button5.Text = "MODIFICAR VENTA";
-            button5.UseVisualStyleBackColor = true;
+            dateFecha.Location = new Point(6, 30);
+            dateFecha.Name = "dateFecha";
+            dateFecha.Size = new Size(302, 29);
+            dateFecha.TabIndex = 0;
             // 
             // groupBox4
             // 
             groupBox4.Controls.Add(comboBoxMetodoPago);
             groupBox4.Controls.Add(label9);
             groupBox4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox4.Location = new Point(575, 361);
+            groupBox4.Location = new Point(480, 404);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(447, 67);
+            groupBox4.Size = new Size(375, 67);
             groupBox4.TabIndex = 6;
             groupBox4.TabStop = false;
             groupBox4.Text = "Pago:";
@@ -358,6 +346,7 @@
             comboBoxMetodoPago.Name = "comboBoxMetodoPago";
             comboBoxMetodoPago.Size = new Size(198, 29);
             comboBoxMetodoPago.TabIndex = 1;
+            comboBoxMetodoPago.SelectedIndexChanged += comboBoxMetodoPago_SelectedIndexChanged;
             // 
             // label9
             // 
@@ -393,7 +382,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label4.Location = new Point(289, 389);
+            label4.Location = new Point(272, 297);
             label4.Name = "label4";
             label4.Size = new Size(124, 21);
             label4.TabIndex = 12;
@@ -402,46 +391,81 @@
             // textBox_MontoTotal
             // 
             textBox_MontoTotal.Font = new Font("Segoe UI", 9.75F);
-            textBox_MontoTotal.Location = new Point(419, 388);
+            textBox_MontoTotal.Location = new Point(402, 296);
             textBox_MontoTotal.Name = "textBox_MontoTotal";
             textBox_MontoTotal.Size = new Size(142, 25);
             textBox_MontoTotal.TabIndex = 14;
+            // 
+            // dgvDetVent
+            // 
+            dgvDetVent.AllowUserToAddRows = false;
+            dgvDetVent.AllowUserToDeleteRows = false;
+            dgvDetVent.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDetVent.Columns.AddRange(new DataGridViewColumn[] { PRODUCTO, Cantidad, PrecioUnit, SubTotal });
+            dgvDetVent.Location = new Point(27, 81);
+            dgvDetVent.Name = "dgvDetVent";
+            dgvDetVent.ReadOnly = true;
+            dgvDetVent.Size = new Size(435, 201);
+            dgvDetVent.TabIndex = 15;
+            // 
+            // PRODUCTO
+            // 
+            PRODUCTO.HeaderText = "Producto";
+            PRODUCTO.Name = "PRODUCTO";
+            PRODUCTO.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.Name = "Cantidad";
+            Cantidad.ReadOnly = true;
+            // 
+            // PrecioUnit
+            // 
+            PrecioUnit.HeaderText = "PrecioUnit";
+            PrecioUnit.Name = "PrecioUnit";
+            PrecioUnit.ReadOnly = true;
+            // 
+            // SubTotal
+            // 
+            SubTotal.HeaderText = "SubTotal";
+            SubTotal.Name = "SubTotal";
+            SubTotal.ReadOnly = true;
             // 
             // CORE_VentaDirecta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1172, 698);
+            ClientSize = new Size(1190, 698);
+            Controls.Add(dgvDetVent);
             Controls.Add(textBox_MontoTotal);
             Controls.Add(label4);
             Controls.Add(panel1);
             Controls.Add(groupBox4);
-            Controls.Add(button5);
             Controls.Add(groupBox3);
-            Controls.Add(dataGridView2);
             Controls.Add(btn_QuitarCarri);
             Controls.Add(btn_AgCarrito);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvVentaRealizada);
             Controls.Add(label1);
             Name = "CORE_VentaDirecta";
             Text = "CORE_VentaDirecta";
             Load += CORE_VentaDirecta_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvVentaRealizada).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDetVent).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -449,7 +473,7 @@
         #endregion
 
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvVentaRealizada;
         private Button button1;
         private Button button2;
         private GroupBox groupBox1;
@@ -463,10 +487,8 @@
         private Label labelPrecio;
         private Label label6;
         private Label label5;
-        private DataGridView dataGridView2;
         private GroupBox groupBox3;
-        private DateTimePicker dateTimePicker1;
-        private Button button5;
+        private DateTimePicker dateFecha;
         private Label label8;
         private Label labelNombreCliente;
         private GroupBox groupBox4;
@@ -482,5 +504,10 @@
         private Label labelStock;
         private Label label11;
         private Button btn_buscarCliente;
+        private DataGridView dgvDetVent;
+        private DataGridViewTextBoxColumn PRODUCTO;
+        private DataGridViewTextBoxColumn Cantidad;
+        private DataGridViewTextBoxColumn PrecioUnit;
+        private DataGridViewTextBoxColumn SubTotal;
     }
 }

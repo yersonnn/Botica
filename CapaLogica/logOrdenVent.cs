@@ -56,6 +56,11 @@ namespace CapaLogica
             return datVentas.Instancia.CargarMetPag();
         }
 
+        public DataTable CargarNombreMetPag(int idMetodo)
+        {
+            return datVentas.Instancia.CargarNombreMetodoPago(idMetodo);
+        }
+
         #endregion metodos
     }
 }

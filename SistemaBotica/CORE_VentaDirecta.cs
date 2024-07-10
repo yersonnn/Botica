@@ -128,7 +128,7 @@ namespace CapaPresentacion
                     entCliente Clie = logClient.Instancia.BuscarClienteId(idCli);
                     if (Clie != null && Clie.estCli)
                     {
-                        labelNombreCliente.Text = Convert.ToString(Clie.NombreCliente);                       
+                        labelNombreCliente.Text = Convert.ToString(Clie.NombreCliente);
                     }
                     else
                     {
@@ -147,32 +147,98 @@ namespace CapaPresentacion
                 // Manejo del caso cuando el TextBox está vacío
                 MessageBox.Show("Por favor, ingrese un DNI.");
             }
-            //if (textBoxDNI_Cliente.Text != null)
-            //{
-            //    if (textBoxDNI_Cliente is DataRowView)
-            //    {
-            //        DataRowView drv = (DataRowView)textBoxDNI_Cliente;
-            //        int idCli = Convert.ToInt32(drv["ClienteID"]);
-            //        entCliente Clie = logClient.Instancia.BuscarClienteId(idCli);
-            //        if (Clie != null && (Clie.estCli = true))
-            //        {
-            //            textBoxIDPROD.Text = Convert.ToString(Clie.idProd);
-            //            labelPrecio.Text = Convert.ToString(Clie.PrecioUnitario);
-            //            labelStock.Text = Convert.ToString(Clie.Stock);
-            //        }
-            //    }
-            //    else
-            //    {
-            //        int idCli = Convert.ToInt32(textBoxDNI_Cliente.Text);
-            //        entCliente Clie = logClient.Instancia.BuscarClienteId(idCli);
-            //        if (Clie != null && (Clie.estCli = true))
-            //        {
-            //            textBoxIDPROD.Text = Convert.ToString(Clie.idProd);
-            //            labelPrecio.Text = Convert.ToString(Clie.PrecioUnitario);
-            //            labelStock.Text = Convert.ToString(Clie.Stock);
-            //        }
-            //    }
-            //}
+
+        }
+        public static int confilas = 0;
+        public static decimal MontoPagar = 0;
+        private void btn_AgCarrito_Click(object sender, EventArgs e)
+        {
+            entDetalleVenta dProd = new entDetalleVenta();
+            entProd Prod = new entProd();
+
+            if ((textBoxIDPROD.Text.Trim() != "") && (textBoxCantidad.Text.Trim() != ""))
+            {
+                if ((Convert.ToInt32(textBoxCantidad.Text) > 0) && (Convert.ToInt32(textBoxCantidad.Text) <= Convert.ToInt32(labelStock.Text)))
+                {
+                    if (confilas == 0)
+                    {
+                        dgvDetVent.Rows.Add(comboBoxNombreProd.Text, textBoxCantidad.Text, labelPrecio.Text);
+                        decimal precioTotal = Convert.ToDecimal(dgvDetVent.Rows[confilas].Cells[1].Value) * Convert.ToDecimal(dgvDetVent.Rows[confilas].Cells[2].Value);
+                        dgvDetVent.Rows[confilas].Cells[3].Value = precioTotal;
+
+                        confilas++;
+                    }
+                    else
+                    {
+                        dgvDetVent.Rows.Add(comboBoxNombreProd.Text, textBoxCantidad.Text, labelPrecio.Text);
+                        decimal precioTotal = Convert.ToDecimal(dgvDetVent.Rows[confilas].Cells[1].Value) * Convert.ToDecimal(dgvDetVent.Rows[confilas].Cells[2].Value);
+                        dgvDetVent.Rows[confilas].Cells[3].Value = precioTotal;
+                        confilas++;
+                    }
+                    //Limpiar();
+                }
+                MontoPagar = 0;
+                foreach (DataGridViewRow Fila in dgvDetVent.Rows)
+                {
+                    MontoPagar += Convert.ToDecimal(Fila.Cells[3].Value);
+                }
+                textBox_MontoTotal.Text = MontoPagar.ToString();
+            }
+        }
+
+        private void GrabarDetalle(int cod)
+        {
+            foreach (DataGridViewRow Fila in dgvDetVent.Rows)
+            {
+                entDetalleVenta dProd = new entDetalleVenta();
+                dProd.DetVentaID = cod;
+
+
+
+                dProd.ProductoID = Convert.ToInt32(Fila.Cells[0].Value.ToString());
+                
+
+
+                dProd.Cantidad = Convert.ToInt32(Fila.Cells[1].Value.ToString());
+                dProd.PrecioUnit = Convert.ToDecimal(Fila.Cells[2].Value.ToString());
+                dProd.PrecioTotal = Convert.ToDecimal(Fila.Cells[3].Value.ToString());
+
+                logOrdenVent.Instancia.InsertarDetVenta(dProd);
+            }
+        }
+
+        private void comboBoxMetodoPago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxMetodoPago.SelectedValue != null)
+            {
+                if (comboBoxMetodoPago.SelectedValue is DataRowView)
+                {
+                    DataRowView drv = (DataRowView)comboBoxMetodoPago.SelectedValue;
+                    int idMetPag = Convert.ToInt32(drv["MetodoDePagoID"]);
+                    comboBoxMetodoPago.DataSource = logOrdenVent.Instancia.CargarNombreMetPag(idMetPag);
+
+                }
+                else
+                {
+                    int idMetPag = Convert.ToInt32(comboBoxMetodoPago.SelectedValue);
+                    comboBoxMetodoPago.DataSource = logOrdenVent.Instancia.CargarNombreMetPag(idMetPag);
+
+                }
+                comboBoxMetodoPago.DisplayMember = "Nombmetpago";
+                comboBoxMetodoPago.ValueMember = "MetodoDePagoID";
+            }
+            
+        }
+
+        private void btn_QuitarCarri_Click(object sender, EventArgs e)
+        {
+            if (confilas > 0)
+            {
+                MontoPagar = MontoPagar - Convert.ToDecimal(dgvDetVent.Rows[dgvDetVent.CurrentRow.Index].Cells[3].Value);
+                textBox_MontoTotal.Text = MontoPagar.ToString();
+                dgvDetVent.Rows.RemoveAt(dgvDetVent.CurrentRow.Index);
+                confilas--;
+            }
         }
     }
 }
