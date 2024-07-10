@@ -1,5 +1,6 @@
 ﻿using Capa_Entidad;
 using CapaAccesoDatos;
+using System;
 using System.Collections.Generic;
 using System.Data;
 
@@ -54,7 +55,14 @@ namespace CapaLogica
         {
             return datProd.Instancia.CargarNombre(idCat);
         }
-
+        public entProd BuscarProductoId(int idProducto)
+        {
+            try
+            {
+                return datProd.Instancia.BuscarProductoId(idProducto);
+            }
+            catch (Exception e) { throw e; }
+        }
         #endregion metodos
 
     }

@@ -12,7 +12,6 @@ namespace Capa_Entidad
         public int idProd { get; set; }
         public string Producto { get; set; }
         public int IDCatProd { get; set; }
-
         public string NombCategoria { get; set; }
 
         public double PrecioUnitario { get; set; }

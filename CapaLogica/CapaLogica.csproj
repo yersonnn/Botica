@@ -47,7 +47,9 @@
     <Compile Include="logCategoria.cs" />
     <Compile Include="logClient.cs" />
     <Compile Include="logEmpl.cs" />
+    <Compile Include="logInvent.cs" />
     <Compile Include="logMetPag.cs" />
+    <Compile Include="logOrdenVent.cs" />
     <Compile Include="logProd.cs" />
     <Compile Include="logProv.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

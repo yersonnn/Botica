@@ -149,7 +149,15 @@ namespace CapaAccesoDatos
             finally { cmd.Connection.Close(); }
             return delete;
         }
-
+        //public DataTable CargarMetodoPago()
+        //{
+        //    SqlConnection cn = Conexion.Instancia.Conectar();
+        //    SqlDataAdapter da = new SqlDataAdapter("spCargarMetodoPago", cn);
+        //    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        //    DataTable dt = new DataTable();
+        //    da.Fill(dt);
+        //    return dt;
+        //}
         //public DataTable CargarTipoMetodo()
         //{
         //    SqlConnection cn = Conexion.Instancia.Conectar();

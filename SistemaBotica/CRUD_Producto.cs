@@ -48,6 +48,14 @@ namespace CapaPresentacion
 
         }
 
+        private void ActualizarCombos()
+        {
+            comboBoxCatProd.DataSource = logProd.Instancia.CargarCategoria();
+            comboBoxCatProd.DisplayMember = "Nombcategoria";
+            comboBoxCatProd.ValueMember = "CategoriaID";
+
+        }
+
         public void listarProd()
         {
             dgv_Productos.DataSource = logProd.Instancia.ListarProd();
@@ -61,7 +69,6 @@ namespace CapaPresentacion
         private void btn_NuevProduc_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
-
             btn_AgProduc.Visible = true;
             LimpiarVariables();
             btn_ModProduc.Visible = false;
@@ -88,6 +95,8 @@ namespace CapaPresentacion
             LimpiarVariables();
             groupBox1.Enabled = false;
             listarProd();
+            ActualizarCombos();
+
         }
 
         private void btn_ModProduc_Click(object sender, EventArgs e)
@@ -111,6 +120,7 @@ namespace CapaPresentacion
             LimpiarVariables();
             groupBox1.Enabled = false;
             listarProd();
+            ActualizarCombos();
         }
 
         private void btn_EditProduc_Click(object sender, EventArgs e)
@@ -129,7 +139,7 @@ namespace CapaPresentacion
                 Prod.idProd = int.Parse(txt_CodProducto.Text.Trim());
                 //cbkEstadoCliente.Checked = false;
                 //c.estCliente = cbkEstadoCliente.Checked;
-                Prod.estProd = checkBox_Produc.Checked;
+
                 logProd.Instancia.DeshabilitarProd(Prod);
             }
             catch (Exception ex)
@@ -139,6 +149,7 @@ namespace CapaPresentacion
             LimpiarVariables();
             groupBox1.Enabled = false;
             listarProd();
+            
         }
 
         private void dgv_Productos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -146,9 +157,9 @@ namespace CapaPresentacion
             DataGridViewRow filaActual = dgv_Productos.Rows[e.RowIndex]; //
             txt_CodProducto.Text = filaActual.Cells[0].Value.ToString();
             txt_NombProducto.Text = filaActual.Cells[1].Value.ToString();
-            comboBoxCatProd.Text = filaActual.Cells[2].Value.ToString();
-            txt_PrecProducto.Text = filaActual.Cells[3].Value.ToString();
-            checkBox_Produc.Checked = Convert.ToBoolean(filaActual.Cells[4].Value);
+            comboBoxCatProd.Text = filaActual.Cells[3].Value.ToString();
+            txt_PrecProducto.Text = filaActual.Cells[4].Value.ToString();
+            checkBox_Produc.Checked = Convert.ToBoolean(filaActual.Cells[6].Value);
         }
 
         private void txt_CatProducto_TextChanged(object sender, EventArgs e)
@@ -180,9 +191,7 @@ namespace CapaPresentacion
 
         private void CRUD_Producto_Load(object sender, EventArgs e)
         {
-            comboBoxCatProd.DataSource = logProd.Instancia.CargarCategoria();
-            comboBoxCatProd.DisplayMember = "Nombcategoria";
-            comboBoxCatProd.ValueMember = "CategoriaID";
+            ActualizarCombos();
         }
     }
 }

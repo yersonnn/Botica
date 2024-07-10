@@ -154,6 +154,36 @@ namespace CapaAccesoDatos
 
         }
 
+        public entCliente BuscarClienteId(int idCli)
+        {
+            SqlCommand cmd = null;
+            entCliente Cli = new entCliente();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spBuscaridCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ClienteID", idCli);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Cli.idCli = Convert.ToInt32(dr["ClienteID"]);
+                    Cli.NombreCliente = dr["Nombclient"].ToString();
+                    Cli.Correo = dr["Correoclient"].ToString();
+                    Cli.CelularCliente = Convert.ToInt32(dr["Celclient"]);
+                    Cli.estCli = Convert.ToBoolean(dr["Estclient"]);
+
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return Cli;
+        }
+
         #endregion metodos
 
 

@@ -48,9 +48,11 @@
     <Compile Include="datCategoria.cs" />
     <Compile Include="datCliente.cs" />
     <Compile Include="datEmpl.cs" />
+    <Compile Include="datInventario.cs" />
     <Compile Include="datMetPag.cs" />
     <Compile Include="datProd.cs" />
     <Compile Include="datProv.cs" />
+    <Compile Include="datVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

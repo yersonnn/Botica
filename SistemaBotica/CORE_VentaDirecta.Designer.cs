@@ -33,30 +33,35 @@
             button1 = new Button();
             button2 = new Button();
             groupBox1 = new GroupBox();
+            btn_buscarCliente = new Button();
             labelNombreCliente = new Label();
-            textBox2 = new TextBox();
+            textBoxDNI_Cliente = new TextBox();
             label3 = new Label();
             label2 = new Label();
             groupBox2 = new GroupBox();
-            labelNombreProd = new Label();
+            labelStock = new Label();
+            label11 = new Label();
+            textBoxIDPROD = new TextBox();
+            label10 = new Label();
+            comboBoxNombreProd = new ComboBox();
             label8 = new Label();
-            textBox4 = new TextBox();
+            textBoxCantidad = new TextBox();
             labelPrecio = new Label();
             label6 = new Label();
             label5 = new Label();
-            textBox3 = new TextBox();
-            label4 = new Label();
-            button3 = new Button();
-            button4 = new Button();
+            btn_AgCarrito = new Button();
+            btn_QuitarCarri = new Button();
             dataGridView2 = new DataGridView();
             groupBox3 = new GroupBox();
             dateTimePicker1 = new DateTimePicker();
             button5 = new Button();
             groupBox4 = new GroupBox();
-            comboBox1 = new ComboBox();
+            comboBoxMetodoPago = new ComboBox();
             label9 = new Label();
             panel1 = new Panel();
             label7 = new Label();
+            label4 = new Label();
+            textBox_MontoTotal = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -104,35 +109,47 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btn_buscarCliente);
             groupBox1.Controls.Add(labelNombreCliente);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(textBoxDNI_Cliente);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(575, 281);
+            groupBox1.Location = new Point(575, 247);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(447, 108);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cliente:";
             // 
+            // btn_buscarCliente
+            // 
+            btn_buscarCliente.Font = new Font("Segoe UI", 9.75F);
+            btn_buscarCliente.Location = new Point(297, 28);
+            btn_buscarCliente.Name = "btn_buscarCliente";
+            btn_buscarCliente.Size = new Size(92, 25);
+            btn_buscarCliente.TabIndex = 14;
+            btn_buscarCliente.Text = "BUSCAR";
+            btn_buscarCliente.UseVisualStyleBackColor = true;
+            btn_buscarCliente.Click += btn_buscarCliente_Click;
+            // 
             // labelNombreCliente
             // 
             labelNombreCliente.AutoSize = true;
-            labelNombreCliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelNombreCliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelNombreCliente.Location = new Point(157, 66);
             labelNombreCliente.Name = "labelNombreCliente";
             labelNombreCliente.Size = new Size(21, 20);
             labelNombreCliente.TabIndex = 13;
             labelNombreCliente.Text = "--";
             // 
-            // textBox2
+            // textBoxDNI_Cliente
             // 
-            textBox2.Font = new Font("Segoe UI", 9.75F);
-            textBox2.Location = new Point(155, 28);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(136, 25);
-            textBox2.TabIndex = 5;
+            textBoxDNI_Cliente.Font = new Font("Segoe UI", 9.75F);
+            textBoxDNI_Cliente.Location = new Point(155, 28);
+            textBoxDNI_Cliente.Name = "textBoxDNI_Cliente";
+            textBoxDNI_Cliente.Size = new Size(136, 25);
+            textBoxDNI_Cliente.TabIndex = 5;
             // 
             // label3
             // 
@@ -156,55 +173,94 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(labelNombreProd);
+            groupBox2.Controls.Add(labelStock);
+            groupBox2.Controls.Add(label11);
+            groupBox2.Controls.Add(textBoxIDPROD);
+            groupBox2.Controls.Add(label10);
+            groupBox2.Controls.Add(comboBoxNombreProd);
             groupBox2.Controls.Add(label8);
-            groupBox2.Controls.Add(textBox4);
+            groupBox2.Controls.Add(textBoxCantidad);
             groupBox2.Controls.Add(labelPrecio);
             groupBox2.Controls.Add(label6);
             groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(textBox3);
-            groupBox2.Controls.Add(label4);
             groupBox2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            groupBox2.Location = new Point(575, 104);
+            groupBox2.Location = new Point(575, 67);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(429, 162);
+            groupBox2.Size = new Size(429, 174);
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Text = "PRODUCTOS FARMACEUTICOS";
             // 
-            // labelNombreProd
+            // labelStock
             // 
-            labelNombreProd.AutoSize = true;
-            labelNombreProd.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelNombreProd.Location = new Point(102, 67);
-            labelNombreProd.Name = "labelNombreProd";
-            labelNombreProd.Size = new Size(21, 20);
-            labelNombreProd.TabIndex = 12;
-            labelNombreProd.Text = "--";
+            labelStock.AutoSize = true;
+            labelStock.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelStock.Location = new Point(223, 107);
+            labelStock.Name = "labelStock";
+            labelStock.Size = new Size(21, 20);
+            labelStock.TabIndex = 16;
+            labelStock.Text = "--";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Location = new Point(169, 106);
+            label11.Name = "label11";
+            label11.Size = new Size(48, 20);
+            label11.TabIndex = 15;
+            label11.Text = "Stock:";
+            // 
+            // textBoxIDPROD
+            // 
+            textBoxIDPROD.Font = new Font("Segoe UI", 9.75F);
+            textBoxIDPROD.Location = new Point(92, 70);
+            textBoxIDPROD.Name = "textBoxIDPROD";
+            textBoxIDPROD.Size = new Size(71, 25);
+            textBoxIDPROD.TabIndex = 14;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(28, 73);
+            label10.Name = "label10";
+            label10.Size = new Size(58, 20);
+            label10.TabIndex = 13;
+            label10.Text = "ProdID:";
+            // 
+            // comboBoxNombreProd
+            // 
+            comboBoxNombreProd.FormattingEnabled = true;
+            comboBoxNombreProd.Location = new Point(92, 28);
+            comboBoxNombreProd.Name = "comboBoxNombreProd";
+            comboBoxNombreProd.Size = new Size(295, 29);
+            comboBoxNombreProd.TabIndex = 12;
+            comboBoxNombreProd.SelectedIndexChanged += comboBoxNombreCliente_SelectedIndexChanged;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(19, 67);
+            label8.Location = new Point(19, 32);
             label8.Name = "label8";
             label8.Size = new Size(67, 20);
             label8.TabIndex = 11;
             label8.Text = "Nombre:";
             // 
-            // textBox4
+            // textBoxCantidad
             // 
-            textBox4.Font = new Font("Segoe UI", 9.75F);
-            textBox4.Location = new Point(102, 92);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(71, 25);
-            textBox4.TabIndex = 10;
+            textBoxCantidad.Font = new Font("Segoe UI", 9.75F);
+            textBoxCantidad.Location = new Point(92, 106);
+            textBoxCantidad.Name = "textBoxCantidad";
+            textBoxCantidad.Size = new Size(71, 25);
+            textBoxCantidad.TabIndex = 10;
             // 
             // labelPrecio
             // 
             labelPrecio.AutoSize = true;
             labelPrecio.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelPrecio.Location = new Point(102, 130);
+            labelPrecio.Location = new Point(105, 137);
             labelPrecio.Name = "labelPrecio";
             labelPrecio.Size = new Size(21, 20);
             labelPrecio.TabIndex = 9;
@@ -214,7 +270,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(6, 126);
+            label6.Location = new Point(19, 137);
             label6.Name = "label6";
             label6.Size = new Size(80, 20);
             label6.TabIndex = 8;
@@ -224,73 +280,54 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(14, 95);
+            label5.Location = new Point(19, 107);
             label5.Name = "label5";
             label5.Size = new Size(72, 20);
             label5.TabIndex = 7;
             label5.Text = "Cantidad:";
             // 
-            // textBox3
+            // btn_AgCarrito
             // 
-            textBox3.Font = new Font("Segoe UI", 9.75F);
-            textBox3.Location = new Point(102, 33);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(272, 25);
-            textBox3.TabIndex = 6;
-            textBox3.TextChanged += textBox3_TextChanged;
+            btn_AgCarrito.Location = new Point(1023, 126);
+            btn_AgCarrito.Name = "btn_AgCarrito";
+            btn_AgCarrito.Size = new Size(135, 51);
+            btn_AgCarrito.TabIndex = 6;
+            btn_AgCarrito.Text = "AGREGAR AL CARRITO";
+            btn_AgCarrito.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // btn_QuitarCarri
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(25, 37);
-            label4.Name = "label4";
-            label4.Size = new Size(61, 20);
-            label4.TabIndex = 1;
-            label4.Text = "Codigo:";
-            // 
-            // button3
-            // 
-            button3.Location = new Point(1023, 126);
-            button3.Name = "button3";
-            button3.Size = new Size(135, 51);
-            button3.TabIndex = 6;
-            button3.Text = "AGREGAR AL CARRITO";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(1023, 190);
-            button4.Name = "button4";
-            button4.Size = new Size(135, 51);
-            button4.TabIndex = 7;
-            button4.Text = "QUITAR DEL CARRITO";
-            button4.UseVisualStyleBackColor = true;
+            btn_QuitarCarri.Location = new Point(1023, 190);
+            btn_QuitarCarri.Name = "btn_QuitarCarri";
+            btn_QuitarCarri.Size = new Size(135, 51);
+            btn_QuitarCarri.TabIndex = 7;
+            btn_QuitarCarri.Text = "QUITAR DEL CARRITO";
+            btn_QuitarCarri.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(12, 177);
+            dataGridView2.Location = new Point(12, 158);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(549, 260);
+            dataGridView2.Size = new Size(549, 224);
             dataGridView2.TabIndex = 8;
             // 
             // groupBox3
             // 
             groupBox3.Controls.Add(dateTimePicker1);
             groupBox3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            groupBox3.Location = new Point(12, 86);
+            groupBox3.Location = new Point(12, 67);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(254, 85);
+            groupBox3.Size = new Size(335, 85);
             groupBox3.TabIndex = 9;
             groupBox3.TabStop = false;
             groupBox3.Text = "Fecha:";
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(25, 37);
+            dateTimePicker1.Location = new Point(15, 34);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(208, 29);
+            dateTimePicker1.Size = new Size(304, 29);
             dateTimePicker1.TabIndex = 0;
             // 
             // button5
@@ -304,23 +341,23 @@
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(comboBox1);
+            groupBox4.Controls.Add(comboBoxMetodoPago);
             groupBox4.Controls.Add(label9);
             groupBox4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox4.Location = new Point(567, 395);
+            groupBox4.Location = new Point(575, 361);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(447, 67);
             groupBox4.TabIndex = 6;
             groupBox4.TabStop = false;
             groupBox4.Text = "Pago:";
             // 
-            // comboBox1
+            // comboBoxMetodoPago
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(143, 28);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(198, 29);
-            comboBox1.TabIndex = 1;
+            comboBoxMetodoPago.FormattingEnabled = true;
+            comboBoxMetodoPago.Location = new Point(143, 28);
+            comboBoxMetodoPago.Name = "comboBoxMetodoPago";
+            comboBoxMetodoPago.Size = new Size(198, 29);
+            comboBoxMetodoPago.TabIndex = 1;
             // 
             // label9
             // 
@@ -338,7 +375,7 @@
             panel1.Controls.Add(label7);
             panel1.Location = new Point(1, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1171, 63);
+            panel1.Size = new Size(1320, 59);
             panel1.TabIndex = 11;
             // 
             // label7
@@ -346,25 +383,45 @@
             label7.AutoSize = true;
             label7.Font = new Font("Nirmala UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(0, 0, 64);
-            label7.Location = new Point(11, 7);
+            label7.Location = new Point(5, 7);
             label7.Name = "label7";
             label7.Size = new Size(446, 45);
             label7.TabIndex = 0;
             label7.Text = "VENTA DE FARMACEUTICOS";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label4.Location = new Point(289, 389);
+            label4.Name = "label4";
+            label4.Size = new Size(124, 21);
+            label4.TabIndex = 12;
+            label4.Text = "MONTO TOTAL:";
+            // 
+            // textBox_MontoTotal
+            // 
+            textBox_MontoTotal.Font = new Font("Segoe UI", 9.75F);
+            textBox_MontoTotal.Location = new Point(419, 388);
+            textBox_MontoTotal.Name = "textBox_MontoTotal";
+            textBox_MontoTotal.Size = new Size(142, 25);
+            textBox_MontoTotal.TabIndex = 14;
             // 
             // CORE_VentaDirecta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1166, 719);
+            ClientSize = new Size(1172, 698);
+            Controls.Add(textBox_MontoTotal);
+            Controls.Add(label4);
             Controls.Add(panel1);
             Controls.Add(groupBox4);
             Controls.Add(button5);
             Controls.Add(groupBox3);
             Controls.Add(dataGridView2);
-            Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(btn_QuitarCarri);
+            Controls.Add(btn_AgCarrito);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(button2);
@@ -373,6 +430,7 @@
             Controls.Add(label1);
             Name = "CORE_VentaDirecta";
             Text = "CORE_VentaDirecta";
+            Load += CORE_VentaDirecta_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -397,13 +455,11 @@
         private GroupBox groupBox1;
         private Label label3;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox textBoxDNI_Cliente;
         private GroupBox groupBox2;
-        private TextBox textBox3;
-        private Label label4;
-        private Button button3;
-        private Button button4;
-        private TextBox textBox4;
+        private Button btn_AgCarrito;
+        private Button btn_QuitarCarri;
+        private TextBox textBoxCantidad;
         private Label labelPrecio;
         private Label label6;
         private Label label5;
@@ -412,12 +468,19 @@
         private DateTimePicker dateTimePicker1;
         private Button button5;
         private Label label8;
-        private Label labelNombreProd;
         private Label labelNombreCliente;
         private GroupBox groupBox4;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxMetodoPago;
         private Label label9;
         private Panel panel1;
         private Label label7;
+        private ComboBox comboBoxNombreProd;
+        private Label label4;
+        private TextBox textBox_MontoTotal;
+        private TextBox textBoxIDPROD;
+        private Label label10;
+        private Label labelStock;
+        private Label label11;
+        private Button btn_buscarCliente;
     }
 }

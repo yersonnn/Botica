@@ -140,7 +140,6 @@ namespace CapaAccesoDatos
                 cmd = new SqlCommand("spDesabilitarProd", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ProductoID", Prod.idProd);
-                cmd.Parameters.AddWithValue("@Estprod", Prod.estProd);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -178,7 +177,35 @@ namespace CapaAccesoDatos
             da.Fill(dt);
             return dt;
         }
-
+        public entProd BuscarProductoId(int idProducto)
+        {
+            SqlCommand cmd = null;
+            entProd Prod = new entProd();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spBuscaridProducto", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ProductoID", idProducto);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Prod.idProd = Convert.ToInt16(dr["ProductoID"]);
+                    Prod.Producto = dr["Nombproducto"].ToString();
+                    Prod.IDCatProd = Convert.ToInt16(dr["CategoriaID"]);
+                    Prod.PrecioUnitario = Convert.ToDouble(dr["PrecioProd"]);
+                    Prod.Stock = Convert.ToInt16(dr["Stock"]);
+                    Prod.estProd = Convert.ToBoolean(dr["Estprod"]);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return Prod;
+        }
         #endregion metodos
 
 

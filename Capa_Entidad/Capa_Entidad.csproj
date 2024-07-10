@@ -46,8 +46,11 @@
   <ItemGroup>
     <Compile Include="entCategoria.cs" />
     <Compile Include="entCliente.cs" />
+    <Compile Include="entDetalleVenta.cs" />
     <Compile Include="entEmpl.cs" />
+    <Compile Include="entInventario.cs" />
     <Compile Include="entMetodoPago.cs" />
+    <Compile Include="entOrdenVenta.cs" />
     <Compile Include="entProd.cs" />
     <Compile Include="entProv.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -30,7 +30,6 @@
         {
             textBox1 = new TextBox();
             dataGridView1 = new DataGridView();
-            button2 = new Button();
             label2 = new Label();
             button1 = new Button();
             panel1 = new Panel();
@@ -53,16 +52,6 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(574, 250);
             dataGridView1.TabIndex = 16;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 11.25F);
-            button2.Location = new Point(12, 400);
-            button2.Name = "button2";
-            button2.Size = new Size(85, 35);
-            button2.TabIndex = 15;
-            button2.Text = "Regresar";
-            button2.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -109,11 +98,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1122, 450);
+            ClientSize = new Size(691, 450);
             Controls.Add(panel1);
             Controls.Add(textBox1);
             Controls.Add(dataGridView1);
-            Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(button1);
             Name = "CONSULTA_ReporteVentasProducto";
@@ -129,7 +117,6 @@
 
         private TextBox textBox1;
         private DataGridView dataGridView1;
-        private Button button2;
         private Label label2;
         private Button button1;
         private Panel panel1;

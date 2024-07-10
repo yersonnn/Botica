@@ -1,5 +1,6 @@
 ﻿using Capa_Entidad;
 using CapaAccesoDatos;
+using System;
 using System.Collections.Generic;
 
 namespace CapaLogica
@@ -42,6 +43,15 @@ namespace CapaLogica
         public void DeshabilitarCli(entCliente Cli)
         {
             datCliente.Instancia.DeshabilitarCli(Cli);
+        }
+
+        public entCliente BuscarClienteId(int idCli)
+        {
+            try
+            {
+                return datCliente.Instancia.BuscarClienteId(idCli);
+            }
+            catch (Exception e) { throw e; }
         }
         #endregion metodos
 
